@@ -1,0 +1,205 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jost&display=swap');
+
+.card:nth-child(1) > .card-container {
+    visibility: visible;
+    animation: fadeInUp 750ms;
+}
+
+.card:nth-child(2) > .card-container {
+    visibility: visible;
+    animation: fadeInUp 750ms;
+    animation-delay: 0.1s;
+}
+
+.card:nth-child(3) > .card-container {
+    visibility: visible;
+    animation: fadeInUp 750ms;
+    animation-delay: 0.2s;
+}
+
+.card-container {
+    overflow: hidden;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0 8px 15px rgb(140 152 164 / 10%);
+    transition: 250ms ease-in;
+}
+
+.card-content {
+    padding: 25px 20px;
+    height: 100%;
+    overflow: hidden;
+}
+
+.img-container img {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 18px;
+}
+
+.card-title h3 {
+    font-size: 20px;
+    font-family: 'Lora', serif;
+}
+
+.card-title {
+    margin-bottom: 15px;
+    font-weight: 700;
+    font-family: 'Lora', serif;
+}
+
+.card-body p {
+    font-family: 'Jost', sans-serif;
+    font-size: 16px;
+}
+.card-content .btn {
+    display: flex;
+    margin-top: 20px;
+}
+
+.card-content .btn:not(.btn-outline) {
+    background-color: transparent;
+}
+
+.card-content .btn button {
+    border: none;
+    background: transparent;
+}
+
+.card-content .btn a {
+    color: white;
+    text-decoration: none;
+    font-weight: 550;
+    font-size: 16px;
+    font-family: 'Jost', sans-serif;
+}
+
+.card-content .btn a:hover {
+    text-decoration: underline;
+}
+
+.card-content .btn::after {
+    content: '>';
+    padding-left: 10px;
+    /* line-height: 0; */
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    font-size: 10px;
+    transition: all 0.3s;
+}
+
+.card:nth-child(1) > .card-container {
+    color: white;
+    background-color: #bda588;
+    border-radius: 4px;
+    margin-bottom: 30px;
+}
+
+.card:nth-child(2) > .card-container,
+.card:nth-child(2) > .card-container > a {
+    color: #2f2d51;
+    background-color: white;
+    border-radius: 4px;
+    margin-bottom: 30px;
+}
+
+.card:nth-child(2) > .card-container > .card-content > .btn::after {
+    color: #2f2d51;
+}
+
+.card:nth-child(3) > .card-container {
+    color: white;
+    background-color: #183f63;
+    border-radius: 4px;
+    margin-bottom: 30px;
+}
+
+.card > .card-container {
+    width: 100%;
+    box-shadow: 0 8px 15px rgb(140 152 164 / 10%);
+}
+
+.cards-container {
+    margin-top: 3rem;
+    padding: 0 14px;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-title {
+    visibility: visible;
+    animation-delay: 1s;
+    animation-name: fadeInUp 5000ms;
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        -webkit-transform: translate3d(0, 50%, 0);
+        transform: translate3d(0, 50%, 0);
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: none;
+        transform: none;
+    }
+}
+
+@media (min-width: 768px) {
+    .cards-container {
+        margin-inline: 40px;
+        padding: 0;
+        content-visibility: auto;
+    }
+    .card-content {
+        padding: 35px 40px;
+    }
+    .card-title h3 {
+        font-size: 26px;
+    }
+    .card-title {
+        margin-bottom: 30px;
+    }
+    .card-content .btn {
+        margin-top: 45px;
+    }
+}
+
+@media (min-width: 769px) {
+    .card {
+        width: 30%;
+    }
+    .card:nth-child(1) > .card-container {
+        margin: 0;
+    }
+    .card:nth-child(2) > .card-container {
+        height: 360px;
+    }
+    .cards-container {
+        margin-top: 100px;
+        margin-inline: 2em;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+}
+
+@media (min-width: 1024px) {
+    .cards-container {
+        margin-inline: 5rem;
+    }
+    .cards-container {
+        margin-top: 500px;
+    }
+    .card:nth-child(2) > .card-container {
+        height: 397px;
+        height: auto;
+    }
+}
+@media (min-width: 1025px) {
+    .cards-container {
+        margin-top: -105px;
+    }
+}

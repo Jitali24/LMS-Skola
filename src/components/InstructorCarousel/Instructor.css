@@ -1,0 +1,235 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jost&display=swap');
+
+.instructor-container .carousel-cell {
+    width: 50%;
+    /* margin: 0 1px; */
+}
+
+.instructor-container .flickity-prev-next-button {
+    display: none;
+}
+
+.instructor-container .flickity-page-dots {
+    bottom: -40px;
+}
+
+.instructor-container .flickity-page-dots .dot {
+    background: #77838f;
+    margin: 0 4px;
+}
+
+.instructor-container .flickity-page-dots .dot.is-selected {
+    width: 20px;
+    border-radius: 5px;
+    background-color: #2f2d51;
+}
+
+.instructor-body {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.instructor-container .carousel {
+    margin-top: 1.5rem;
+}
+
+.instructor-container {
+    padding: 60px 14px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.instructor-container .carousel-cell:hover {
+    cursor: default;
+}
+
+.instructor-header {
+    margin-bottom: 25px;
+    text-align: center;
+    animation: fadeInUp 500ms;
+    animation-delay: 0.1s;
+}
+
+.instructor-header h2 {
+    font-family: 'Lora', serif;
+    font-size: 26px;
+    color: #2f2d51;
+    margin-bottom: 5px;
+}
+
+.instructor-header p {
+    font-family: 'Jost';
+    font-size: 16px;
+    color: #77838f;
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        -webkit-transform: translate3d(0, 15%, 0);
+        transform: translate3d(0, 15%, 0);
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: none;
+        transform: none;
+    }
+}
+
+.instructor-list {
+    display: flex;
+    flex-direction: row;
+}
+
+.instructor {
+    width: fit-content;
+    /* padding: 0 7px; */
+    margin: 0 auto;
+    max-width: 140px;
+}
+
+.instructor-avatar img {
+    height: 130px;
+    width: 130px;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+}
+
+.instructor-social {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 7px;
+    width: 130px;
+    height: 130px;
+    text-align: center;
+    border-radius: 50%;
+    background-color: rgba(47, 45, 81, 0.8);
+    opacity: 0%;
+    transition: all 0.5s ease;
+}
+
+.instructor-social ul li {
+    list-style: none;
+    margin: 0 5px;
+}
+
+.instructor-social ul {
+    display: flex;
+    flex-direction: row;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.instructor-social i {
+    color: #fff;
+}
+
+.instructor-social:hover {
+    opacity: 100%;
+}
+
+.instructor-text {
+    font-family: 'Jost';
+    text-align: center;
+}
+
+.instructor-name {
+    font-size: 16px;
+    color: #2f2d51;
+    margin-bottom: 5px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.instructor-position {
+    font-size: 13px;
+    color: #77838f;
+    z-index: 10;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+@media (min-width: 768px) {
+    .instructor-container {
+        padding: 3rem 2rem 6rem 2rem;
+    }
+    .instructor-container .flickity-page-dots {
+        bottom: -50px;
+    }
+    .instructor-avatar img {
+        height: 150px;
+        width: 150px;
+    }
+    .instructor-text h3 {
+        font-size: 18px;
+    }
+    .instructor-text p {
+        font-size: 16px;
+    }
+    .instructor {
+        padding: 0 10px;
+        max-width: 175px;
+    }
+    .instructor-container .carousel-cell {
+        width: 25%;
+    }
+    .instructor-container .carousel {
+        margin-top: 3rem;
+    }
+    .instructor-header h2 {
+        font-size: 30px;
+    }
+    .instructor-social {
+        top: 0;
+        left: 11.5px;
+        width: 150px;
+        height: 150px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .instructor-container {
+        padding: 90px 2rem 9rem 2rem;
+    }
+    .instructor-container .flickity-page-dots {
+        bottom: -60px;
+    }
+    .instructor-container .carousel {
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .instructor-container .carousel-cell {
+        width: 25%;
+    }
+    .instructor {
+        max-width: auto;
+        margin: 0 auto;
+    }
+    .instructor-header h2 {
+        font-size: 35px;
+    }
+    .instructor-header p {
+        font-size: 18px;
+    }
+    .instructor-social {
+        left: 32px;
+    }
+}
+
+@media (min-width: 1260px) {
+    .instructor-container .carousel-cell {
+        width: 20%;
+        margin: 0 5px;
+    }
+    .instructor-social {
+        left: 57px;
+    }
+}

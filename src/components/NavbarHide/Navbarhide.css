@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jost&display=swap');
+
+nav {
+    background-color: #bda588;
+    height: 45px;
+    color: #fff;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    text-align: center;
+    display: none;
+}
+
+.active {
+    visibility: visible;
+    transition: all 0.5s;
+    z-index: 5;
+}
+
+.hidden {
+    visibility: hidden;
+    transition: all 0.5s;
+    transform: translateY(-100%);
+}
+
+.f-content {
+    display: flex;
+    flex-direction: row;
+    max-width: 1170px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 14px;
+    font-family: 'Jost', sans-serif;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 12px;
+}
+
+.f-content ul {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    align-items: center;
+}
+
+.f-contact li {
+    display: inline-block;
+    margin-right: 15px;
+}
+.f-social a i {
+    margin-right: 20px;
+    color: white;
+}
+
+@media (min-width: 1260px) {
+    nav {
+        display: block;
+    }
+}

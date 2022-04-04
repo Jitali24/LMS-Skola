@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jost&display=swap');
+
+.students-container .flickity-enabled.is-draggable .flickity-viewport {
+    cursor: text;
+}
+
+.students-container .flickity-prev-next-button {
+    display: none;
+}
+
+.students-container .flickity-page-dots {
+    bottom: -40px;
+}
+
+.students-container .flickity-page-dots .dot {
+    background: #77838f;
+    margin: 0 4px;
+}
+
+.students-container .flickity-page-dots .dot.is-selected {
+    width: 20px;
+    border-radius: 5px;
+    background-color: #2f2d51;
+}
+
+.students-container {
+    padding: 35px 0;
+    /* margin-bottom: 100px; */
+    /* temporary */
+}
+
+.students-container .carousel {
+    margin: 20px 10px 0 10px;
+}
+
+.students-title {
+    max-width: 80%;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+}
+
+.students-title h2 {
+    font-size: 26px;
+    font-family: 'Lora', serif;
+    font-weight: 700;
+    margin-bottom: 5px;
+    color: #2f2d51;
+    animation-duration: 0.4s;
+    animation-name: fadeInUp;
+}
+
+.students-title p {
+    font-size: 16px;
+    font-family: 'Jost', sans-serif;
+    color: #77838f;
+    animation-duration: 0.4s;
+    animation-name: fadeInUp;
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        -webkit-transform: translate3d(0, 50%, 0);
+        transform: translate3d(0, 50%, 0);
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: none;
+        transform: none;
+    }
+}
+
+@media (min-width: 425px) {
+    .students-title {
+        margin-bottom: 45px;
+    }
+}
+
+@media (min-width: 768px) {
+    .students-container {
+        padding: 60px 0;
+    }
+    .students-title {
+        margin-bottom: 3rem;
+    }
+    .testimonial {
+        margin: 0 0;
+    }
+    .students-title h2 {
+        font-size: 30px;
+    }
+    .testimonial-inner {
+        padding: 35px 28px;
+    }
+    .testimonial-inner h3 {
+        font-size: 18px;
+    }
+    .students-container .carousel-cell {
+        width: 50%;
+        margin: 0 10px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .students-container .carousel {
+        margin: 0 5rem;
+    }
+    .students-container .carousel-cell {
+        width: 31.9%;
+        margin-left: 15px;
+        margin-right: 5px;
+    }
+    .students-title h2 {
+        font-size: 35px;
+    }
+    .students-title p {
+        font-size: 18px;
+    }
+    .students-container .flickity-page-dots {
+        bottom: -70px;
+    }
+}

@@ -1,0 +1,183 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jost&display=swap');
+
+.carousels-container.flickity-enabled.is-draggable {
+    margin: 0;
+}
+
+.carousels-container .flickity-prev-next-button {
+    display: none;
+}
+
+.carousels-container .flickity-page-dots {
+    bottom: -40px;
+}
+
+.carousels-container .flickity-page-dots .dot {
+    background: #77838f;
+    margin: 0 4px;
+}
+
+.carousels-container .flickity-page-dots .dot.is-selected {
+    width: 20px;
+    border-radius: 5px;
+    background-color: #2f2d51;
+}
+
+.carousels-container .flickity-viewport {
+    margin-left: 0;
+}
+
+.carousels-container .flickity-enabled.is-draggable .flickity-viewport {
+    cursor: pointer;
+}
+
+.carousels {
+    padding: 0 14px;
+}
+
+.carousels-title {
+    margin-bottom: 25px;
+}
+
+.carousels-container {
+    padding-bottom: 60px;
+}
+
+.carousels-container h2 {
+    font-family: 'Lora', serif;
+    font-size: 26px;
+    color: #2f2d51;
+    margin-bottom: 5px;
+    animation-duration: 0.5s;
+    animation-name: fadeInUp;
+}
+
+.carousels-container p {
+    font-family: 'Jost', sans-serif;
+    font-size: 16px;
+    color: #77838f;
+    margin-bottom: 1rem;
+    animation-duration: 0.4s;
+    animation-name: fadeInUp;
+}
+
+.carousels-container select {
+    width: 100%;
+    height: 50px;
+    padding-left: 10px;
+    font-family: 'Jost', sans-serif;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    background-color: white;
+    color: #77838f;
+    color: #2f2d51;
+    box-shadow: 0 8px 15px rgb(140 152 164 / 10%);
+    animation-duration: 0.6s;
+    animation-name: fadeInUp;
+}
+
+.carousels-container select:hover {
+    cursor: pointer;
+}
+
+.carousels-container .carousel {
+    margin: 0;
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        -webkit-transform: translate3d(0, 50%, 0);
+        transform: translate3d(0, 50%, 0);
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: none;
+        transform: none;
+    }
+}
+
+@media (min-width: 320px) {
+    .carousels-container .carousel-cell {
+        width: 100%;
+    }
+}
+
+@media (min-width: 768px) {
+    .carousels {
+        padding: 0 40px;
+    }
+    .carousels-container .carousels {
+        margin-inline: 2em;
+        padding: 60px 0px;
+    }
+    .carousels-container h2 {
+        font-size: 30px;
+    }
+    .carousels-title {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .carousel-title {
+        width: 400px;
+    }
+    /* .carousels-title .right {
+        margin-left: 50px;
+    } */
+    .carousels-title .right select {
+        padding-right: 30px;
+    }
+    .carousels-container .carousel-cell {
+        width: 50%;
+    }
+    .carousels-container .flickity-page-dots {
+        bottom: -60px;
+    }
+}
+
+@media (min-width: 992px) {
+    .carousels {
+        padding: 90px 5rem;
+    }
+    .feature-container {
+        padding: 0 15px;
+    }
+    .carousels-title .right select {
+        width: 200px;
+        padding-right: 30px;
+    }
+    .carousels-title .carousel-title {
+        margin-inline-start: 6rem;
+    }
+    .carousels-title .right {
+        margin-inline-end: 6rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .carousels-title .carousel-title {
+        margin-inline-start: 0;
+    }
+    .carousels-title .right {
+        margin-inline-end: 0;
+    }
+    .carousels-container h2 {
+        font-size: 35px;
+    }
+    .carousels-title {
+        margin: 0 2rem;
+        margin-bottom: 25px;
+    }
+    .carousels-container .carousels {
+        margin-inline: 0;
+    }
+    .carousels-container .carousel-cell {
+        width: 33.25%;
+    }
+    .carousels-container .flickity-page-dots {
+        bottom: -70px;
+    }
+}

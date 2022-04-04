@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jost&display=swap');
+
+.scroll-btn {
+    display: none;
+}
+
+@keyframes scrollUpDown {
+    0% {
+        -webkit-transform: translateY(-5px);
+        transform: translateY(-5px);
+    }
+    100% {
+        -webkit-transform: translateY(5px);
+        transform: translateY(5px);
+    }
+}
+
+@media (min-width: 521px) {
+    .scroll-btn {
+        display: block;
+    }
+}

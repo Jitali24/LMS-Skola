@@ -1,0 +1,240 @@
+@import url("https://fonts.googleapis.com/css2?family=Lora:wght@600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Jost&display=swap");
+
+.footer-container {
+  background-color: #183f63;
+  color: white;
+  width: 100%;
+  margin-top: 2rem;
+  bottom: 0;
+  padding: 30px 14px;
+}
+
+.footer-col-main {
+  width: 100%;
+  font-family: "Jost", sans-serif;
+  font-size: 14px;
+  padding: 0px 7px;
+}
+
+.footer-col-main svg > path {
+  fill: #fff;
+}
+.footer-col-main a svg {
+  margin-bottom: 12px;
+  height: 61px;
+  width: 150px;
+  /* fill: #bda588; */
+  color: #bda588;
+  /* background-color: #bda588; */
+}
+.footer-col-main .info-link {
+  margin-top: 25px;
+}
+
+.footer-icons {
+  margin: 20px 0;
+}
+.footer-icons i {
+  color: #fff;
+}
+.footer-icons a {
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+  line-height: 33px;
+  text-align: center;
+  border-radius: 50%;
+  border: 1px solid transparent;
+  margin-right: 10px;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-content .list {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-col {
+  font-family: "Jost", sans-serif;
+  padding: 0 7px;
+}
+.footer-col a {
+  text-decoration: none;
+  color: #fff;
+  margin-top: 12px;
+  font-size: 14px;
+}
+
+.footer-col h2 {
+  margin-bottom: 20px;
+  font-size: 18px;
+}
+
+.footer-container hr {
+  opacity: 0.1;
+  width: 90%;
+  margin: 0 auto 30px auto;
+  border: 0.01px solid white;
+}
+
+.footer-content2 {
+  padding: 0px 7px;
+  display: flex;
+  flex-direction: column;
+  font-family: "Jost", sans-serif;
+  font-size: 14px;
+}
+.footer-content2 .copyright,
+.footer-content2 .footer-links {
+  text-align: center;
+  padding-bottom: 15px;
+}
+.footer-lang select {
+  width: 100%;
+  border-radius: 4px;
+  height: 40px;
+  line-height: 38px;
+  color: #fff;
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 15px rgb(140 152 164 / 10%);
+  border: 0;
+  padding: 0 20px 0 10px;
+}
+.footer-lang select option {
+  color: grey;
+  border: 0;
+  border-radius: 4px;
+}
+.footer-links {
+  margin-bottom: 10px;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.footer-links a {
+  text-decoration: none;
+  color: #fff;
+  margin-right: 16px;
+  padding: 5px 0px;
+}
+
+.footer-links span {
+  margin: 20px 0;
+}
+
+.list a:hover,
+.info-link:hover,
+.footer-links a:hover {
+  color: #b4af68;
+}
+.footer-icons a:hover {
+  background-color: #fff;
+  border-radius: 50%;
+  height: 30px;
+  width: 30px;
+}
+.footer-icons a:hover i {
+  color: #b4af68;
+}
+
+@media screen and (max-width: 767px) {
+  .footer-col-row {
+    display: flex;
+    flex-direction: row;
+  }
+  .footer-menu-btn {
+    margin-left: auto;
+    margin-top: 5px;
+  }
+  .footer-col .mobile-list {
+    margin-top: -20px;
+    margin-bottom: 20px;
+    flex-direction: column;
+  }
+  .footer-col .list {
+    display: none;
+  }
+  .footer-container hr {
+    width: 96%;
+    margin-top: 5px;
+  }
+}
+@media (min-width: 768px) {
+  .footer-col-main {
+    width: 43%;
+  }
+  .footer-col-main p {
+    margin-top: 25px;
+  }
+  .footer-content {
+    padding: 70px 0 40px 0;
+    margin-inline: 1.5rem;
+    flex-direction: row;
+  }
+  .footer-col {
+    width: 25%;
+  }
+  .mobile-list {
+    display: none;
+  }
+  .footer-col-row i {
+    display: none;
+  }
+  .footer-content2 {
+    padding: 0;
+    padding-top: 10px;
+    margin-bottom: -20px;
+    margin-inline: 2rem;
+    flex-direction: row;
+  }
+  .footer-content2 .copyright {
+    width: 30%;
+  }
+  .footer-links {
+    width: 50%;
+  }
+  .footer-lang select {
+    margin-top: -20px;
+  }
+}
+
+@media (min-width: 1000px) {
+  .footer-content2 .copyright {
+    width: 33%;
+  }
+}
+
+@media (min-width: 1440px) {
+  .footer-content {
+    padding: 80px 15px 40px 15px;
+    max-width: 1170px;
+    margin: auto;
+  }
+  .footer-content2 {
+    margin: 10px 120px -10px 120px;
+    padding: 5px 0;
+  }
+  .footer-links {
+    text-align: right;
+    margin: 0 7px;
+  }
+  .footer-container hr {
+    width: 81%;
+  }
+  .footer-lang {
+    position: relative;
+    bottom: 10px;
+  }
+  .footer-lang select {
+    padding: 0 60px 0 20px;
+  }
+  .footer-content2 .copyright {
+    position: relative;
+    left: -30px;
+  }
+}

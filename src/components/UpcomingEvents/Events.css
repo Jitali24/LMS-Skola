@@ -1,0 +1,328 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jost&display=swap');
+
+.events-container {
+    padding: 0 14px;
+    background-color: white;
+    padding-bottom: 2rem;
+}
+
+.events-head {
+    text-align: center;
+    padding: 0 7px;
+    margin-bottom: 25px;
+    padding-top: 50px;
+}
+
+.events-head h2 {
+    margin-bottom: 5px;
+    text-transform: capitalize;
+    font-size: 26px;
+    line-height: 1.05;
+    text-transform: capitalize;
+    margin-bottom: 5px;
+    font-family: 'Lora', serif;
+    font-weight: 700;
+    color: #2f2d51;
+    animation-duration: 0.5s;
+    animation-name: fadeInUp;
+}
+
+.events-head p {
+    font-family: 'Jost', sans-serif;
+    font-size: 16px;
+    color: #77838f;
+    animation-duration: 0.5s;
+    animation-name: fadeInUp;
+}
+
+.events-body {
+    padding-bottom: 2rem;
+}
+
+.events-blog {
+    padding-bottom: 2rem;
+}
+
+.events-card {
+    position: relative;
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid #e7e7ec;
+    background-color: #fff;
+    display: flex;
+    flex-direction: row;
+}
+
+.events-date {
+    background-color: #183f63;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 15px 40px;
+    border-radius: 4px;
+    height: 100px;
+    width: 100px;
+}
+
+.events-card:hover .events-date {
+    border-radius: 50%;
+}
+
+.events-date span {
+    color: #fff;
+    font-family: 'Jost', sans-serif;
+    font-size: 20px;
+}
+
+.events-date span b {
+    font-family: 'Jost', sans-serif;
+    font-size: 25px;
+    margin-bottom: 5px;
+}
+
+.events-location {
+    position: relative;
+    padding-left: 10px;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.events-location h3 {
+    font-size: 0px;
+}
+
+.events-location h3 a:hover {
+    color: #ffc78b;
+}
+.events-location h3 a {
+    text-decoration: none;
+    color: #2f2d51;
+    font-family: 'Jost', sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 1.3;
+}
+
+.events-location span {
+    color: #77838f;
+    position: relative;
+    top: 5;
+    font-family: 'Jost', sans-serif;
+    font-size: 16px;
+}
+
+.events-location span svg {
+    position: relative;
+    top: 4px;
+}
+
+.events-post {
+    height: 100%;
+    background-color: #fff;
+    border: 1px solid #e7e7ec;
+    border-radius: 4px;
+    overflow: hidden;
+    box-shadow: 0 8px 15px rgb(140 152 164 / 10%);
+    padding: 10px;
+    transition: all 0.5s;
+    display: flex;
+    flex-direction: column;
+}
+
+.events-post .card-head {
+    position: relative;
+    margin-bottom: 15px;
+}
+
+.events-post .card-head a img {
+    position: absolute;
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 4px;
+    object-fit: cover;
+    transition: all 0.3s ease-in-out;
+}
+
+.events-post .card-head .card-blog {
+    position: absolute;
+    left: 0;
+    bottom: 20px;
+    right: 0;
+    z-index: 1;
+    padding: 0 20px;
+}
+
+.events-post .card-head .card-blog a {
+    display: inline-block;
+    text-decoration: none;
+    height: 30px;
+    line-height: 30px;
+    font-size: 14px;
+    color: #fff;
+    border-radius: 15px;
+    background-color: #b8b2fd;
+    padding: 0 20px;
+}
+
+.events-post .card-head .card-blog a:hover {
+    background-color: #aaa3f9;
+}
+
+.events-post .card-body {
+    padding: 0 10px;
+}
+
+.events-post .card-body .meta {
+    display: flex;
+    flex-direction: row;
+    font-size: 14px;
+    font-family: 'Jost', sans-serif;
+    color: #77838f;
+    list-style: none;
+}
+
+.meta ul {
+    margin: 0;
+    padding: 0;
+    margin-bottom: 8px;
+    margin-top: 18px;
+}
+
+.events-post .card-body .meta ul li {
+    list-style: none;
+    display: inline-flex;
+    align-items: center;
+    font-size: 14px;
+    margin-right: 15px;
+    line-height: 1;
+}
+
+.meta svg {
+    margin-right: 10px;
+}
+
+.meta li {
+    margin-right: 15px;
+}
+
+.events-post .card-body .title a {
+    font-size: 16px;
+    font-family: 'Jost', sans-serif;
+    color: #77838f;
+    color: #2f2d51;
+    font-weight: 500;
+    margin: 0 0 10px;
+    text-decoration: none;
+}
+
+.events-post .card-body .title a:hover {
+    color: #ffc78b;
+}
+
+.events-blogs {
+    height: 100%;
+    /* padding-bottom: 30px; */
+    animation-duration: 1s;
+    animation-name: fadeInUp;
+}
+
+.card-head {
+    overflow: hidden;
+    position: relative;
+}
+
+.card-head > img {
+    position: absolute;
+    z-index: -1;
+    inset: 0;
+    border-radius: 4px;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+
+    transition: transform 200ms;
+}
+
+.card-head {
+    border-radius: 4px;
+}
+
+.card-head:hover > a > img {
+    transform: scale(1.1);
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        -webkit-transform: translate3d(0, 50%, 0);
+        transform: translate3d(0, 50%, 0);
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: none;
+        transform: none;
+    }
+}
+
+@media (min-width: 768px) {
+    .events-container {
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .events {
+        margin: 0 1rem;
+    }
+    .events-head h2 {
+        font-size: 30px;
+    }
+    .events-body {
+        padding: 0 10px;
+    }
+    .events-card {
+        margin-bottom: 1rem;
+    }
+    .events-blogs {
+        display: flex;
+        flex-direction: row;
+    }
+    .events-post {
+        margin: 0 10px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .events {
+        display: flex;
+        flex-direction: row;
+        margin: 0 5rem;
+    }
+    .events-head h2 {
+        font-size: 35px;
+    }
+    .events-head p {
+        font-size: 18px;
+    }
+    .events-card {
+        width: 340px;
+    }
+    .events-post .card-body .meta {
+        font-size: 14px;
+        margin-top: 8px;
+        margin-bottom: 8px;
+    }
+    .events-post .card-body .title a {
+        font-size: 18px;
+    }
+    .events-post {
+        height: 395px;
+    }
+    .events-container {
+        padding-left: 0;
+        padding-right: 0;
+    }
+}

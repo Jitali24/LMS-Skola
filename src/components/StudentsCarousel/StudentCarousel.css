@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jost&display=swap');
+
+.testimonial {
+    height: 100%;
+    margin: 0 5px;
+    box-shadow: 0 8px 15px rgb(140 152 164 / 10%);
+}
+
+.testimonial-inner {
+    height: 100%;
+    background-color: #fff;
+    border: 1px solid #e7e7ec;
+    border-radius: 4px;
+    padding: 30px 28px;
+    overflow: hidden;
+}
+
+.testimonial-inner img {
+    display: block;
+    width: 70px;
+    border-radius: 50%;
+    overflow: hidden;
+    background-color: #e7e7ec;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.testimonial-inner img:hover {
+    cursor: default;
+}
+
+.testimonial-inner h3 {
+    font-size: 16px;
+    font-family: 'Jost', sans-serif;
+    color: #2f2d51;
+}
+
+.testimonial-inner p {
+    font-size: 16px;
+    font-family: 'Jost', sans-serif;
+    color: #77838f;
+    animation-duration: 0.2s;
+    animation-name: fadeInUp;
+}
+
+.testimonial-head {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 25px;
+    animation-duration: 0.2s;
+    animation-name: fadeInUp;
+}
+
+.testimonial-title {
+    display: flex;
+    flex-direction: column;
+    width: calc(100% - 70px);
+    padding-left: 23px;
+    margin: auto 0;
+}
+
+.testimonial-quote {
+    line-height: 1.43;
+    margin: 0;
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        -webkit-transform: translate3d(0, 50%, 0);
+        transform: translate3d(0, 50%, 0);
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: none;
+        transform: none;
+    }
+}
