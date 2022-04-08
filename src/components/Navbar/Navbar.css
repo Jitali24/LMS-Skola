@@ -6,17 +6,11 @@
     width: 130px;
 }
 
-/* .navbar-outer {
-    width: 100%;
-    background-color: #fff;
-} */
-
 .navbar-container {
     display: flex;
     flex-direction: row;
-    padding: 20px 15px;
+    padding: 20px 30px;
     background: #fff;
-    /* border-bottom: 1px solid #e7e7ec; */
     margin-left: auto;
     margin-right: auto;
     height: 90px;
@@ -486,9 +480,9 @@ input {
     display: none;
 }
 
-/* .navbar-outer.active {
-    background-color: white;
-} */
+.header__course, .header__search{
+    display: none;
+}
 
 @media (min-width: 768px) {
     .popupCard__inner {
@@ -504,10 +498,6 @@ input {
 }
 
 @media (min-width: 1260px) {
-    /* .navbar-container {
-        max-width: 1170px;
-    } */
-
     .navbar-logo svg {
         height: 72px;
         width: 175px;
@@ -523,10 +513,6 @@ input {
         background: transparent;
     }
 
-    /* .navbar-outer.active {
-        background-color: transparent;
-    } */
-
     .navbar-container.active .nav a {
         color: white;
     }
@@ -540,6 +526,132 @@ input {
         width: 80%;
         margin-left: auto;
         margin-right: auto;
+    }
+
+    /* navbar courses btn */
+    .header__course {
+        display: flex;
+        align-items: center;
+        position: relative;
+        height: 75px;
+        margin: 0 20px;
+    }
+    
+    .header__course .f-icon {
+        display: inline-block;
+        height: 50px;
+        line-height: 50px;
+        border-radius: 4px;
+        font-weight: 500;
+        color: #fff;
+        white-space: nowrap;
+        background-color: #090761;
+        padding: 0 25px;
+    }
+
+    .header__course .f-icon:hover {
+        background-color: #ffc78b;
+    }
+
+    .header__course a {
+        text-decoration: none;
+        font-family: "Jost";
+    }
+
+    .header__course a svg {
+        vertical-align: middle;
+    }
+
+    .header__course .submenu-inner {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 260px;
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    .header__course:hover>.submenu-inner {
+        opacity: 1;
+        visibility: visible;
+        width: 320px;
+    }
+
+    .header__course .submenu {
+        border-radius: 4px;
+        background-color: #090761;
+        /* opacity: 0; */
+        /* transform: translateY(20px); */
+    }
+
+    .header__course ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    .header__course .submenu li {
+        position: relative;
+    }
+
+    .header__course .submenu a {
+        position: relative;
+        display: flex;
+        align-items: center;
+        font-weight: 500;
+        height: 50px;
+        line-height: 50px;
+        color: rgba(255,255,255,.6);
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        padding: 0 30px;
+        font-family: "Jost";
+    }
+
+    .header__course .submenu li:hover {
+        background-color: #090770;
+    }
+
+    .header__course .submenu a:hover {
+        color: #fff;
+    }
+    
+    .header__inner {
+        font-size: 16px;
+    }
+
+    /* navbar search btn */
+    .header__search {
+        display: block;
+        max-width: 230px;
+        width: 100%;
+    }
+
+    .header__search .f-form {
+        position: relative;
+    }
+    .header__search .f-form .form-control {
+        height: 50px;
+        line-height: 48px;
+        border: 1px solid #E7E7EC;
+        font-size: inherit;
+        border-radius: 4px;
+        color: #090761;
+        padding: 0 15px 0 40px;
+        margin: 0;
+    }
+    .d-none {
+        display: none!important;
+    }
+
+    .header__search .f-form .f-icon {
+        position: absolute;
+        top: 50%;
+        left: 15px;
+        line-height: 1;
+        transform: translateY(-50%);
+        font-size: 14px;
     }
 
     /* navbar menu */
@@ -591,7 +703,7 @@ input {
     .home-links {
         display: flex;
         flex-direction: row;
-        margin-left: -610px;
+        margin-left: -790px;
         padding-bottom: 10px;
         border-radius: 4px;
         display: none;
@@ -605,7 +717,7 @@ input {
         width: 37%;
     }
 
-    .home-links-row a {
+    .image-menu a:hover + .home-links a {
         margin: 0 32.5px;
         color: #2f2d51;
         text-transform: none;
@@ -635,12 +747,12 @@ input {
         display: flex;
         flex-direction: row;
         vertical-align: middle;
-        margin-left: -70px;
+        margin-left: -120px;
         padding: 30px 0;
         border-radius: 5px;
         font-family: 'Jost';
         display: none;
-        width: 720px;
+        width: 700px;
     }
 
     .courses-links div {
@@ -663,7 +775,7 @@ input {
         height: 40px;
     }
 
-    .courses-links a {
+    .courses-menu a:hover + .courses-links ul li a {
         font-weight: 300;
         color: #77838f;
         font-size: 16px;
@@ -700,11 +812,12 @@ input {
         height: 40px;
     }
 
-    .events-links .events-list a {
+    .events-menu a:hover + .events-links ul li a {
         text-transform: capitalize;
         font-family: 'Jost';
         font-size: 16px;
         font-weight: 300;
+        color: #77838f;
     }
 
     .events-menu a:hover + .events-links {
@@ -739,11 +852,12 @@ input {
         height: 40px;
     }
 
-    .pages-links .pages-list a {
+    .pages-menu a:hover + .pages-links ul li a {
         text-transform: capitalize;
         font-family: 'Jost';
         font-size: 16px;
         font-weight: 300;
+        color: #77838f;
     }
 
     .pages-menu a:hover + .pages-links {
@@ -798,11 +912,12 @@ input {
         height: 40px;
     }
 
-    .blog-links .blog-list a {
+    .blog-menu a:hover + .blog-links ul li a {
         text-transform: capitalize;
         font-family: 'Jost';
         font-size: 16px;
         font-weight: 300;
+        color: #77838f;
     }
 
     .blog-menu a:hover + .blog-links {
@@ -816,7 +931,7 @@ input {
 
     /* contact */
     .nav-contact {
-        margin-right: 30px;
+        margin-right: 15px;
     }
 
     .nav-contact a:hover {
