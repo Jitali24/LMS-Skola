@@ -1,405 +1,440 @@
-@import url('https://fonts.googleapis.com/css2?family=Lora:wght@600&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Jost&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Lora:wght@600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Jost&display=swap");
 
 .banner-container .carousel {
-    height: 60vh;
-    /* margin-top: 90px; */
+  height: 70vh;
+  /* margin-top: 90px; */
 }
 
 .banner-container .carousel-cell {
-    width: 100%;
-    height: 60vh;
-    margin: 0 0;
-    position: relative;
-    background-size: cover;
-    position: absolute;
-    top: 0;
-    left: 0;
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
+  width: 100%;
+  height: 70vh;
+  margin: 0 0;
+  position: relative;
+  background-size: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 #carousel-cell1 {
-    background-image: linear-gradient(
-            0deg,
-            rgba(23, 62, 98, 0.3),
-            rgba(23, 62, 98, 0.76)
-        ),
-        linear-gradient(252.15deg, rgba(23, 62, 98, 0.3) 14.62%, #173e62 70.59%),
-        url('https://demo.createdbycocoon.com/moodle/skola/1/theme/skola/images/skola/hero/hero-13/bg.jpg');
+  background-image: linear-gradient(
+      0deg,
+      rgba(23, 62, 98, 0.3),
+      rgba(23, 62, 98, 0.76)
+    ),
+    linear-gradient(252.15deg, rgba(23, 62, 98, 0.3) 14.62%, #173e62 70.59%),
+    url("https://demo.createdbycocoon.com/moodle/skola/1/theme/skola/images/skola/hero/hero-13/bg.jpg");
 }
 
 #carousel-cell2 {
-    background-image: linear-gradient(
-            0deg,
-            rgba(23, 62, 98, 0.3),
-            rgba(23, 62, 98, 0.76)
-        ),
-        linear-gradient(252.15deg, rgba(23, 62, 98, 0.3) 14.62%, #173e62 70.59%),
-        url('https://demo.createdbycocoon.com/moodle/skola/1/pluginfile.php/1/local_cocoon_essentials/cocoon/bg61b824ba72f5d.jpeg');
+  background-image: linear-gradient(
+      0deg,
+      rgba(23, 62, 98, 0.3),
+      rgba(23, 62, 98, 0.76)
+    ),
+    linear-gradient(252.15deg, rgba(23, 62, 98, 0.3) 14.62%, #173e62 70.59%),
+    url("https://demo.createdbycocoon.com/moodle/skola/1/pluginfile.php/1/local_cocoon_essentials/cocoon/bg61b824ba72f5d.jpeg");
 }
 
 #carousel-cell3 {
-    background-image: linear-gradient(
-            0deg,
-            rgba(23, 62, 98, 0.3),
-            rgba(23, 62, 98, 0.76)
-        ),
-        linear-gradient(252.15deg, rgba(23, 62, 98, 0.3) 14.62%, #173e62 70.59%),
-        url('https://demo.createdbycocoon.com/moodle/skola/1/pluginfile.php/1/local_cocoon_essentials/cocoon/bg-161b8245aa8e61.jpeg');
+  background-image: linear-gradient(
+      0deg,
+      rgba(23, 62, 98, 0.3),
+      rgba(23, 62, 98, 0.76)
+    ),
+    linear-gradient(252.15deg, rgba(23, 62, 98, 0.3) 14.62%, #173e62 70.59%),
+    url("https://demo.createdbycocoon.com/moodle/skola/1/pluginfile.php/1/local_cocoon_essentials/cocoon/bg-161b8245aa8e61.jpeg");
 }
 
 .banner-container .flickity-enabled.is-draggable .flickity-viewport {
-    cursor: default;
+  cursor: default;
 }
 
 .banner-container .flickity-prev-next-button {
-    width: 45px;
-    height: 45px;
-    background: transparent;
-    border: 1px solid white;
-    display: none;
+  width: 45px;
+  height: 45px;
+  background: transparent;
+  border: 1px solid white;
+  display: none;
 }
 
 .banner-container .flickity-prev-next-button:hover {
-    background: white;
+  background: white;
 }
 
 .banner-container .flickity-prev-next-button:hover svg {
-    color: #173e62;
+  color: #173e62;
 }
 
 .banner-container .flickity-prev-next-button.next {
-    right: 6%;
+  right: 6%;
 }
 
 .banner-container .flickity-prev-next-button.previous {
-    left: 90%;
-    top: 60%;
+  left: 90%;
+  top: 60%;
 }
 
 .banner-container .flickity-button {
-    color: white;
+  color: white;
 }
 
 .banner-container .flickity-page-dots {
-    bottom: 3%;
-    right: 10%;
+  bottom: 3%;
+  right: 10%;
 }
 
 .banner-container .flickity-page-dots .dot {
-    width: 6px;
-    height: 6px;
-    opacity: 1;
-    background: transparent;
-    border: 2px solid white;
-    background-color: white;
+  width: 6px;
+  height: 6px;
+  opacity: 1;
+  background: transparent;
+  border: 2px solid white;
+  background-color: white;
 }
 
 .banner-container .flickity-page-dots .dot.is-selected {
-    position: relative;
-    width: 26px;
-    height: 26px;
-    border-radius: 50%;
-    border: none;
-    bottom: 5%;
-    margin: 0 0;
-    vertical-align: middle;
-    background-color: rgba(255, 255, 255, 0.3);
+  position: relative;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  border: none;
+  bottom: 5%;
+  margin: 0 0;
+  vertical-align: middle;
+  background-color: rgba(255, 255, 255, 0.3);
 }
 
 .banner-container .flickity-page-dots .dot.dot.is-selected::after {
-    background-color: white;
-    content: '';
-    position: absolute;
-    z-index: 1;
-    top: 50%;
-    left: 50%;
-    width: 6px;
-    height: 6px;
-    border-radius: 50%;
-    overflow: hidden;
-    transform: translate(-50%, -50%);
+  background-color: white;
+  content: "";
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  left: 50%;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  overflow: hidden;
+  transform: translate(-50%, -50%);
 }
 
 .banner-text {
-    position: absolute;
-    top: 25%;
-    vertical-align: middle;
-    z-index: 10;
-    color: white;
-    padding: 0 14px;
+  position: absolute;
+  top: 25%;
+  vertical-align: middle;
+  z-index: 10;
+  color: white;
+  padding: 0 14px;
 
-    animation-delay: 1s;
-    animation-name: fadeUp 5000ms;
+  animation-delay: 1s;
+  animation-name: fadeUp 5000ms;
 }
 
 @keyframes fadeUp {
-    0% {
-        opacity: 0;
-        -webkit-transform: translate3d(50%, 0, 0);
-        transform: translate3d(50%, 0, 0);
-    }
-    100% {
-        opacity: 1;
-        -webkit-transform: none;
-        transform: none;
-    }
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(50%, 0, 0);
+    transform: translate3d(50%, 0, 0);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
 }
 
 .banner-title {
-    font-size: 30px;
-    font-family: 'Lora', serif;
-    margin-bottom: 8px;
+  font-size: 30px;
+  font-family: "Lora", serif;
+  margin-bottom: 8px;
 }
 
 .banner-text p {
-    font-size: 16px;
-    font-family: 'Jost', sans-serif;
-    margin-bottom: 25px;
-    text-transform: capitalize;
+  font-size: 16px;
+  font-family: "Jost", sans-serif;
+  margin-bottom: 25px;
+  text-transform: capitalize;
 }
 
 .banner-btn {
-    background-color: #bda588;
-    height: 50px;
-    line-height: 50px;
-    padding: 0 25px;
-    border-radius: 4px;
-    width: 130px;
-    text-align: center;
+  background-color: #bda588;
+  height: 50px;
+  line-height: 50px;
+  padding: 0 25px;
+  border-radius: 4px;
+  width: 130px;
+  text-align: center;
 }
 
 .banner-btn:hover {
-    background-color: #bf945f;
-    cursor: pointer;
+  background-color: #bf945f;
+  cursor: pointer;
 }
 
 .banner-btn a {
-    font-size: 14px;
-    font-family: 'Jost', sans-serif;
-    text-transform: uppercase;
-    text-decoration: none;
-    font-weight: 900;
-    color: white;
+  font-size: 14px;
+  font-family: "Jost", sans-serif;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: 900;
+  color: white;
 }
 
 .banner-counter {
-    display: flex;
-    flex-direction: row;
+  display: flex;
+  flex-direction: row;
 }
 
 .counter-text {
-    position: relative;
-    margin-top: -36px;
-    margin-top: -11.2%;
-    margin-left: 53%;
-    content-visibility: auto;
-    font-weight: 400;
-    font-size: 16px;
-    font-family: 'Jost', sans-serif;
-    color: white;
-    display: flex;
-    flex-direction: row;
+  position: relative;
+  margin-top: -36px;
+  margin-top: -12%;
+  margin-left: 53%;
+  content-visibility: auto;
+  font-weight: 700;
+  font-size: 16px;
+  font-family: "Jost", sans-serif;
+  color: white;
+  display: flex;
+  flex-direction: row;
 }
 
 .banner-counter::after {
-    content: counter(count);
-    animation: counter 9.3s linear infinite;
-    counter-reset: count 2;
+  content: counter(count);
+  animation: counter 9.3s linear infinite;
+  counter-reset: count 2;
 }
 
 @keyframes counter {
-    0% {
-        counter-increment: count 0;
-        content: '' counter(count) ' / 03';
-    }
-    60% {
-        counter-increment: count 1;
-        content: '' counter(count) ' / 03';
-    }
-    70% {
-        counter-increment: count 2;
-        content: '' counter(count) ' / 03';
-    }
-    100% {
-        counter-increment: count 2;
-        content: '' counter(count) ' / 03';
-    }
+  0% {
+    counter-increment: count 0;
+    content: "" counter(count) " / 03";
+  }
+  60% {
+    counter-increment: count 1;
+    content: "" counter(count) " / 03";
+  }
+  70% {
+    counter-increment: count 2;
+    content: "" counter(count) " / 03";
+  }
+  100% {
+    counter-increment: count 2;
+    content: "" counter(count) " / 03";
+  }
 }
 
 @media (min-width: 375px) {
-    .banner-container .carousel {
-        height: 73vh;
-    }
-    .banner-container .carousel-cell {
-        height: 73vh;
-    }
-    .banner-text {
-        top: 32%;
-    }
-    .counter-text {
-        margin-top: -10%;
-    }
+  .banner-container .carousel {
+    height: 80vh;
+  }
+  .banner-container .carousel-cell {
+    height: 80vh;
+  }
+  .banner-text {
+    top: 32%;
+  }
+  .counter-text {
+    margin-top: -10.5%;
+  }
 }
 
 @media (min-width: 425px) {
-    .banner-container .carousel {
-        height: 82vh;
-    }
-    .banner-container .carousel-cell {
-        height: 82vh;
-    }
-    .banner-text {
-        top: 34%;
-    }
-    .counter-text {
-        margin-top: -9%;
-        margin-left: 51%;
-    }
+  .banner-container .carousel {
+    height: 90vh;
+  }
+  .banner-container .carousel-cell {
+    height: 90vh;
+  }
+  .banner-text {
+    top: 34%;
+  }
+  .counter-text {
+    margin-top: -10%;
+    margin-left: 51%;
+  }
 }
 
 @media (min-width: 768px) {
-    .banner-container .flickity-page-dots {
-        bottom: 38%;
-        bottom: 45%;
-        bottom: 34%;
-        left: 3%;
-        transform: translateX(-50%) rotate(-90deg);
-    }
-    .counter-text {
-        margin-left: 3%;
-        margin-top: -84%;
-        margin-bottom: 68%;
-        transform: translateX(-50%) rotate(-90deg);
-    }
-    .banner-container .carousel {
-        height: 110vh;
-        height: 92vh;
-    }
-    .banner-container .carousel-cell {
-        height: 110vh;
-        height: 92vh;
-    }
-    .banner-text {
-        top: 33%;
-        padding: 0 0;
-        margin-left: 13.5%;
-        max-width: 540px;
-    }
-    .banner-text p {
-        max-width: 450px;
-    }
-    .banner-title {
-        font-size: 40px;
-    }
-    .banner-container .flickity-prev-next-button {
-        display: block;
-    }
-    .banner-container .flickity-prev-next-button.next {
-        margin-top: 0px;
-        right: 40px;
-    }
-    .banner-container .flickity-prev-next-button.previous {
-        left: 88.8%;
-        top: 64%;
-    }
-    .banner-container .flickity-page-dots .dot {
-        margin: 0 13px;
-    }
+  .banner-container .flickity-page-dots {
+    bottom: 38%;
+    left: 3%;
+    transform: translateX(-50%) rotate(-90deg);
+  }
+  .counter-text {
+    margin-left: 3%;
+    margin-top: -90%;
+    margin-bottom: 70.5%;
+    transform: translateX(-50%) rotate(-90deg);
+  }
+  .banner-container .carousel {
+    height: 92vh;
+  }
+  .banner-container .carousel-cell {
+    height: 92vh;
+  }
+  .banner-text {
+    top: 33%;
+    padding: 0 0;
+    margin-left: 13.5%;
+    max-width: 540px;
+  }
+  .banner-text p {
+    max-width: 450px;
+  }
+  .banner-title {
+    font-size: 40px;
+  }
+  .banner-container .flickity-prev-next-button {
+    display: block;
+  }
+  .banner-container .flickity-prev-next-button.next {
+    margin-top: -10px;
+    right: 35px;
+  }
+  .banner-container .flickity-prev-next-button.previous {
+    left: 89.5%;
+    top: 60%;
+  }
+  .banner-container .flickity-page-dots .dot {
+    margin: 0 13px;
+  }
 }
 
 @media (min-width: 1024px) {
-    .banner-container .carousel {
-        height: 110vh;
-        height: 150vh;
-        /* margin-top: 90px; */
-    }
-    .banner-container .carousel-cell {
-        height: 110vh;
-        height: 120vh;
-    }
-    .banner-container .flickity-prev-next-button.next {
-        margin-top: -15%;
-        right: 5%;
-    }
-    .banner-container .flickity-prev-next-button.previous {
-        left: 90.7%;
-        top: 42%;
-    }
-    .banner-container .flickity-page-dots {
-        bottom: 37%;
-        bottom: 54%;
-    }
-    .counter-text {
-        margin-top: -105%;
-        margin-bottom: 57%;
-    }
-    .banner-text {
-        max-width: 700px;
-        top: 36.5%;
-    }
-    .banner-btn {
-        width: 156px;
-        height: 60px;
-        line-height: 60px;
-    }
-    .banner-btn a {
-        font-size: 16px;
-    }
+  .banner-container .carousel {
+    height: 80vh;
+    /* margin-top: 90px; */
+  }
+  .banner-container .carousel-cell {
+    height: 80vh;
+  }
+  .banner-container .flickity-prev-next-button.next {
+    margin-top: -4%;
+    right: 4.2%;
+  }
+  .banner-container .flickity-prev-next-button.previous {
+    left: 91.5%;
+    top: 55%;
+  }
+  .banner-container .flickity-page-dots {
+    bottom: 42%;
+  }
+  .counter-text {
+    margin-top: -86%;
+    margin-bottom: 55.5%;
+    font-size: 20px;
+  }
+  .banner-text {
+    max-width: 700px;
+    top: 36.5%;
+  }
+  .banner-btn {
+    width: 156px;
+    height: 60px;
+    line-height: 60px;
+  }
+  .banner-btn a {
+    font-size: 16px;
+  }
 }
 
 @media (min-width: 1025px) {
-    .banner-text {
-        max-width: 570px;
-        top: 33%;
-        margin-left: 16%;
-    }
-    .banner-title {
-        top: 36.5%;
-        left: 3%;
-        font-size: 55px;
-    }
-    .banner-text p {
-        font-size: 18px;
-    }
-    .banner-btn {
-        width: 195px;
-    }
-    .banner-container .carousel {
-        height: 110vh;
-        height: 115vh;
-        margin-top: 0;
-    }
-    .banner-container .carousel-cell {
-        height: 110vh;
-        height: 115vh;
-    }
-    .banner-container .flickity-prev-next-button.next {
-        right: 8.9%;
-        margin-top: -1%;
-    }
-    .banner-container .flickity-prev-next-button.previous {
-        left: 87.8%;
-        top: 58%;
-    }
-    .banner-container .flickity-page-dots {
-        bottom: 38%;
-    }
-    .counter-text {
-        margin-top: -76%;
-        font-size: 20px;
-        margin-bottom: 56.75%;
-    }
+  .banner-text {
+    top: 30%;
+    margin-left: 16%;
+  }
+  .banner-btn {
+    width: 195px;
+  }
+  .banner-container .carousel {
+    height: 115vh;
+    margin-top: 0;
+  }
+  .banner-container .carousel-cell {
+    height: 115vh;
+  }
+  .banner-container .flickity-prev-next-button.next {
+    right: 4%;
+    margin-top: -12.5%;
+  }
+  .banner-container .flickity-prev-next-button.previous {
+    left: 91.5%;
+    top: 45%;
+  }
+  .banner-container .flickity-page-dots {
+    bottom: 50%;
+  }
+  .counter-text {
+    margin-top: -100%;
+    font-size: 20px;
+    margin-bottom: 66%;
+  }
+}
+
+@media (min-width: 1260px) {
+  .banner-text {
+    max-width: 570px;
+  }
+  .banner-title {
+    top: 36.5%;
+    left: 3%;
+    font-size: 55px;
+  }
+  .banner-text p {
+    font-size: 18px;
+  }
+  .banner-container .carousel {
+    height: 75vh;
+  }
+  .banner-container .carousel-cell {
+    height: 75vh;
+  }
+  .banner-container .flickity-prev-next-button.next {
+    right: 3.5%;
+    margin-top: -5.5%;
+  }
+  .banner-container .flickity-prev-next-button.previous {
+    left: 93%;
+    top: 52%;
+  }
+  .banner-container .flickity-page-dots {
+    bottom: 40%;
+  }
+  .counter-text {
+    margin-top: -78%;
+    margin-bottom: 45%;
+  }
 }
 
 @media (min-width: 1440px) {
-    .counter-text {
-        margin-top: -72%;
-        margin-bottom: 49%;
-    }
-    .banner-container .flickity-prev-next-button.previous {
-        left: 88.1%;
-    }
+  .banner-container .carousel {
+    height: 95vh;
+  }
+  .banner-container .carousel-cell {
+    height: 95vh;
+  }
+  .counter-text {
+    margin-top: -74%;
+    margin-bottom: 37%;
+  }
+  .banner-text {
+    top: 25%;
+  }
+  .banner-container .flickity-prev-next-button.next {
+    right: 10%;
+    margin-top: -3.5%;
+  }
+  .banner-container .flickity-prev-next-button.previous {
+    left: 87%;
+    top: 52%;
+  }
+  .banner-container .flickity-page-dots {
+    bottom: 41%;
+  }
 }
