@@ -1,12 +1,16 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import { useLocation } from "react-router-dom";
 import "./Navbar.css";
 
 function Navbar() {
   const [navbar, setNavbar] = useState(false);
+  const [flag, setFlag] = useState(false);
   const [clickUser, setUserClick] = useState(false);
   const [clickUserClose, setUserCloseClick] = useState(true);
   const [clickSearch, setSearchClick] = useState(false);
   const [clickMenuMb, setMenuMbClick] = useState(false);
+
+  const { pathname } = useLocation();
 
   const handleUserClick = () => {
     setUserClick(true);
@@ -30,10 +34,31 @@ function Navbar() {
     }
   };
 
+  useEffect(() => {
+    if (navbar) {
+      if (pathname !== "/blog" || pathname !== "/courses") {
+        setFlag(true);
+      } else {
+        setFlag(false);
+      }
+    } else {
+      if (pathname !== "/blog" || pathname !== "/courses") {
+        setFlag(true);
+      }
+        if (pathname === "/"){
+        setFlag(false);
+      }
+    }
+    // else {
+    //   setFlag(false);
+    // }
+  }, [navbar, pathname]);
+
   window.addEventListener("scroll", changeBackground);
+
   return (
-    <div className={navbar ? "navbar-container" : "navbar-container active"}>
-      <div class="navbar-logo">
+    <div className={flag ? "navbar-container" : "navbar-container active"}>
+      <div className="navbar-logo">
         <a href="https://demo.createdbycocoon.com/moodle/skola/1">
           <svg
             width="177"
@@ -67,118 +92,125 @@ function Navbar() {
           </svg>
         </a>
       </div>
-      <div class="header__course">
-        <a href="#" class="f-icon">
-          <svg
-            class="mr-2"
-            xmlns="http://www.w3.org/2000/svg"
-            width="25"
-            height="17"
-            viewBox="0 0 25 17"
-            fill="none"
-          >
-            <rect width="25" height="1" fill="white"></rect>
-            <rect y="8" width="15" height="1" fill="white"></rect>
-            <rect y="16" width="20" height="1" fill="white"></rect>
-          </svg>
-          &nbsp; Courses
-        </a>
-        <div class="submenu-inner">
-          <ul class="submenu">
-            <li>
-              <a href="https://demo.createdbycocoon.com/moodle/skola/1/course/index.php?categoryid=3">
-                Design
-              </a>
-            </li>
-            <li>
-              <a href="https://demo.createdbycocoon.com/moodle/skola/1/course/index.php?categoryid=4">
-                Business
-              </a>
-            </li>
-            <li>
-              <a href="https://demo.createdbycocoon.com/moodle/skola/1/course/index.php?categoryid=5">
-                Software Development
-              </a>
-            </li>
-            <li>
-              <a href="https://demo.createdbycocoon.com/moodle/skola/1/course/index.php?categoryid=6">
-                Personal Development
-              </a>
-            </li>
-            <li>
-              <a href="https://demo.createdbycocoon.com/moodle/skola/1/course/index.php?categoryid=7">
-                Photography
-              </a>
-            </li>
-            <li>
-              <a href="https://demo.createdbycocoon.com/moodle/skola/1/course/index.php?categoryid=8">
-                Audio + Music
-              </a>
-            </li>
-            <li>
-              <a href="https://demo.createdbycocoon.com/moodle/skola/1/course/index.php?categoryid=9">
-                Marketing
-              </a>
-            </li>
-            <li>
-              <a href="https://demo.createdbycocoon.com/moodle/skola/1/course/index.php?categoryid=10">
-                Finance + Accounting
-              </a>
-            </li>
-          </ul>
-        </div>
-      </div>
-      <div class="header__search">
-        <form
-          class="f-form"
-          action="https://demo.createdbycocoon.com/moodle/skola/1/search/index.php"
-        >
-          <span class="f-close d-none">
-            <i class="fas fa-times"></i>
-          </span>
-          <input
-            id="searchform_search"
-            name="q"
-            class="form-control"
-            placeholder="What do you want to learn?"
-            type="text"
-            size="15"
-          />
-          <input type="hidden" name="context" value="146" />
-          <span class="f-icon">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="20"
-              height="20"
-              viewBox="0 0 20 20"
-              fill="none"
+      {pathname === "/blog" || pathname === "/courses" ? (
+        <>
+          <div className="header__course">
+            <a href="#" className="f-icon">
+              <svg
+                className="mr-2"
+                xmlns="http://www.w3.org/2000/svg"
+                width="25"
+                height="17"
+                viewBox="0 0 25 17"
+                fill="none"
+              >
+                <rect width="25" height="1" fill="white"></rect>
+                <rect y="8" width="15" height="1" fill="white"></rect>
+                <rect y="16" width="20" height="1" fill="white"></rect>
+              </svg>
+              &nbsp; Courses
+            </a>
+            <div className="submenu-inner">
+              <ul className="submenu">
+                <li>
+                  <a href="https://demo.createdbycocoon.com/moodle/skola/1/course/index.php?categoryid=3">
+                    Design
+                  </a>
+                </li>
+                <li>
+                  <a href="https://demo.createdbycocoon.com/moodle/skola/1/course/index.php?categoryid=4">
+                    Business
+                  </a>
+                </li>
+                <li>
+                  <a href="https://demo.createdbycocoon.com/moodle/skola/1/course/index.php?categoryid=5">
+                    Software Development
+                  </a>
+                </li>
+                <li>
+                  <a href="https://demo.createdbycocoon.com/moodle/skola/1/course/index.php?categoryid=6">
+                    Personal Development
+                  </a>
+                </li>
+                <li>
+                  <a href="https://demo.createdbycocoon.com/moodle/skola/1/course/index.php?categoryid=7">
+                    Photography
+                  </a>
+                </li>
+                <li>
+                  <a href="https://demo.createdbycocoon.com/moodle/skola/1/course/index.php?categoryid=8">
+                    Audio + Music
+                  </a>
+                </li>
+                <li>
+                  <a href="https://demo.createdbycocoon.com/moodle/skola/1/course/index.php?categoryid=9">
+                    Marketing
+                  </a>
+                </li>
+                <li>
+                  <a href="https://demo.createdbycocoon.com/moodle/skola/1/course/index.php?categoryid=10">
+                    Finance + Accounting
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div className="header__search">
+            <form
+              className="f-form"
+              action="https://demo.createdbycocoon.com/moodle/skola/1/search/index.php"
             >
-              <g>
-                <path
-                  d="M8.80758 0C3.95121 0 0 3.95121 0 8.80758C0 13.6642 3.95121 17.6152 8.80758 17.6152C13.6642 17.6152 17.6152 13.6642 17.6152 8.80758C17.6152 3.95121 13.6642 0 8.80758 0ZM8.80758 15.9892C4.8477 15.9892 1.62602 12.7675 1.62602 8.80762C1.62602 4.84773 4.8477 1.62602 8.80758 1.62602C12.7675 1.62602 15.9891 4.8477 15.9891 8.80758C15.9891 12.7675 12.7675 15.9892 8.80758 15.9892Z"
-                  fill="#949DA6"
-                ></path>
-                <path
-                  d="M19.762 18.6124L15.1007 13.9511C14.7831 13.6335 14.2687 13.6335 13.9511 13.9511C13.6335 14.2684 13.6335 14.7834 13.9511 15.1007L18.6124 19.762C18.7712 19.9208 18.9791 20.0002 19.1872 20.0002C19.395 20.0002 19.6032 19.9208 19.762 19.762C20.0796 19.4446 20.0796 18.9297 19.762 18.6124Z"
-                  fill="#949DA6"
-                ></path>
-              </g>
-            </svg>
-          </span>
-        </form>
-      </div>
+              <span className="f-close d-none">
+                <i className="fas fa-times"></i>
+              </span>
+              <input
+                id="searchform_search"
+                name="q"
+                className="form-control"
+                placeholder="What do you want to learn?"
+                type="text"
+                size="15"
+              />
+              <input type="hidden" name="context" value="146" />
+              <span className="f-icon">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 20 20"
+                  fill="none"
+                >
+                  <g>
+                    <path
+                      d="M8.80758 0C3.95121 0 0 3.95121 0 8.80758C0 13.6642 3.95121 17.6152 8.80758 17.6152C13.6642 17.6152 17.6152 13.6642 17.6152 8.80758C17.6152 3.95121 13.6642 0 8.80758 0ZM8.80758 15.9892C4.8477 15.9892 1.62602 12.7675 1.62602 8.80762C1.62602 4.84773 4.8477 1.62602 8.80758 1.62602C12.7675 1.62602 15.9891 4.8477 15.9891 8.80758C15.9891 12.7675 12.7675 15.9892 8.80758 15.9892Z"
+                      fill="#949DA6"
+                    ></path>
+                    <path
+                      d="M19.762 18.6124L15.1007 13.9511C14.7831 13.6335 14.2687 13.6335 13.9511 13.9511C13.6335 14.2684 13.6335 14.7834 13.9511 15.1007L18.6124 19.762C18.7712 19.9208 18.9791 20.0002 19.1872 20.0002C19.395 20.0002 19.6032 19.9208 19.762 19.762C20.0796 19.4446 20.0796 18.9297 19.762 18.6124Z"
+                      fill="#949DA6"
+                    ></path>
+                  </g>
+                </svg>
+              </span>
+            </form>
+          </div>
+        </>
+      ) : (
+        <></>
+      )}
+
       <div className="navbar-icons">
-        <div class="nav">
-          <ul class="menu-list">
-            <li class="image-menu">
-              <a class="nav-link" href="/">
-                Home <i class="fa-solid fa-angle-down"></i>
+        <div className="nav">
+          <ul className="menu-list">
+            <li className="image-menu">
+              <a className="nav-link" href="/">
+                Home <i className="fa-solid fa-angle-down"></i>
               </a>
               <div className="home-links">
                 <div className="home-links-row">
                   <a
                     href="https://demo.createdbycocoon.com/moodle/skola/1"
-                    class="demo-card-caption"
+                    className="demo-card-caption"
                   >
                     <img
                       src="https://demo.createdbycocoon.com/moodle/skola/1/theme/skola/images/home_screens/01_home.jpg"
@@ -188,7 +220,7 @@ function Navbar() {
                   </a>
                   <a
                     href="https://demo.createdbycocoon.com/moodle/skola/1/mod/page/view.php?id=110&amp;ccn_style=2"
-                    class="demo-card-caption"
+                    className="demo-card-caption"
                   >
                     <img
                       src="https://demo.createdbycocoon.com/moodle/skola/1/theme/skola/images/home_screens/02_home.jpg"
@@ -198,7 +230,7 @@ function Navbar() {
                   </a>
                   <a
                     href="https://demo.createdbycocoon.com/moodle/skola/1/mod/page/view.php?id=111&amp;ccn_style=33"
-                    class="demo-card-caption"
+                    className="demo-card-caption"
                   >
                     <img
                       src="https://demo.createdbycocoon.com/moodle/skola/1/theme/skola/images/home_screens/03_home.jpg"
@@ -208,7 +240,7 @@ function Navbar() {
                   </a>
                   <a
                     href="https://demo.createdbycocoon.com/moodle/skola/1/mod/page/view.php?id=112&amp;ccn_style=4"
-                    class="demo-card-caption"
+                    className="demo-card-caption"
                   >
                     <img
                       src="https://demo.createdbycocoon.com/moodle/skola/1/theme/skola/images/home_screens/04_home.jpg"
@@ -218,7 +250,7 @@ function Navbar() {
                   </a>
                   <a
                     href="https://demo.createdbycocoon.com/moodle/skola/1/mod/page/view.php?id=113&amp;ccn_style=5"
-                    class="demo-card-caption"
+                    className="demo-card-caption"
                   >
                     <img
                       src="https://demo.createdbycocoon.com/moodle/skola/1/theme/skola/images/home_screens/05_home.jpg"
@@ -228,7 +260,7 @@ function Navbar() {
                   </a>
                   <a
                     href="https://demo.createdbycocoon.com/moodle/skola/1/mod/page/view.php?id=114&amp;ccn_style=6"
-                    class="demo-card-caption"
+                    className="demo-card-caption"
                   >
                     <img
                       src="https://demo.createdbycocoon.com/moodle/skola/1/theme/skola/images/home_screens/06_home.jpg"
@@ -240,7 +272,7 @@ function Navbar() {
                 <div className="home-links-row">
                   <a
                     href="https://demo.createdbycocoon.com/moodle/skola/1/mod/page/view.php?id=115&amp;ccn_style=7"
-                    class="demo-card-caption"
+                    className="demo-card-caption"
                   >
                     <img
                       src="https://demo.createdbycocoon.com/moodle/skola/1/theme/skola/images/home_screens/07_home.jpg"
@@ -250,7 +282,7 @@ function Navbar() {
                   </a>
                   <a
                     href="https://demo.createdbycocoon.com/moodle/skola/1/mod/page/view.php?id=116&amp;ccn_style=8"
-                    class="demo-card-caption"
+                    className="demo-card-caption"
                   >
                     <img
                       src="https://demo.createdbycocoon.com/moodle/skola/1/theme/skola/images/home_screens/08_home.jpg"
@@ -260,7 +292,7 @@ function Navbar() {
                   </a>
                   <a
                     href="https://demo.createdbycocoon.com/moodle/skola/1/mod/page/view.php?id=117&amp;ccn_style=9"
-                    class="demo-card-caption"
+                    className="demo-card-caption"
                   >
                     <img
                       src="https://demo.createdbycocoon.com/moodle/skola/1/theme/skola/images/home_screens/09_home.jpg"
@@ -270,7 +302,7 @@ function Navbar() {
                   </a>
                   <a
                     href="https://demo.createdbycocoon.com/moodle/skola/1/mod/page/view.php?id=118&amp;ccn_style=10"
-                    class="demo-card-caption"
+                    className="demo-card-caption"
                   >
                     <img
                       src="https://demo.createdbycocoon.com/moodle/skola/1/theme/skola/images/home_screens/10_home.jpg"
@@ -280,7 +312,7 @@ function Navbar() {
                   </a>
                   <a
                     href="https://demo.createdbycocoon.com/moodle/skola/1/mod/page/view.php?id=119&amp;ccn_style=11"
-                    class="demo-card-caption"
+                    className="demo-card-caption"
                   >
                     <img
                       src="https://demo.createdbycocoon.com/moodle/skola/1/theme/skola/images/home_screens/11_home.jpg"
@@ -290,7 +322,7 @@ function Navbar() {
                   </a>
                   <a
                     href="https://demo.createdbycocoon.com/moodle/skola/1/mod/page/view.php?id=120&amp;ccn_style=12"
-                    class="demo-card-caption"
+                    className="demo-card-caption"
                   >
                     <img
                       src="https://demo.createdbycocoon.com/moodle/skola/1/theme/skola/images/home_screens/12_home.jpg"
@@ -302,7 +334,7 @@ function Navbar() {
                 <div className="home-links-row">
                   <a
                     href="https://demo.createdbycocoon.com/moodle/skola/1/mod/page/view.php?id=121&amp;ccn_style=13"
-                    class="demo-card-caption"
+                    className="demo-card-caption"
                   >
                     <img
                       src="https://demo.createdbycocoon.com/moodle/skola/1/theme/skola/images/home_screens/13_home.jpg"
@@ -312,7 +344,7 @@ function Navbar() {
                   </a>
                   <a
                     href="https://demo.createdbycocoon.com/moodle/skola/1/mod/page/view.php?id=122&amp;ccn_style=14"
-                    class="demo-card-caption"
+                    className="demo-card-caption"
                   >
                     <img
                       src="https://demo.createdbycocoon.com/moodle/skola/1/theme/skola/images/home_screens/14_home.jpg"
@@ -322,7 +354,7 @@ function Navbar() {
                   </a>
                   <a
                     href="https://demo.createdbycocoon.com/moodle/skola/1/mod/page/view.php?id=123&amp;ccn_style=15"
-                    class="demo-card-caption"
+                    className="demo-card-caption"
                   >
                     <img
                       src="https://demo.createdbycocoon.com/moodle/skola/1/theme/skola/images/home_screens/15_home.jpg"
@@ -333,9 +365,9 @@ function Navbar() {
                 </div>
               </div>
             </li>
-            <li class="courses-menu">
-              <a class="" href="/">
-                Courses <i class="fa-solid fa-angle-down"></i>
+            <li className="courses-menu">
+              <a className="" href="/">
+                Courses <i className="fa-solid fa-angle-down"></i>
               </a>
               <div className="courses-links">
                 <div className="courses-list">
@@ -425,7 +457,7 @@ function Navbar() {
                   </ul>
                 </div>
                 <div className="other-courses">
-                  <h3 class="item__title"> Other Course Pages</h3>
+                  <h3 className="item__title"> Other Course Pages</h3>
                   <ul>
                     <li>
                       <a href="https://demo.createdbycocoon.com/moodle/skola/1/course/view.php?id=4">
@@ -457,46 +489,46 @@ function Navbar() {
               </div>
             </li>
             <li className="events-menu">
-              <a class="" href="/">
-                Events <i class="fa-solid fa-angle-down"></i>
+              <a className="" href="/">
+                Events <i className="fa-solid fa-angle-down"></i>
               </a>
               <div className="events-links">
-                <ul class="events-list">
-                  <li class="">
+                <ul className="events-list">
+                  <li className="">
                     <a
-                      class="ccn-menu-item"
+                      className="ccn-menu-item"
                       href="https://demo.createdbycocoon.com/moodle/skola/1/local/cocoon_events"
                     >
                       Event List
                     </a>
                   </li>
-                  <li class="">
+                  <li className="">
                     <a
-                      class="ccn-menu-item"
+                      className="ccn-menu-item"
                       href="https://demo.createdbycocoon.com/moodle/skola/1/local/cocoon_events/view.php?id=1"
                     >
                       Event Single
                     </a>
                   </li>
-                  <li class="">
+                  <li className="">
                     <a
-                      class="ccn-menu-item"
+                      className="ccn-menu-item"
                       href="https://demo.createdbycocoon.com/moodle/skola/1/calendar/view.php"
                     >
                       Calendar Default
                     </a>
                   </li>
-                  <li class="">
+                  <li className="">
                     <a
-                      class="ccn-menu-item"
+                      className="ccn-menu-item"
                       href="https://demo.createdbycocoon.com/moodle/skola/1/calendar/view.php?view=month&amp;time=1575158400"
                     >
                       Calendar Month
                     </a>
                   </li>
-                  <li class="">
+                  <li className="">
                     <a
-                      class="ccn-menu-item"
+                      className="ccn-menu-item"
                       href="https://demo.createdbycocoon.com/moodle/skola/1/calendar/view.php?view=day&amp;time=1577491200"
                     >
                       Calendar Day
@@ -505,12 +537,12 @@ function Navbar() {
                 </ul>
               </div>
             </li>
-            <li class="pages-menu">
+            <li className="pages-menu">
               <a href="/">
-                Pages <i class="fa-solid fa-angle-down"></i>
+                Pages <i className="fa-solid fa-angle-down"></i>
               </a>
-              <div class="pages-links">
-                <ul class="pages-list">
+              <div className="pages-links">
+                <ul className="pages-list">
                   <li>
                     <a href="https://demo.createdbycocoon.com/moodle/skola/1/mod/page/view.php?id=124">
                       About Us
@@ -537,12 +569,12 @@ function Navbar() {
                     </a>
                   </li>
                   <li className="pages-user-options">
-                    <a class="" href="/" id="pages-user">
+                    <a className="" href="/" id="pages-user">
                       User
-                      <i class="fas fa-chevron-right"></i>
+                      <i className="fas fa-chevron-right"></i>
                     </a>
-                    <div class="pages-user-links">
-                      <ul class="pages-user-list">
+                    <div className="pages-user-links">
+                      <ul className="pages-user-list">
                         <li>
                           <a href="https://demo.createdbycocoon.com/moodle/skola/1/login/index.php">
                             Login
@@ -576,10 +608,10 @@ function Navbar() {
             </li>
             <li className="blog-menu">
               <a href="/">
-                Blog <i class="fa-solid fa-angle-down"></i>
+                Blog <i className="fa-solid fa-angle-down"></i>
               </a>
-              <div class="blog-links">
-                <ul class="blog-list">
+              <div className="blog-links">
+                <ul className="blog-list">
                   <li>
                     <a href="https://demo.createdbycocoon.com/moodle/skola/1/blog/index.php?ccn_blog_style=1">
                       Blog List
@@ -608,9 +640,9 @@ function Navbar() {
                 </ul>
               </div>
             </li>
-            <li class="nav-contact">
+            <li className="nav-contact">
               <a
-                class="ccn-menu-item"
+                className="ccn-menu-item"
                 href="https://demo.createdbycocoon.com/moodle/skola/1/mod/page/view.php?id=138"
               >
                 Contact
@@ -618,72 +650,77 @@ function Navbar() {
             </li>
           </ul>
         </div>
-        <div class="header__searchMb">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="20"
-            height="20"
-            viewBox="0 0 20 20"
-            fill="none"
-            onClick={handleSearchClick}
-          >
-            <g>
-              <path
-                d="M8.80758 0C3.95121 0 0 3.95121 0 8.80758C0 13.6642 3.95121 17.6152 8.80758 17.6152C13.6642 17.6152 17.6152 13.6642 17.6152 8.80758C17.6152 3.95121 13.6642 0 8.80758 0ZM8.80758 15.9892C4.8477 15.9892 1.62602 12.7675 1.62602 8.80762C1.62602 4.84773 4.8477 1.62602 8.80758 1.62602C12.7675 1.62602 15.9891 4.8477 15.9891 8.80758C15.9891 12.7675 12.7675 15.9892 8.80758 15.9892Z"
-                fill="#949DA6"
-              ></path>
-              <path
-                d="M19.762 18.6124L15.1007 13.9511C14.7831 13.6335 14.2687 13.6335 13.9511 13.9511C13.6335 14.2684 13.6335 14.7834 13.9511 15.1007L18.6124 19.762C18.7712 19.9208 18.9791 20.0002 19.1872 20.0002C19.395 20.0002 19.6032 19.9208 19.762 19.762C20.0796 19.4446 20.0796 18.9297 19.762 18.6124Z"
-                fill="#949DA6"
-              ></path>
-            </g>
-          </svg>
-          <div
-            className={
-              clickSearch
-                ? "searchMobile mbCartFirst active"
-                : "searchMobile mbCartFirst"
-            }
-          >
-            <div class="mbCartFirst__inner">
-              <form
-                class="f-form"
-                action="https://demo.createdbycocoon.com/moodle/skola/1/search/index.php"
-              >
-                <input
-                  id="searchform_search"
-                  name="q"
-                  class="form-control"
-                  placeholder="What do you want to learn?"
-                  type="text"
-                  size="15"
-                />
-                <input type="hidden" name="context" value="636" />
-                <span class="f-icon">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="20"
-                    height="20"
-                    viewBox="0 0 20 20"
-                    fill="none"
-                  >
-                    <g>
-                      <path
-                        d="M8.80758 0C3.95121 0 0 3.95121 0 8.80758C0 13.6642 3.95121 17.6152 8.80758 17.6152C13.6642 17.6152 17.6152 13.6642 17.6152 8.80758C17.6152 3.95121 13.6642 0 8.80758 0ZM8.80758 15.9892C4.8477 15.9892 1.62602 12.7675 1.62602 8.80762C1.62602 4.84773 4.8477 1.62602 8.80758 1.62602C12.7675 1.62602 15.9891 4.8477 15.9891 8.80758C15.9891 12.7675 12.7675 15.9892 8.80758 15.9892Z"
-                        fill="#949DA6"
-                      ></path>
-                      <path
-                        d="M19.762 18.6124L15.1007 13.9511C14.7831 13.6335 14.2687 13.6335 13.9511 13.9511C13.6335 14.2684 13.6335 14.7834 13.9511 15.1007L18.6124 19.762C18.7712 19.9208 18.9791 20.0002 19.1872 20.0002C19.395 20.0002 19.6032 19.9208 19.762 19.762C20.0796 19.4446 20.0796 18.9297 19.762 18.6124Z"
-                        fill="#949DA6"
-                      ></path>
-                    </g>
-                  </svg>
-                </span>
-              </form>
+        {pathname === "/" ? (
+          <div className="header__searchMb">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="20"
+              viewBox="0 0 20 20"
+              fill="none"
+              onClick={handleSearchClick}
+            >
+              <g>
+                <path
+                  d="M8.80758 0C3.95121 0 0 3.95121 0 8.80758C0 13.6642 3.95121 17.6152 8.80758 17.6152C13.6642 17.6152 17.6152 13.6642 17.6152 8.80758C17.6152 3.95121 13.6642 0 8.80758 0ZM8.80758 15.9892C4.8477 15.9892 1.62602 12.7675 1.62602 8.80762C1.62602 4.84773 4.8477 1.62602 8.80758 1.62602C12.7675 1.62602 15.9891 4.8477 15.9891 8.80758C15.9891 12.7675 12.7675 15.9892 8.80758 15.9892Z"
+                  fill="#949DA6"
+                ></path>
+                <path
+                  d="M19.762 18.6124L15.1007 13.9511C14.7831 13.6335 14.2687 13.6335 13.9511 13.9511C13.6335 14.2684 13.6335 14.7834 13.9511 15.1007L18.6124 19.762C18.7712 19.9208 18.9791 20.0002 19.1872 20.0002C19.395 20.0002 19.6032 19.9208 19.762 19.762C20.0796 19.4446 20.0796 18.9297 19.762 18.6124Z"
+                  fill="#949DA6"
+                ></path>
+              </g>
+            </svg>
+            <div
+              className={
+                clickSearch
+                  ? "searchMobile mbCartFirst active"
+                  : "searchMobile mbCartFirst"
+              }
+            >
+              <div className="mbCartFirst__inner">
+                <form
+                  className="f-form"
+                  action="https://demo.createdbycocoon.com/moodle/skola/1/search/index.php"
+                >
+                  <input
+                    id="searchform_search"
+                    name="q"
+                    className="form-control"
+                    placeholder="What do you want to learn?"
+                    type="text"
+                    size="15"
+                  />
+                  <input type="hidden" name="context" value="636" />
+                  <span className="f-icon">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="20"
+                      height="20"
+                      viewBox="0 0 20 20"
+                      fill="none"
+                    >
+                      <g>
+                        <path
+                          d="M8.80758 0C3.95121 0 0 3.95121 0 8.80758C0 13.6642 3.95121 17.6152 8.80758 17.6152C13.6642 17.6152 17.6152 13.6642 17.6152 8.80758C17.6152 3.95121 13.6642 0 8.80758 0ZM8.80758 15.9892C4.8477 15.9892 1.62602 12.7675 1.62602 8.80762C1.62602 4.84773 4.8477 1.62602 8.80758 1.62602C12.7675 1.62602 15.9891 4.8477 15.9891 8.80758C15.9891 12.7675 12.7675 15.9892 8.80758 15.9892Z"
+                          fill="#949DA6"
+                        ></path>
+                        <path
+                          d="M19.762 18.6124L15.1007 13.9511C14.7831 13.6335 14.2687 13.6335 13.9511 13.9511C13.6335 14.2684 13.6335 14.7834 13.9511 15.1007L18.6124 19.762C18.7712 19.9208 18.9791 20.0002 19.1872 20.0002C19.395 20.0002 19.6032 19.9208 19.762 19.762C20.0796 19.4446 20.0796 18.9297 19.762 18.6124Z"
+                          fill="#949DA6"
+                        ></path>
+                      </g>
+                    </svg>
+                  </span>
+                </form>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="header__user" onClick={handleUserClick}>
+        ) : (
+          <></>
+        )}
+
+        <div className="header__user" onClick={handleUserClick}>
           <svg
             width="20"
             height="20"
@@ -703,72 +740,75 @@ function Navbar() {
                 : "loginSignCard popupCard"
             }
           >
-            <div class="bg"></div>
-            <div class="popupCard__inner scrollfix-custom">
-              <div class="loginSignCard-item active" id="loginSignCard-login">
-                <div class="loginSignCard-fix">
-                  <div class="f-header">
-                    <h2 class="f-header__title">
+            <div className="bg"></div>
+            <div className="popupCard__inner scrollfix-custom">
+              <div
+                className="loginSignCard-item active"
+                id="loginSignCard-login"
+              >
+                <div className="loginSignCard-fix">
+                  <div className="f-header">
+                    <h2 className="f-header__title">
                       Log In to Your Skola Account!
                     </h2>
                     <span
-                      class="f-header__close"
+                      className="f-header__close"
                       onClick={handleUserCloseClick}
                     >
-                      <i class="fa-solid fa-xmark"></i>
+                      <i className="fa-solid fa-xmark"></i>
                     </span>
                   </div>
 
-                  <div class="f-content">
-                    <div class="f-content__scroll">
-                      <div class="login-wrap">
+                  <div className="f-content">
+                    <div className="f-content__scroll">
+                      <div className="login-wrap">
                         <form
-                          class="__loginform form-wrap"
+                          className="__loginform form-wrap"
                           id="login"
                           method="post"
                           action="https://demo.createdbycocoon.com/moodle/skola/1/login/index.php"
                         >
-                          <div class="form-item">
+                          <div className="form-item">
                             <label>Username</label>
                             <input
                               type="text"
                               name="username"
                               placeholder="Username"
                               id="login_username"
-                              class="form-control"
+                              className="form-control"
                               value=""
-                              autocomplete="username"
+                              autoComplete="username"
                             />
                           </div>
-                          <div class="form-item">
+                          <div className="form-item">
                             <label>Password</label>
                             <input
                               type="password"
                               name="password"
                               id="login_password"
                               placeholder="Password"
-                              class="form-control"
+                              className="form-control"
                               value=""
-                              autocomplete="current-password"
+                              autoComplete="current-password"
                             />
                           </div>
-                          <div class="form-forgot">
+                          <div className="form-forgot">
                             <label
-                              class="checkbox-custom"
+                              className="checkbox-custom"
                               for="rememberusername"
                             >
-                              <div class="f-textbox">
+                              <div className="f-textbox">
                                 <span></span>
                                 Remember username
                               </div>
                             </label>
-                            <p class="f-text">
+                            <p className="f-text">
                               <a href="https://demo.createdbycocoon.com/moodle/skola/1/login/forgot_password.php">
                                 Lost password?
                               </a>
                             </p>
                           </div>
-                          <button type="submit" class="btn">
+                          <button type="submit" className="btn">
                             Log in
                           </button>
                           <input
@@ -778,7 +818,7 @@ function Navbar() {
                           />
                         </form>
                       </div>
-                      <p class="btn-convert">
+                      <p className="btn-convert">
                         Don't have an account?
                         <a href="#loginSignCard-signup">Sign up</a>
                       </p>
@@ -786,49 +826,51 @@ function Navbar() {
                   </div>
                 </div>
               </div>
-              <div class="loginSignCard-item" id="loginSignCard-signup">
-                <div class="loginSignCard-fix">
-                  <div class="f-header">
-                    <h2 class="f-header__title">Sign Up and Start Learning!</h2>
-                    <span class="f-header__close">
-                      <i class="ccn-flaticon-multiply"></i>
+              <div className="loginSignCard-item" id="loginSignCard-signup">
+                <div className="loginSignCard-fix">
+                  <div className="f-header">
+                    <h2 className="f-header__title">
+                      Sign Up and Start Learning!
+                    </h2>
+                    <span className="f-header__close">
+                      <i className="ccn-flaticon-multiply"></i>
                     </span>
                   </div>
-                  <div class="f-content">
-                    <div class="f-content__scroll">
-                      <form class="form-wrap">
-                        <div class="form-item">
+                  <div className="f-content">
+                    <div className="f-content__scroll">
+                      <form className="form-wrap">
+                        <div className="form-item">
                           <label>Username</label>
                           <input
                             type="text"
                             placeholder="creativelayers"
                             name="name"
-                            class="form-control"
+                            className="form-control"
                           />
                         </div>
-                        <div class="form-item">
+                        <div className="form-item">
                           <label>Email</label>
                           <input
                             type="email"
                             placeholder="creativelayers@gmail.com"
                             name="email"
-                            class="form-control"
+                            className="form-control"
                           />
                         </div>
-                        <div class="form-item">
+                        <div className="form-item">
                           <label>Password</label>
                           <input
                             type="password"
                             placeholder="**********"
                             name="password"
-                            class="form-control"
+                            className="form-control"
                           />
                         </div>
-                        <button type="submit" class="btn">
+                        <button type="submit" className="btn">
                           SIGN UP
                         </button>
                       </form>
-                      <p class="btn-convert">
+                      <p className="btn-convert">
                         Don't have an account?
                         <a href="#loginSignCard-login">Log In</a>
                       </p>
@@ -839,8 +881,8 @@ function Navbar() {
             </div>
           </div>
         </div>
-        <div class="header__showMenuMb" onClick={handleMenuMbClick}>
-          <div class="f-icon">
+        <div className="header__showMenuMb" onClick={handleMenuMbClick}>
+          <div className="f-icon">
             <span></span>
           </div>
           <div
@@ -851,19 +893,19 @@ function Navbar() {
             }
           >
             <a href="/">
-              Home<i class="fas fa-chevron-right"></i>
+              Home<i className="fas fa-chevron-right"></i>
             </a>
             <a href="/">
-              Courses<i class="fas fa-chevron-right"></i>
+              Courses<i className="fas fa-chevron-right"></i>
             </a>
             <a href="/">
-              Events<i class="fas fa-chevron-right"></i>
+              Events<i className="fas fa-chevron-right"></i>
             </a>
             <a href="/">
-              Pages<i class="fas fa-chevron-right"></i>
+              Pages<i className="fas fa-chevron-right"></i>
             </a>
             <a href="/">
-              Blog<i class="fas fa-chevron-right"></i>
+              Blog<i className="fas fa-chevron-right"></i>
             </a>
             <a href="https://demo.createdbycocoon.com/moodle/skola/1/mod/page/view.php?id=138">
               Contact

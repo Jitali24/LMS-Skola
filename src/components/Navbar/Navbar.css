@@ -26,7 +26,7 @@
     display: flex;
     flex-direction: row;
     margin-left: auto;
-    margin-top: 5px;
+    margin-top: -15px;
 }
 
 .header__searchMb,
@@ -931,7 +931,9 @@ input {
 
     /* contact */
     .nav-contact {
-        margin-right: 15px;
+        /* margin-right: 15px; */
+        position: absolute;
+        right: 120px;
     }
 
     .nav-contact a:hover {

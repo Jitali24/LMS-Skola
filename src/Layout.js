@@ -4,18 +4,20 @@ import App from "./App";
 import Footer from "./components/Footer/Footer";
 import Navbar from "./components/Navbar/Navbar";
 import Blog from "./Pages/Blogs/Blog";
+import Courses from "./Pages/Courses/Courses";
 
 const Layout = () => {
   return (
     <>
-      <Navbar />
       <Router>
+        <Navbar />
         <Routes>
           <Route path="/" element={<App />} exact />
           <Route path="/blog" element={<Blog />} />
+          <Route path="/courses" element={<Courses />} />
         </Routes>
+        <Footer />
       </Router>
-      <Footer />
     </>
   );
 };

@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jost&display=swap');
+
+.courses-container{
+    /* height: 90vh; */
+    padding: 0 14px;
+    background-color: #fff;
+    margin-bottom: -30px;
+}
+
+.courses-description {
+    padding: 0 7px;
+}
+
+.courses-description .courses-title h1 {
+    color: #2F2D51;
+    padding-right: 55px;
+    font-size: 26px;
+    font-family: "Jost";
+    text-transform: capitalize;
+}
+
+.courses-description .courses-title p {
+    margin-bottom: 1rem;
+    color: #77838F;
+    font-size: 16px;
+    font-family: "Jost";
+}
+
+.courses-description .courses-author {
+    display: flex;
+    flex-direction: row;
+}
+
+.courses-description .courses-author-avatar span img{
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+    border: 0.01px solid rgb(215, 215, 215);
+    padding: 10px;
+}
+
+.courses-description .courses-author-info {
+    padding-left: 40px;
+    margin-top: -10px;
+}
+
+.courses-description .courses-author-info ul {
+    list-style-type: none;
+}
+
+.courses-description .courses-author-info ul li {
+    margin: 10px 55px 0 0 ;
+}
+
+.courses-description .courses-author-info ul li b {
+    color: #2F2D51;
+    font-size: 16px;
+    font-weight: 600;
+    font-family: "Jost";
+}
+
+.courses-description .courses-author-info ul li p {
+    color: #77838F;
+    font-size: 14px;
+    font-family: "Jost";
+}
+
+.courses-description .courses-author-info ul li .f-star {
+    color: #FFC78B;
+    margin-right: 5px;
+}
+
+@media (min-width: 768px) {
+    .courses-container{
+        padding: 0 1rem;
+    }
+    .courses-description .courses-title {
+        padding: 0 10px;
+    }
+    .courses-description .courses-title h1 {
+        font-size: 30px;
+    }
+    .courses-description .courses-author {
+        /* flex-direction: column; */
+        padding: 0 15px;
+    }
+    .courses-description .courses-author-avatar span img{
+        height: 83px;
+        width: 83px;
+    }
+    .courses-description .courses-author-info {
+        padding-left: 30px;
+    }
+    .courses-description .courses-author-info ul {
+        display: flex;
+        margin-top: 20px;
+    }
+    .courses-description .courses-author-info ul li .f-star {
+        display: flex;
+    }
+    .courses-description .courses-author-info ul li .f-star p {
+        padding-left: 10px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .courses-container .courses-description{
+        /* width: 66%; */
+    }
+}
