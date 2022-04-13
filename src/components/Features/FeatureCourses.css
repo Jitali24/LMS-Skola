@@ -86,6 +86,18 @@
     margin: 0;
 }
 
+/* courses page */
+.related-courses .carousel-title {
+    text-align: center;
+    width: auto;
+    margin-bottom: 45px;
+}
+
+.related-courses .carousels {
+    padding: 0;
+}
+
+
 @keyframes fadeInUp {
     0% {
         opacity: 0;
@@ -102,6 +114,20 @@
 @media (min-width: 320px) {
     .carousels-container .carousel-cell {
         width: 100%;
+        height: 400px;
+    }
+
+    /* courses page */
+    .related-courses .carousel-title h2 {
+        font-family: "Jost";
+        font-size: 26px;
+    }
+    .related-courses .carousel-title p {
+        font-size: 16px;
+        font-family: "Jost";
+    }
+    .related-courses .feature-container {
+        padding: 0;
     }
 }
 
@@ -136,6 +162,14 @@
     .carousels-container .flickity-page-dots {
         bottom: -60px;
     }
+
+    /* courses page */
+    .related-courses .carousel-title h2 {
+        font-size: 30px;
+    }
+    .related-courses .feature-container {
+        padding: 0 7px;
+    }
 }
 
 @media (min-width: 992px) {
@@ -154,6 +188,11 @@
     }
     .carousels-title .right {
         margin-inline-end: 6rem;
+    }
+
+    /* courses page */
+    .related-courses .carousels {
+        padding: 3rem 2rem;
     }
 }
 
@@ -179,5 +218,19 @@
     }
     .carousels-container .flickity-page-dots {
         bottom: -70px;
+    }
+
+    /* couses page */
+    .related-courses .carousel-title h2 {
+        font-size: 35px;
+    }
+    .related-courses .carousel-title p {
+        font-size: 18px;
+    }
+}
+
+@media (min-width: 1260px) {
+    .related-courses .carousels {
+        padding: 3rem 10rem;
     }
 }

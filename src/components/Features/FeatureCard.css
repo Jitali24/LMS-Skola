@@ -37,6 +37,7 @@
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
+    font-family: "Jost";
 }
 
 .feature-label:hover {
@@ -130,6 +131,10 @@
     font-size: 16px;
     color: #77838f;
     margin-bottom: 0;
+}
+
+.feature-body .feature-title a {
+    text-decoration: none;
 }
 
 .feature-title:hover {

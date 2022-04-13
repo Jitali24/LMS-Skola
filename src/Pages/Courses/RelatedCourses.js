@@ -1,23 +1,15 @@
-import React from 'react'
-import FeatureCard from './FeatureCard'
-import './FeatureCourses.css'
+import React from "react";
+import FeatureCard from "../../components/Features/FeatureCard";
+import "../../components/Features/FeatureCourses.css";
 
-function FeatureCourses() {
-    return (
+function RelatedCourses() {
+  return (
+    <div className="related-courses">
       <div className="carousels">
         <div className="carousels-container">
-          <div className="carousels-title">
-            <div className="carousel-title">
-              <h2>Featured Courses</h2>
-              <p>Discover your perfect program in our courses.</p>
-            </div>
-            <div className="right">
-              <select>
-                <option value="all categories">All categories</option>
-                <option value="design">Design</option>
-                <option value="business">Business</option>
-              </select>
-            </div>
+          <div className="carousel-title">
+            <h2>Related Courses</h2>
+            <p>Discover your perfect program in our courses.</p>
           </div>
           <div
             class="carousel"
@@ -98,7 +90,8 @@ function FeatureCourses() {
           </div>
         </div>
       </div>
-    );
+    </div>
+  );
 }
 
-export default FeatureCourses
+export default RelatedCourses;

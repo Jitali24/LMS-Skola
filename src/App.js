@@ -9,7 +9,7 @@ import FeatureCourses from "./components/Features/FeatureCourses";
 import Events from "./components/UpcomingEvents/Events";
 import Students from "./components/StudentsCarousel/Students";
 import Submenu from "./components/BottomMenu/Submenu";
-import Scroll from "./components/BackToTop/Scroll";
+// import Scroll from "./components/BackToTop/Scroll";
 
 // import Navbar from "./components/Navbar/Navbar";
 import Demos from "./components/Demos/Demos";
@@ -37,7 +37,7 @@ function App({ setImg }) {
       <Instructor />
       {/* <Footer /> */}
       <Submenu />
-      <Scroll showBelow={250} />
+      {/* <Scroll showBelow={250} /> */}
       <Demos />
     </>
   );
