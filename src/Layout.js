@@ -15,7 +15,7 @@ const Layout = () => {
         <Routes>
           <Route path="/" element={<App />} exact />
           <Route path="/blog" element={<Blog />} />
-          <Route path="/courses" element={<Courses />} />
+          <Route path="/courses/:id" element={<Courses />} />
         </Routes>
         <Scroll showBelow={250} />
         <Footer />

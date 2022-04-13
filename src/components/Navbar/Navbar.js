@@ -95,7 +95,7 @@ function Navbar() {
       {pathname === "/blog" || pathname === "/courses" ? (
         <>
           <div className="header__course">
-            <a href="#" className="f-icon">
+            <a href="/" className="f-icon">
               <svg
                 className="mr-2"
                 xmlns="http://www.w3.org/2000/svg"
@@ -156,10 +156,7 @@ function Navbar() {
             </div>
           </div>
           <div className="header__search">
-            <form
-              className="f-form"
-              action="https://demo.createdbycocoon.com/moodle/skola/1/search/index.php"
-            >
+            <form className="f-form" action="">
               <span className="f-close d-none">
                 <i className="fas fa-times"></i>
               </span>

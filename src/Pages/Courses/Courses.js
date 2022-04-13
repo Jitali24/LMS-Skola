@@ -3,13 +3,22 @@ import RelatedCourses from "./RelatedCourses";
 import "./Courses.css";
 import "../../components/Video/Video.css";
 
-function Courses() {
+import { useParams } from "react-router-dom";
+import CoursesData from "./CoursesData.json";
+
+const Courses = () => {
+  const { id } = useParams();
+
+  const cData = CoursesData.filter(
+    (courses) => courses.id.toString() === id.toString()
+  );
+
   return (
     <div className="courses-container">
       <div className="courses-sections">
         <div className="courses-description">
           <div className="courses-title">
-            <h1>Introduction to the Web Design &amp; HTML </h1>
+            <h1>{cData[0].title}</h1>
             {/* <i className="fa-solid fa-circle-heart"></i> */}
             <p>
               Master Figma app to get a job in UI Design, User Interface, User
@@ -19,14 +28,14 @@ function Courses() {
           <div className="courses-author">
             <div className="courses-author-avatar">
               <span>
-                <img src="https://demo.createdbycocoon.com/moodle/skola/1/pluginfile.php/860/user/icon/skola/f3?rev=9253"></img>
+                <img src={cData[0].authorAvatar} alt=""></img>
               </span>
             </div>
             <div className="courses-author-info">
               <ul>
                 <li>
                   <b>Created by</b>
-                  <p>Johnson Earl</p>
+                  <p>{cData[0].authorName}</p>
                 </li>
                 <li>
                   <b>Categories</b>
@@ -173,7 +182,7 @@ function Courses() {
                   </tbody>
                 </table>
                 <div className="courses-widgets-list-btn">
-                  <a href="">
+                  <a href="/">
                     <svg
                       width="20"
                       height="20"
@@ -251,6 +260,6 @@ function Courses() {
       <RelatedCourses />
     </div>
   );
-}
+};
 
 export default Courses;

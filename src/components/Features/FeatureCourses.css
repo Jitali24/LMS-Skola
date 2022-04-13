@@ -114,6 +114,7 @@
 @media (min-width: 320px) {
     .carousels-container .carousel-cell {
         width: 100%;
+        height: 400px;
     }
 
     /* courses page */

@@ -133,6 +133,10 @@
     margin-bottom: 0;
 }
 
+.feature-body .feature-title a {
+    text-decoration: none;
+}
+
 .feature-title:hover {
     cursor: pointer;
 }
