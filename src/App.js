@@ -17,7 +17,7 @@ import Video from "./components/Video/Video";
 import Instructor from "./components/InstructorCarousel/Instructor";
 // import Footer from "./components/Footer/Footer";
 
-function App() {
+function App({ setImg }) {
   return (
     <>
       <Navbarhide />
@@ -26,7 +26,13 @@ function App() {
       <Cards />
       <FeatureCourses />
       <Video />
-      <Events />
+      <Events
+        blogPageImg1="https://demo.createdbycocoon.com/moodle/skola/1/pluginfile.php/1/blog/attachment/20/lg-11.jpeg"
+        blogPageTitle1="Discover Law - Get into the best UK law schools"
+        blogPageTitle2="Lambeth Safeguarding: Understanding Contextual Harm"
+        blogPageImg2="https://demo.createdbycocoon.com/moodle/skola/1/pluginfile.php/1/blog/attachment/19/lg-12.jpeg"
+        setImg={setImg}
+      />
       <Students />
       <Instructor />
       {/* <Footer /> */}

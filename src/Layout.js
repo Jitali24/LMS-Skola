@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import App from "./App";
 import Footer from "./components/Footer/Footer";
 import Navbar from "./components/Navbar/Navbar";
-import Blog from "./Pages/Blogs/Blog";
+import BlogPage from "./Pages/BlogsPage/BlogPage";
 
 const Layout = () => {
   return (
@@ -12,7 +12,7 @@ const Layout = () => {
       <Router>
         <Routes>
           <Route path="/" element={<App />} exact />
-          <Route path="/blog" element={<Blog />} />
+          <Route path="/blog/:id" element={<BlogPage />} />
         </Routes>
       </Router>
       <Footer />
