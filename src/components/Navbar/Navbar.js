@@ -59,7 +59,7 @@ function Navbar() {
   return (
     <div className={flag ? "navbar-container" : "navbar-container active"}>
       <div className="navbar-logo">
-        <a href="https://demo.createdbycocoon.com/moodle/skola/1">
+        <a href="/">
           <svg
             width="177"
             height="73"

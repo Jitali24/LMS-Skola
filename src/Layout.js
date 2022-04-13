@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import App from "./App";
 import Footer from "./components/Footer/Footer";
 import Navbar from "./components/Navbar/Navbar";
+import Scroll from "./components/BackToTop/Scroll";
 import Blog from "./Pages/Blogs/Blog";
 import Courses from "./Pages/Courses/Courses";
 
@@ -16,6 +17,7 @@ const Layout = () => {
           <Route path="/blog" element={<Blog />} />
           <Route path="/courses" element={<Courses />} />
         </Routes>
+        <Scroll showBelow={250} />
         <Footer />
       </Router>
     </>

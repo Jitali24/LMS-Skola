@@ -93,6 +93,11 @@
     margin-bottom: 45px;
 }
 
+.related-courses .carousels {
+    padding: 0;
+}
+
+
 @keyframes fadeInUp {
     0% {
         opacity: 0;
@@ -119,6 +124,9 @@
     .related-courses .carousel-title p {
         font-size: 16px;
         font-family: "Jost";
+    }
+    .related-courses .feature-container {
+        padding: 0;
     }
 }
 
@@ -157,6 +165,9 @@
     /* courses page */
     .related-courses .carousel-title h2 {
         font-size: 30px;
+    }
+    .related-courses .feature-container {
+        padding: 0 7px;
     }
 }
 
@@ -217,7 +228,7 @@
     }
 }
 
-@media (min-width: 1440px) {
+@media (min-width: 1260px) {
     .related-courses .carousels {
         padding: 3rem 10rem;
     }
