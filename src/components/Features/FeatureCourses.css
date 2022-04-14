@@ -97,6 +97,10 @@
     padding: 0;
 }
 
+.related-courses .carousels-container {
+    padding-bottom: 100px;
+}
+
 
 @keyframes fadeInUp {
     0% {

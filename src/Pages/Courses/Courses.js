@@ -2,6 +2,7 @@ import React from "react";
 import RelatedCourses from "./RelatedCourses";
 import "./Courses.css";
 import "../../components/Video/Video.css";
+import CoursesTabs from "./CoursesTabs";
 
 import { useParams } from "react-router-dom";
 import CoursesData from "./CoursesData.json";
@@ -56,6 +57,9 @@ const Courses = () => {
                 </li>
               </ul>
             </div>
+          </div>
+          <div className="courses-tab">
+            <CoursesTabs />
           </div>
         </div>
         <div className="courses-sidebar">
