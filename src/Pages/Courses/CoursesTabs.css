@@ -1,0 +1,557 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jost&display=swap');
+
+.courses-tabs-container {
+    /* background: #000; */
+    font-family: "Jost";
+    margin-top: 20px;
+}
+
+.cgTuWG {
+    color: #2F2D51 !important;
+    font-size: 16px !important;
+}
+
+.dJfQSd {
+    font-size: 16px !important;
+}
+
+.overview-tab h3, .instructor-tab h3, .courses-review-tab h3 {
+    font-weight: 500;
+    font-size: 22px;
+    color: #2F2D51;
+    margin-bottom: 15px;
+}
+
+.overview-tab p, .instructor-tab p {
+    font-size: 16px;
+    color: #77838F;
+    margin-bottom: 16px;
+}
+
+.list-check {
+    list-style-type: none;
+}
+
+.list-check li {
+    color: #77838F;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.list-check li i {
+    font-weight: 900;
+    width: 18px;
+    height: 18px;
+    line-height: 18px;
+    background-color: #4A8F9F;
+    font-size: 10px;
+    text-align: center;
+    color: #fff;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.list-dot {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.list-dot li:before {
+    content: "";
+    position: absolute;
+    top: 8px;
+    left: 0;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: #4A8F9F;
+}
+
+.list-dot li {
+    position: relative;
+    padding-left: 20px;
+    margin-bottom: 20px;
+    font-size: 16px;
+    color: #77838F;
+}
+
+/* curriculum tab */
+
+.curriculum-collapse {
+    border: 1px solid #E7E7EC;
+    border-radius: 4px;
+    box-shadow: 0 8px 15px rgb(140 152 164 / 10%);
+    margin-bottom: 30px;
+}
+
+.curriculum-collapse__header a{
+    /* padding: 20px 25px; */
+    text-decoration: none;
+    font-size: 18px;
+    color: #2F2D51;
+    padding-left: 10px;
+}
+
+.curriculum-menu-btn {
+    padding: 20px 25px;
+}
+
+.curriculum-collapse__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.curriculum-collapse__list li {
+    border-top: 1px solid #E7E7EC;
+    padding: 15px 20px;
+}
+
+.curriculum-collapse__list .c-title {
+    position: relative;
+    padding-left: 24px;
+    font-size: 16px;
+    color: #77838F;
+    font-weight: 400;
+    margin-bottom: 8px;
+}
+
+.curriculum-collapse__list .c-title img {
+    margin-right: 5px;
+    vertical-align: -2px;
+    position: absolute;
+    top: 1px;
+    left: 0;
+    max-width: 20px;
+}
+
+.curriculum-collapse__list .icon-lock {
+    margin-left: 13px;
+}
+
+.curriculum-collapse__list{
+    width: 100%;
+}
+
+/* instructor tab */
+
+.instructor-tab .courses-author-avatar span img{
+    height: 100px;
+    width: 100px;
+    box-shadow: 0 8px 15px rgb(140 152 164 / 10%);
+}
+
+.instructor-tab .instructor-tab-author {
+    display: flex;
+}
+
+.instructor-tab-author-info {
+    padding: 20px 0 0 20px;
+}
+
+.instructor-tab-author-info h4{
+    font-size: 20px;
+    color: #2F2D51;
+    margin-bottom: 8px;
+}
+
+.instructor-tab-author-info p{
+    font-size: 16px;
+    color: #77838F;
+}
+
+.courses-instructor__lever {
+    list-style-type: none;
+    margin-top: 15px;
+}
+
+.courses-instructor__lever li {
+    font-size: 15px;
+    display: inline-block;
+    vertical-align: top;
+    color: #77838F;
+}
+
+.courses-instructor__lever li img {
+    margin-right: 3px;
+    vertical-align: -3px;
+}
+
+/* courses review tab */
+
+.courses-review-tab .r-point {
+    display: flex;
+    align-items: center;
+    position: relative;
+    border: 1px solid #E7E7EC;
+    border-radius: 4px;
+    background-color: #fff;
+    box-shadow: 0 8px 15px rgb(140 152 164 / 10%);
+    margin-bottom: 20px;
+}
+
+.courses-review-tab .r-point__inner {
+    position: absolute;
+    left: 0;
+    right: 0;
+    text-align: center;
+}
+
+.courses-review-tab .r-point__inner .r-1 {
+    font-size: 40px;
+    font-weight: 500;
+    line-height: 1;
+    color: #2F2D51;
+    margin: 0;
+}
+
+.courses-review-tab .r-point__inner .r-2 {
+    font-size: 15px;
+}
+
+.courses-review-tab .r-point__inner .r-3 {
+    margin: 0;
+    color: #FFC78B;
+    letter-spacing: .5em;
+}
+
+.courses-review-tab .r-point:after {
+    content: "";
+    display: block;
+    padding-top: 50%;
+}
+
+.courses-review-tab .r-progress__ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 40px;
+}
+
+.courses-review-tab .r-progress__li {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    color: #77838F;
+}
+
+.courses-review-tab .r-progress__step {
+    position: relative;
+    width: 45%;
+    height: 10px;
+    background-color: #E7E7EC;
+    border-radius: 10px;
+    margin-right: 15px;
+}
+
+.courses-review-tab .r-progress__step span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    border-radius: 10px;
+    background-color: #4A8F9F;
+}
+
+.courses-review-tab .r-progress__star {
+    margin: 0;
+}
+
+.courses-review-tab .r-progress__star span {
+    margin-right: 10px;
+}
+
+.courses-review-tab .r-progress__star .fas {
+    color: #FFC78B;
+    padding-right: 5px;
+}
+
+.courses-review-tab .r-progress__li+li {
+    margin-top: 15px;
+}
+
+.courses-review-tab .r-progress__star .far {
+    color: #949DA6;
+    padding-right: 5px;
+}
+
+.commentbox ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.commentbox__list .item__inner {
+    position: relative;
+    padding-left: 75px;
+    min-height: 60px;
+    margin-bottom: 30px;
+}
+
+.commentbox__list .item__avatar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 60px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #2F2D51;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.commentbox__list .item__header {
+    position: relative;
+    padding-right: 100px;
+}
+
+.commentbox__list .item__name {
+    font-size: 18px;
+    margin-bottom: 0;
+}
+
+.commentbox__list .item__position {
+    font-size: 14px;
+    font-style: italic;
+    margin-bottom: 0;
+    color: #77838F;
+}
+
+.commentbox__list .item__star {
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: #FFC78B;
+    font-size: 12px;
+}
+
+.commentbox__list .item-text {
+    margin-top: 15px;
+    color: #77838F;
+}
+
+.courses-review-tab .commentbox .avatar1 {
+    background-image: url("https://demo.createdbycocoon.com/moodle/skola/1/pluginfile.php/5/user/icon/skola/f3?rev=10750");
+    height: 60px;
+    width: 60px;
+}
+
+.courses-review-tab .commentbox .avatar2 {
+    background-image: url("https://demo.createdbycocoon.com/moodle/skola/1/pluginfile.php/859/user/icon/skola/f3?rev=9038");
+    height: 60px;
+    width: 60px;
+}
+
+.courses-review-tab .addReviewBox {
+    margin-top: 45px;
+    background-color: #fff;
+    border: 1px solid #E7E7EC;
+    border-radius: 4px;
+    box-shadow: 0 8px 15px rgb(140 152 164 / 10%);
+    padding: 30px 20px;
+    margin-bottom: 30px;
+}
+
+.courses-review-tab .addReviewBox .f-header {
+    margin-bottom: 25px;
+}
+
+.courses-review-tab .addReviewBox .f-header__text {
+    margin-bottom: 5px;
+}
+ 
+#comment_rating {
+    display: none;
+}
+
+.br-theme-fontawesome-stars .br-widget {
+    height: 28px;
+    white-space: nowrap;
+}
+
+.br-theme-fontawesome-stars .br-widget a {
+    font: normal normal normal 20px/1 FontAwesome;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    text-decoration: none;
+    margin-right: 7px;
+}
+
+.br-theme-fontawesome-stars .br-widget a.br-selected:after {
+    color: #EDB867;
+}
+
+.br-theme-fontawesome-stars .br-widget a:after {
+    content: '\f005';
+    color: #d2d2d2;
+}
+
+.br-theme-fontawesome-stars .br-widget .br-current-rating {
+    display: none;
+}
+
+.courses-review-tab .addReviewBox .form-item {
+    margin-bottom: 20px;
+}
+
+.courses-review-tab .addReviewBox .form-item label {
+    display: block;
+    font-size: 16px;
+    font-weight: 400;
+    color: #2F2D51;
+    margin-bottom: 10px;
+}
+
+.courses-review-tab .addReviewBox .form-item .form-control {
+    height: 60px;
+    border: 1px solid #E7E7EC;
+    box-shadow: 0 8px 15px rgb(140 152 164 / 10%);
+    border-radius: 4px;
+    font-size: 14px;
+    color: #2F2D51;
+    margin: 0;
+    padding: 0 20px;
+    width: 100%;
+}
+
+.courses-review-tab .addReviewBox .form-item textarea.form-control {
+    min-height: 200px;
+    resize: none;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    width: 100%;
+    font-family: "Jost";
+    font-size: 16px;
+}
+
+.courses-review-tab  .addReviewBox .form-actions {
+    padding-top: 10px;
+}
+
+.courses-review-tab .form-actions a{
+    background-color: #090761;
+    text-decoration: none;
+}
+
+
+
+
+@media (max-width: 425px) {
+    .dJfQSd, .cgTuWG {
+        padding-left: 10px !important;
+        padding-right: 10px !important;
+    }
+}
+
+@media (min-width: 425px) {
+    .dJfQSd, .cgTuWG {
+        padding-left: 15px !important;
+        padding-right: 15px !important;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .courses-instructor__lever {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .courses-instructor__lever li {
+        width: 50%;
+        font-size: 15px;
+        margin: 0;
+        padding-right: 15px;
+        margin-bottom: 10px;
+    }
+}
+
+@media (min-width: 768px) {
+    .dJfQSd, .cgTuWG {
+        padding-left: 28px !important;
+        padding-right: 28px !important;
+        font-size: 20px !important;
+    }
+
+    .curriculum-collapse__list{
+        width: 100%;
+    }
+
+    .curriculum-collapse__list li, .section li.activity {
+        display: flex;
+        align-items: center;
+        padding: 20px 30px;
+    }
+
+    .curriculum-collapse__list .c-title {
+        width: 100%;
+        margin-bottom: 0;
+    }
+
+    .instructor-tab .courses-author-avatar span img{
+        height: 140px;
+        width: 140px;
+    }
+
+    .instructor-tab-author-info {
+        padding: 40px 0 0 40px;
+    }
+
+    .courses-instructor__lever li {
+        margin-right: 20px;
+    }
+
+    .courses-review-tab .r-header {
+        display: flex;
+        align-items: center;
+    }
+
+    .courses-review-tab .r-point {
+        width: 250px;
+        height: 220px;
+        margin-bottom: 0;
+        margin-top: -30px;
+    }
+
+    .courses-review-tab .r-point__inner .r-1 {
+        font-size: 50px;
+    }
+
+    .courses-review-tab .r-point__inner .r-2 {
+        font-size: 16px;
+    }
+
+    .courses-review-tab .r-progress {
+        flex-grow: 1;
+        padding-left: 20px;
+    }
+
+    .courses-review-tab .r-progress__step {
+        margin-right: 15px;
+    }
+
+    .courses-review-tab .r-progress__li+li {
+        margin-top: 25px;
+    }
+
+    .courses-review-tab .addReviewBox {
+        padding: 55px 60px;
+    }
+}
+
+@media (min-width: 1260px) {
+    .courses-tabs-container {
+        width: 780px;
+        margin-right: 20px;
+    }
+
+    .courses-tab-title tab {
+        font-size: 20px;
+    }
+
+    .overview-tab h3 {
+        margin-top: 40px;
+    }
+}

@@ -4,55 +4,55 @@
     "title": "Introduction To The Web Design & HTML",
     "authorName": "Johnson Earl",
     "authorAvatar": "https://demo.createdbycocoon.com/moodle/skola/1/pluginfile.php/860/user/icon/skola/f3?rev=9253",
-    "authorSp": "Business Management"
+    "authorPosition": "Business Management"
   },
   {
     "id": 2,
     "title": "Cubase Pro 10 Essential Training: Intermediate",
     "authorName": "Ben Green",
     "authorAvatar": "https://demo.createdbycocoon.com/moodle/skola/1/pluginfile.php/855/user/icon/skola/f3?rev=9089",
-    "authorSp": "Figma"
+    "authorPosition": "Figma"
   },
   {
     "id": 3,
     "title": "Unity Medical Visualisation: 03 Deployment and Usability",
     "authorName": "Kathelene Monero",
     "authorAvatar": "https://demo.createdbycocoon.com/moodle/skola/1/pluginfile.php/271/user/icon/skola/f3?rev=9206",
-    "authorSp": "Training Support"
+    "authorPosition": "Ruby on Rails"
   },
   {
     "id": 4,
     "title": "The Complete Big Data Analyst Course 2022",
     "authorName": "Kathelene Monero",
     "authorAvatar": "https://demo.createdbycocoon.com/moodle/skola/1/pluginfile.php/271/user/icon/skola/f3?rev=9206",
-    "authorSp": "Training Support"
+    "authorPosition": "Training Support"
   },
   {
     "id": 5,
     "title": "Learn Figma: User Interface Design Essentials - UI/UX Design",
     "authorName": "Darcy Baule",
     "authorAvatar": "https://demo.createdbycocoon.com/moodle/skola/1/pluginfile.php/857/user/icon/skola/f3?rev=9127",
-    "authorSp": "ReactJS"
+    "authorPosition": "Training Support"
   },
   {
     "id": 6,
     "title": "The Complete JavaScript Course 2022: Build Real Projects!",
     "authorName": "Jackie Anne",
     "authorAvatar": "https://demo.createdbycocoon.com/moodle/skola/1/pluginfile.php/862/user/icon/skola/f3?rev=9271",
-    "authorSp": "Wireframe Design"
+    "authorPosition": "React-Js"
   },
   {
     "id": 7,
     "title": "Fashion Photography From Professional",
     "authorName": "Kathelene Monero",
     "authorAvatar": "https://demo.createdbycocoon.com/moodle/skola/1/pluginfile.php/271/user/icon/skola/f3?rev=9206",
-    "authorSp": "Training Support"
+    "authorPosition": "Wireframe Design"
   },
   {
     "id": 8,
     "title": "Introduction Web Design with HTML Best Seller",
     "authorName": "Kristen Pala",
     "authorAvatar": "https://demo.createdbycocoon.com/moodle/skola/1/pluginfile.php/223/user/icon/skola/f3?rev=9215",
-    "authorSp": "Web Design, PSD to HTML"
+    "authorPosition": "Training Support"
   }
 ]
