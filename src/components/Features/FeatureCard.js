@@ -1,5 +1,5 @@
-import React from 'react'
-import './FeatureCard.css'
+import React from "react";
+import "./FeatureCard.css";
 
 const FeatureCard = ({
   imgSrc,
@@ -7,6 +7,7 @@ const FeatureCard = ({
   categoriesTitle,
   avatarImg,
   link,
+  linkAvatar
 }) => (
   <div className="feature-container">
     <div className="feature-inner">
@@ -24,7 +25,7 @@ const FeatureCard = ({
       </div>
       <div className="feature-body">
         <div class="feature-avatar">
-          <a href="/">
+          <a href={linkAvatar}>
             <img src={avatarImg} alt="" />
           </a>
         </div>
@@ -73,4 +74,4 @@ const FeatureCard = ({
   </div>
 );
 
-export default FeatureCard
+export default FeatureCard;

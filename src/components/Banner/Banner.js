@@ -21,6 +21,7 @@ function Banner() {
               <a href="/">Apply Now</a>
             </div>
           </div>
+          {/* <p class="caption"> 02 / 03 </p> */}
         </div>
         <div class="carousel-cell" id="carousel-cell2">
           <div className="banner-text">
@@ -34,6 +35,7 @@ function Banner() {
             <div className="banner-btn">
               <a href="/">Apply Now</a>
             </div>
+            {/* <p class="caption"> 03 / 03 </p> */}
           </div>
         </div>
         <div class="carousel-cell" id="carousel-cell3">
@@ -48,6 +50,7 @@ function Banner() {
             <div className="banner-btn">
               <a href="/">Apply Now</a>
             </div>
+            {/* <p class="caption"> 04 / 03 </p> */}
           </div>
         </div>
       </div>

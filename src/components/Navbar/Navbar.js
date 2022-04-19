@@ -45,7 +45,7 @@ function Navbar() {
       if (pathname !== "/blog" || pathname !== "/courses") {
         setFlag(true);
       }
-        if (pathname === "/"){
+      if (pathname === "/") {
         setFlag(false);
       }
     }

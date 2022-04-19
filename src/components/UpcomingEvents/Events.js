@@ -26,7 +26,7 @@ function Events({
                 </div>
                 <div className="events-location">
                   <h3>
-                    <a href="/">
+                    <a href="/blog2/1">
                       Undergraduate Open Day - Holloway Campus - 3 July 2022
                     </a>
                   </h3>
@@ -61,7 +61,7 @@ function Events({
                 </div>
                 <div className="events-location">
                   <h3>
-                    <a href="/">
+                    <a href="/blog2/2">
                       Lambeth Safeguarding: Understanding Contextual Harm
                     </a>
                   </h3>
@@ -96,7 +96,7 @@ function Events({
                 </div>
                 <div className="events-location">
                   <h3>
-                    <a href="/">
+                    <a href="/blog2/3">
                       Elegant Light Box Paper Cut Dioramas New Design Conference
                     </a>
                   </h3>
@@ -126,7 +126,7 @@ function Events({
             <div className="events-blog">
               <div className="events-post">
                 <div className="card-head">
-                  <a href="/">
+                  <a href="/blog/1">
                     <img src={blogPageImg1} alt="" />
                   </a>
                   <div className="card-blog">
@@ -173,7 +173,7 @@ function Events({
             <div className="events-blog">
               <div className="events-post">
                 <div className="card-head">
-                  <a href="/">
+                  <a href="/blog/2">
                     <img src={blogPageImg2} alt="" />
                   </a>
                   <div className="card-blog">

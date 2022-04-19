@@ -160,7 +160,7 @@ const BlogPage = () => {
         </div>
         <div
           class="carousel"
-          data-flickity='{ "wrapAround": true, "autoPlay": false, "cellAlign": "left"  }'
+          data-flickity='{ "wrapAround": true, "autoPlay": true, "cellAlign": "left"  }'
         >
           <div className="carousel-cell">
             <EventsCarousel

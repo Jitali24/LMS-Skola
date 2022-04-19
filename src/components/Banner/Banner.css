@@ -202,6 +202,7 @@
   color: white;
   display: flex;
   flex-direction: row;
+  /* display: none; */
 }
 
 .banner-counter::after {
@@ -209,6 +210,20 @@
   animation: counter 9.3s linear infinite;
   counter-reset: count 2;
 }
+
+/* .banner-container .carousel-cell .caption {
+  position: relative;
+  margin-top: -36px;
+  margin-top: 20px;
+  margin-top: -430px;
+  margin-left: 3%;
+  content-visibility: auto;
+  font-weight: 700;
+  font-size: 16px;
+  font-family: "Jost", sans-serif;
+  color: white;
+  transform: translateX(-50%) rotate(-90deg);
+} */
 
 @keyframes counter {
   0% {
@@ -420,7 +435,7 @@
     height: 95vh;
   }
   .counter-text {
-    margin-top: -74%;
+    margin-top: -73%;
     margin-bottom: 37%;
   }
   .banner-text {

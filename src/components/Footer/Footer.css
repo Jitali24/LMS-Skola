@@ -17,17 +17,20 @@
   padding: 0px 7px;
 }
 
-.footer-col-main svg > path {
+.footer-col-main svg path {
   fill: #fff;
 }
+
 .footer-col-main a svg {
   margin-bottom: 12px;
   height: 61px;
   width: 150px;
-  /* fill: #bda588; */
-  color: #bda588;
-  /* background-color: #bda588; */
 }
+
+.footer-col-main a svg g path {
+  fill: #bda588;
+}
+
 .footer-col-main .info-link {
   margin-top: 25px;
 }

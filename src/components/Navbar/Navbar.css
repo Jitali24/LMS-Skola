@@ -20,6 +20,7 @@
   position: sticky;
   top: 0;
   z-index: 500;
+  border-bottom: 0.1px solid #d4d1d1;
 }
 
 .navbar-icons {
@@ -512,6 +513,15 @@ input {
     margin-top: 45px;
     margin-bottom: -90px;
     background: transparent;
+    border-bottom: none;
+  }
+
+  .navbar-container.active .navbar-logo a svg path {
+    fill: white;
+  }
+
+  .navbar-container .navbar-logo a svg g path {
+    fill: #bda588 !important;
   }
 
   .navbar-container.active .nav a {
@@ -701,6 +711,14 @@ input {
     position: absolute;
   }
 
+  /* .menu-list .image-menu:hover > .home-links {
+    visibility: visible;
+    opacity: 1;
+    left: calc(5vw / 2);
+    width: calc(100vw - 5vw);
+    position: fixed;
+  } */
+
   .home-links {
     display: flex;
     flex-direction: row;
@@ -708,6 +726,8 @@ input {
     padding-bottom: 10px;
     border-radius: 4px;
     display: none;
+    /* visibility: hidden;
+    opacity: 0; */
     background: #fff;
   }
 
@@ -754,6 +774,8 @@ input {
     font-family: "Jost";
     display: none;
     width: 700px;
+    /* visibility: hidden;
+    opacity: 0; */
   }
 
   .courses-links div {
@@ -776,16 +798,18 @@ input {
     height: 40px;
   }
 
-  .courses-menu a:hover + .courses-links ul li a {
+  .courses-menu:hover > .courses-links ul li a {
     font-weight: 300;
     color: #77838f;
     font-size: 16px;
     text-decoration: none;
   }
 
-  .courses-menu a:hover + .courses-links {
+  .courses-menu:hover > .courses-links {
     display: flex;
     position: absolute;
+    /* visibility: visible;
+    opacity: 1; */
   }
 
   .courses-menu a:hover,
@@ -807,13 +831,15 @@ input {
     padding-bottom: 30px;
     width: 250px;
     display: none;
+    /* visibility: hidden;
+    opacity: 0; */
   }
 
   .events-links .events-list li {
     height: 40px;
   }
 
-  .events-menu a:hover + .events-links ul li a {
+  .events-menu:hover > .events-links ul li a {
     text-transform: capitalize;
     font-family: "Jost";
     font-size: 16px;
@@ -821,9 +847,11 @@ input {
     color: #77838f;
   }
 
-  .events-menu a:hover + .events-links {
+  .events-menu:hover > .events-links {
     display: block;
     position: absolute;
+    /* visibility: visible;
+    opacity: 1; */
   }
 
   .events-menu a:hover,

@@ -1,0 +1,301 @@
+@import url("https://fonts.googleapis.com/css2?family=Lora:wght@600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Jost&display=swap");
+
+.contact-container {
+  background-color: white;
+}
+
+.contact-container .contact-title {
+  font-family: "Jost", sans-serif;
+  font-size: 16px;
+  color: #77838f;
+}
+
+.contact-container .contact-inner {
+  margin: 0 auto;
+  padding: 35px 0;
+  text-align: center;
+}
+
+.contact-container .contact-inner h1 {
+  color: #2f2d51;
+}
+
+.contact-container .contact-inner ol {
+  list-style-type: none;
+  margin-top: 10px;
+  text-align: center;
+}
+
+.contact-container .contact-inner ol li a {
+  text-decoration: none;
+  color: #77838f;
+}
+
+.contact-body {
+  padding: 0 14px;
+}
+
+.contact-us-first {
+  padding: 0 7px;
+}
+
+.contact-us-first .title {
+  margin-bottom: 30px;
+}
+
+.contact-us-first .title h2,
+.contact-us-second .title h2 {
+  font-size: 26px;
+  line-height: 1.05;
+  text-transform: capitalize;
+  margin-bottom: 5px;
+  font-weight: 600;
+  color: #2f2d51;
+}
+
+.contactUs-icon {
+  position: relative;
+  padding-left: 45px;
+  margin-bottom: 20px;
+}
+
+.contactUs-icon .f-icon {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.contactUs-icon .f-icon img {
+  width: 25px;
+}
+
+.contactUs-icon .f-title {
+  font-size: 18px;
+  margin-bottom: 14px;
+  font-weight: 600;
+  line-height: 1.3;
+  color: #2f2d51;
+}
+
+.contactUs-icon .f-text {
+  margin-bottom: 0;
+}
+
+.contactUs-icon .f-social a i {
+  color: #77838f;
+}
+
+.contact-us-second {
+  margin: 40px 0;
+}
+
+.form-contact {
+  margin: 20px 0;
+}
+
+.form-group > label {
+  display: block;
+  font-size: 16px;
+  font-weight: 400;
+  color: #2f2d51;
+  margin-bottom: 10px;
+}
+
+input[type="text"],
+textarea {
+  font-family: "Jost", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: #2f2d51;
+  width: 100%;
+  border-radius: 0;
+  height: 50px;
+  line-height: 48px;
+  border: 1px solid #e7e7ec;
+  border-radius: 4px;
+  padding: 0 15px;
+  margin-bottom: 15px;
+}
+
+.form-submit .btn {
+  width: 100%;
+  background-color: #090761;
+}
+
+.form-submit .btn:hover {
+  background-color: #ffc78b;
+}
+
+.contact-us-third {
+  padding: 20px 0;
+}
+
+.contact-us-third h2 {
+  font-size: 26px;
+  color: #2f2d51;
+  margin-bottom: 10px;
+  line-height: 1.05;
+  text-transform: capitalize;
+}
+
+.contact-us-third p {
+  margin-bottom: 20px;
+}
+
+.subscribeForm {
+  max-width: 580px;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 580px;
+  margin: auto;
+  border: 1px solid #e7e7ec;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.subscribeForm .form-control {
+  height: 50px;
+  line-height: 48px;
+  width: calc(100% - 100px);
+  border: 0;
+  padding: 0 20px;
+  margin-bottom: 0;
+  transition: all 0.3s;
+  border-radius: 0;
+}
+
+.subscribeForm .btn {
+  border: 0;
+  height: 50px;
+  line-height: 50px;
+  width: 100px;
+  text-align: center;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  padding: 0 10px;
+  text-transform: capitalize;
+  border-radius: 0 !important;
+  transition: all 0.3s;
+  background-color: #090761;
+}
+
+.subscribeForm .btn:hover {
+  background-color: #ffc78b;
+}
+
+@media (min-width: 768px) {
+  .contactUs-icons .row {
+    display: flex;
+  }
+  .contactUs-icon {
+    width: 360px;
+  }
+  .contact-container .contact-inner h1 {
+    font-size: 35px;
+  }
+  .contact-us-first .title h2,
+  .contact-us-second .title h2,
+  .contact-us-third h2 {
+    font-size: 30px;
+  }
+  .form-flex {
+    display: flex;
+    justify-content: space-between;
+  }
+  .form-input {
+    width: 360px;
+  }
+  .form-submit .btn {
+    width: 320px;
+  }
+  .contact-us textarea {
+    height: 200px;
+  }
+  .contact-us-third {
+    text-align: center;
+    padding: 50px 0;
+  }
+}
+
+@media (min-width: 1024px) {
+  .contact-us {
+    padding: 0 2rem;
+  }
+  .contact-container .contact-inner h1 {
+    font-size: 40px;
+  }
+  .contact-us-first .title h2,
+  .contact-us-second .title h2,
+  .contact-us-third h2 {
+    font-size: 35px;
+  }
+  .contactUs-icons .one {
+    width: 50%;
+  }
+  .contactUs-icon {
+    width: 480px;
+  }
+  .contactUs-icons .two {
+    width: 50%;
+  }
+  .contactUs-icon {
+    margin-bottom: 50px;
+  }
+  .form-input {
+    width: 460px;
+  }
+  .contact-us input[type="text"] {
+    height: 60px;
+  }
+  .form-submit .btn {
+    height: 60px;
+  }
+  .contact-us-third {
+    padding: 90px 0;
+  }
+  .subscribeForm .btn {
+    height: 60px;
+    width: 180px;
+  }
+  .subscribeForm input[type="text"] {
+    width: 398px;
+  }
+}
+
+@media (min-width: 1260px) {
+  .contact-body {
+    padding-top: 60px;
+  }
+  .contact-us {
+    padding: 0 10rem;
+  }
+  .contactUs-icon {
+    width: 270px;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  .contact-flex {
+    display: flex;
+  }
+  .contact-flex-1 {
+    width: 50%;
+  }
+  .contact-flex-2 {
+    width: 50%;
+  }
+  .contact-us input[type="text"] {
+    width: 270px;
+  }
+  .form-input {
+    width: auto;
+  }
+  .subscribeForm input[type="text"] {
+    width: 398px;
+  }
+  .contact-us-second {
+    margin-top: 0px;
+  }
+}
