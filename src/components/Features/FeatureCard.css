@@ -263,3 +263,9 @@
   right: 0;
   transform: translateY(-100%);
 }
+
+@media (min-width: 1285px) {
+  .feature-img {
+    height: 190px;
+  }
+}

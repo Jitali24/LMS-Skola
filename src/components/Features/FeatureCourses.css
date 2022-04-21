@@ -63,6 +63,7 @@
 }
 
 .carousels-container select {
+  display: block;
   width: 100%;
   height: 50px;
   padding-left: 10px;
@@ -98,9 +99,8 @@
 }
 
 .related-courses .carousels-container {
-    padding-bottom: 100px;
+  padding-bottom: 100px;
 }
-
 
 @keyframes fadeInUp {
   0% {
@@ -154,10 +154,7 @@
   .carousel-title {
     width: 400px;
   }
-  /* .carousels-title .right {
-        margin-left: 50px;
-    } */
-  .carousels-title .right select {
+  .carousels-title .fc-right select {
     padding-right: 30px;
   }
   .carousels-container .carousel-cell {
@@ -183,14 +180,14 @@
   .feature-container {
     padding: 0 15px;
   }
-  .carousels-title .right select {
+  .carousels-title .fc-right select {
     width: 200px;
     padding-right: 30px;
   }
   .carousels-title .carousel-title {
     margin-inline-start: 6rem;
   }
-  .carousels-title .right {
+  .carousels-title .fc-right {
     margin-inline-end: 6rem;
   }
 
@@ -204,7 +201,7 @@
   .carousels-title .carousel-title {
     margin-inline-start: 0;
   }
-  .carousels-title .right {
+  .carousels-title .fc-right {
     margin-inline-end: 0;
   }
   .carousels-container h2 {
@@ -236,5 +233,11 @@
 @media (min-width: 1260px) {
   .related-courses .carousels {
     padding: 3rem 10rem;
+  }
+  .carousels-container .carousel-cell {
+    width: 33.3%;
+  }
+  .carousels-container {
+    padding: 0 3rem;
   }
 }

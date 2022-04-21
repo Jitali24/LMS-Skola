@@ -635,7 +635,7 @@ input {
   /* navbar search btn */
   .header__search {
     display: block;
-    max-width: 230px;
+    max-width: 250px;
     width: 100%;
   }
 
@@ -682,6 +682,14 @@ input {
     padding: 0 10px;
   }
 
+  .navbar-container.active .nav a:hover {
+    color: #ffc78b;
+  }
+
+  .nav a:hover {
+    color: #2f2d51;
+  }
+
   .nav ul {
     list-style: none;
     margin: 0;
@@ -702,22 +710,18 @@ input {
     right: 600px;
   }
 
-  .image-menu a:hover {
+  .navbar-container.active .image-menu a:hover {
     color: #ffc78b;
   }
 
-  .image-menu a:hover + .home-links {
+  .image-menu a:hover {
+    color: #2f2d51;
+  }
+
+  .image-menu:hover > .home-links {
     display: block;
     position: absolute;
   }
-
-  /* .menu-list .image-menu:hover > .home-links {
-    visibility: visible;
-    opacity: 1;
-    left: calc(5vw / 2);
-    width: calc(100vw - 5vw);
-    position: fixed;
-  } */
 
   .home-links {
     display: flex;
@@ -726,9 +730,11 @@ input {
     padding-bottom: 10px;
     border-radius: 4px;
     display: none;
-    /* visibility: hidden;
-    opacity: 0; */
     background: #fff;
+    margin-top: 2.5px;
+    border: 1px solid #e7e7ec;
+    border-radius: 4px;
+    box-shadow: 0 8px 15px rgb(140 152 164 / 10%);
   }
 
   .home-links-row {
@@ -738,7 +744,7 @@ input {
     width: 37%;
   }
 
-  .image-menu a:hover + .home-links a {
+  .image-menu:hover > .home-links a {
     margin: 0 32.5px;
     color: #2f2d51;
     text-transform: none;
@@ -774,8 +780,10 @@ input {
     font-family: "Jost";
     display: none;
     width: 700px;
-    /* visibility: hidden;
-    opacity: 0; */
+    margin-top: 2.5px;
+    border: 1px solid #e7e7ec;
+    border-radius: 4px;
+    box-shadow: 0 8px 15px rgb(140 152 164 / 10%);
   }
 
   .courses-links div {
@@ -808,13 +816,10 @@ input {
   .courses-menu:hover > .courses-links {
     display: flex;
     position: absolute;
-    /* visibility: visible;
-    opacity: 1; */
   }
 
-  .courses-menu a:hover,
-  .courses-links a:hover {
-    color: #ffc78b;
+  .courses-menu:hover > .courses-links ul li a:hover {
+    color: #2f2d51;
   }
 
   /* events */
@@ -829,10 +834,12 @@ input {
     padding: 0 0 30px 15px;
     border-radius: 5px;
     padding-bottom: 30px;
+    margin-top: 2.5px;
     width: 250px;
     display: none;
-    /* visibility: hidden;
-    opacity: 0; */
+    border: 1px solid #e7e7ec;
+    border-radius: 4px;
+    box-shadow: 0 8px 15px rgb(140 152 164 / 10%);
   }
 
   .events-links .events-list li {
@@ -850,13 +857,10 @@ input {
   .events-menu:hover > .events-links {
     display: block;
     position: absolute;
-    /* visibility: visible;
-    opacity: 1; */
   }
 
-  .events-menu a:hover,
-  .events-links a:hover {
-    color: #ffc78b;
+  .events-menu:hover > .events-links ul li a:hover {
+    color: #2f2d51;
   }
 
   /* pages */
@@ -871,17 +875,20 @@ input {
     margin-left: -70px;
     padding: 0 0 30px 15px;
     border-radius: 5px;
-    margin-top: 0px;
+    margin-top: 2.5px;
     padding-bottom: 30px;
     width: 260px;
     display: none;
+    border: 1px solid #e7e7ec;
+    border-radius: 4px;
+    box-shadow: 0 8px 15px rgb(140 152 164 / 10%);
   }
 
   .pages-links .pages-list li {
     height: 40px;
   }
 
-  .pages-menu a:hover + .pages-links ul li a {
+  .pages-menu:hover > .pages-links ul li a {
     text-transform: capitalize;
     font-family: "Jost";
     font-size: 16px;
@@ -889,13 +896,13 @@ input {
     color: #77838f;
   }
 
-  .pages-menu a:hover + .pages-links {
+  .pages-menu:hover > .pages-links {
     display: block;
     position: absolute;
   }
 
-  .pages-menu a:hover {
-    color: #ffc78b;
+  .pages-menu:hover > .pages-links ul li a:hover {
+    color: #2f2d51;
   }
 
   #pages-user i {
@@ -910,13 +917,15 @@ input {
     height: 120px;
     margin-left: 120px;
     margin-top: -70px;
-    box-shadow: rgb(140 152 164 / 10%) 0px 8px 15px;
-    border-radius: 4px;
     display: none;
+    border: 1px solid #e7e7ec;
+    border-radius: 4px;
+    box-shadow: 0 8px 15px rgb(140 152 164 / 10%);
   }
 
-  .pages-user-options a:hover + .pages-user-links {
+  .pages-user-options:hover > .pages-user-links {
     display: block;
+    position: absolute;
   }
 
   /* blog */
@@ -931,17 +940,20 @@ input {
     margin-left: -70px;
     padding: 0 0 30px 15px;
     border-radius: 5px;
-    margin-top: 0px;
+    margin-top: 2.5px;
     padding-bottom: 30px;
     width: 260px;
     display: none;
+    border: 1px solid #e7e7ec;
+    border-radius: 4px;
+    box-shadow: 0 8px 15px rgb(140 152 164 / 10%);
   }
 
   .blog-links .blog-list li {
     height: 40px;
   }
 
-  .blog-menu a:hover + .blog-links ul li a {
+  .blog-menu:hover > .blog-links ul li a {
     text-transform: capitalize;
     font-family: "Jost";
     font-size: 16px;
@@ -949,29 +961,38 @@ input {
     color: #77838f;
   }
 
-  .blog-menu a:hover + .blog-links {
+  .blog-menu:hover > .blog-links {
     display: block;
     position: absolute;
   }
 
-  .blog-menu a:hover {
-    color: #ffc78b;
+  .blog-menu:hover > .blog-links ul li a:hover {
+    color: #2f2d51;
   }
 
   /* contact */
   .nav-contact {
-    /* margin-right: 15px; */
     position: absolute;
     right: 120px;
   }
 
-  .nav-contact a:hover {
+  .navbar-container.active .nav-contact a:hover {
     color: #ffc78b;
   }
 
-  .header__searchMb,
-  .header__user {
-    margin-top: 25px;
+  .nav-contact a:hover {
+    color: #2f2d51;
+  }
+
+  .navbar-container.active .header__user,
+  .navbar-container .header__user,
+  .header__searchMb {
+    margin-top: 26px;
     margin-left: 10px;
+  }
+
+  .header__user2 {
+    margin-top: 26px;
+    margin-left: -70px !important;
   }
 }

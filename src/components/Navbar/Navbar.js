@@ -15,6 +15,7 @@ function Navbar() {
   const handleUserClick = () => {
     setUserClick(true);
   };
+
   const handleUserCloseClick = () => {
     setUserCloseClick(false);
   };
@@ -22,6 +23,7 @@ function Navbar() {
   const handleSearchClick = () => {
     setSearchClick(!clickSearch);
   };
+
   const handleMenuMbClick = () => {
     setMenuMbClick(!clickMenuMb);
   };
@@ -49,9 +51,6 @@ function Navbar() {
         setFlag(false);
       }
     }
-    // else {
-    //   setFlag(false);
-    // }
   }, [navbar, pathname]);
 
   window.addEventListener("scroll", changeBackground);
@@ -92,7 +91,9 @@ function Navbar() {
           </svg>
         </a>
       </div>
-      {pathname === "/blog" || pathname === "/courses" ? (
+      {pathname === "/" ? (
+        <></>
+      ) : (
         <>
           <div className="header__course">
             <a href="/" className="f-icon">
@@ -113,44 +114,28 @@ function Navbar() {
             <div className="submenu-inner">
               <ul className="submenu">
                 <li>
-                  <a href="https://demo.createdbycocoon.com/moodle/skola/1/course/index.php?categoryid=3">
-                    Design
-                  </a>
+                  <a href="/">Design</a>
                 </li>
                 <li>
-                  <a href="https://demo.createdbycocoon.com/moodle/skola/1/course/index.php?categoryid=4">
-                    Business
-                  </a>
+                  <a href="/">Business</a>
                 </li>
                 <li>
-                  <a href="https://demo.createdbycocoon.com/moodle/skola/1/course/index.php?categoryid=5">
-                    Software Development
-                  </a>
+                  <a href="/">Software Development</a>
                 </li>
                 <li>
-                  <a href="https://demo.createdbycocoon.com/moodle/skola/1/course/index.php?categoryid=6">
-                    Personal Development
-                  </a>
+                  <a href="/">Personal Development</a>
                 </li>
                 <li>
-                  <a href="https://demo.createdbycocoon.com/moodle/skola/1/course/index.php?categoryid=7">
-                    Photography
-                  </a>
+                  <a href="/">Photography</a>
                 </li>
                 <li>
-                  <a href="https://demo.createdbycocoon.com/moodle/skola/1/course/index.php?categoryid=8">
-                    Audio + Music
-                  </a>
+                  <a href="/">Audio + Music</a>
                 </li>
                 <li>
-                  <a href="https://demo.createdbycocoon.com/moodle/skola/1/course/index.php?categoryid=9">
-                    Marketing
-                  </a>
+                  <a href="/">Marketing</a>
                 </li>
                 <li>
-                  <a href="https://demo.createdbycocoon.com/moodle/skola/1/course/index.php?categoryid=10">
-                    Finance + Accounting
-                  </a>
+                  <a href="/">Finance + Accounting</a>
                 </li>
               </ul>
             </div>
@@ -172,7 +157,7 @@ function Navbar() {
               <span className="f-icon">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  width="20"
+                  width="14"
                   height="20"
                   viewBox="0 0 20 20"
                   fill="none"
@@ -192,10 +177,7 @@ function Navbar() {
             </form>
           </div>
         </>
-      ) : (
-        <></>
       )}
-
       <div className="navbar-icons">
         <div className="nav">
           <ul className="menu-list">
@@ -205,60 +187,42 @@ function Navbar() {
               </a>
               <div className="home-links">
                 <div className="home-links-row">
-                  <a
-                    href="https://demo.createdbycocoon.com/moodle/skola/1"
-                    className="demo-card-caption"
-                  >
+                  <a href="/" className="demo-card-caption">
                     <img
                       src="https://demo.createdbycocoon.com/moodle/skola/1/theme/skola/images/home_screens/01_home.jpg"
                       alt=""
                     />
                     <p>Home v1</p>
                   </a>
-                  <a
-                    href="https://demo.createdbycocoon.com/moodle/skola/1/mod/page/view.php?id=110&amp;ccn_style=2"
-                    className="demo-card-caption"
-                  >
+                  <a href="/" className="demo-card-caption">
                     <img
                       src="https://demo.createdbycocoon.com/moodle/skola/1/theme/skola/images/home_screens/02_home.jpg"
                       alt=""
                     />
                     Home v2
                   </a>
-                  <a
-                    href="https://demo.createdbycocoon.com/moodle/skola/1/mod/page/view.php?id=111&amp;ccn_style=33"
-                    className="demo-card-caption"
-                  >
+                  <a href="/" className="demo-card-caption">
                     <img
                       src="https://demo.createdbycocoon.com/moodle/skola/1/theme/skola/images/home_screens/03_home.jpg"
                       alt=""
                     />
                     Home v3
                   </a>
-                  <a
-                    href="https://demo.createdbycocoon.com/moodle/skola/1/mod/page/view.php?id=112&amp;ccn_style=4"
-                    className="demo-card-caption"
-                  >
+                  <a href="/" className="demo-card-caption">
                     <img
                       src="https://demo.createdbycocoon.com/moodle/skola/1/theme/skola/images/home_screens/04_home.jpg"
                       alt=""
                     />
                     Home v4
                   </a>
-                  <a
-                    href="https://demo.createdbycocoon.com/moodle/skola/1/mod/page/view.php?id=113&amp;ccn_style=5"
-                    className="demo-card-caption"
-                  >
+                  <a href="/" className="demo-card-caption">
                     <img
                       src="https://demo.createdbycocoon.com/moodle/skola/1/theme/skola/images/home_screens/05_home.jpg"
                       alt=""
                     />
                     Home v5
                   </a>
-                  <a
-                    href="https://demo.createdbycocoon.com/moodle/skola/1/mod/page/view.php?id=114&amp;ccn_style=6"
-                    className="demo-card-caption"
-                  >
+                  <a href="/" className="demo-card-caption">
                     <img
                       src="https://demo.createdbycocoon.com/moodle/skola/1/theme/skola/images/home_screens/06_home.jpg"
                       alt=""
@@ -267,60 +231,42 @@ function Navbar() {
                   </a>
                 </div>
                 <div className="home-links-row">
-                  <a
-                    href="https://demo.createdbycocoon.com/moodle/skola/1/mod/page/view.php?id=115&amp;ccn_style=7"
-                    className="demo-card-caption"
-                  >
+                  <a href="/" className="demo-card-caption">
                     <img
                       src="https://demo.createdbycocoon.com/moodle/skola/1/theme/skola/images/home_screens/07_home.jpg"
                       alt=""
                     />
                     Home v7
                   </a>
-                  <a
-                    href="https://demo.createdbycocoon.com/moodle/skola/1/mod/page/view.php?id=116&amp;ccn_style=8"
-                    className="demo-card-caption"
-                  >
+                  <a href="/" className="demo-card-caption">
                     <img
                       src="https://demo.createdbycocoon.com/moodle/skola/1/theme/skola/images/home_screens/08_home.jpg"
                       alt=""
                     />
                     Home v8
                   </a>
-                  <a
-                    href="https://demo.createdbycocoon.com/moodle/skola/1/mod/page/view.php?id=117&amp;ccn_style=9"
-                    className="demo-card-caption"
-                  >
+                  <a href="/" className="demo-card-caption">
                     <img
                       src="https://demo.createdbycocoon.com/moodle/skola/1/theme/skola/images/home_screens/09_home.jpg"
                       alt=""
                     />
                     Home v9
                   </a>
-                  <a
-                    href="https://demo.createdbycocoon.com/moodle/skola/1/mod/page/view.php?id=118&amp;ccn_style=10"
-                    className="demo-card-caption"
-                  >
+                  <a href="/" className="demo-card-caption">
                     <img
                       src="https://demo.createdbycocoon.com/moodle/skola/1/theme/skola/images/home_screens/10_home.jpg"
                       alt=""
                     />
                     Home v10
                   </a>
-                  <a
-                    href="https://demo.createdbycocoon.com/moodle/skola/1/mod/page/view.php?id=119&amp;ccn_style=11"
-                    className="demo-card-caption"
-                  >
+                  <a href="/" className="demo-card-caption">
                     <img
                       src="https://demo.createdbycocoon.com/moodle/skola/1/theme/skola/images/home_screens/11_home.jpg"
                       alt=""
                     />
                     Home v11
                   </a>
-                  <a
-                    href="https://demo.createdbycocoon.com/moodle/skola/1/mod/page/view.php?id=120&amp;ccn_style=12"
-                    className="demo-card-caption"
-                  >
+                  <a href="/" className="demo-card-caption">
                     <img
                       src="https://demo.createdbycocoon.com/moodle/skola/1/theme/skola/images/home_screens/12_home.jpg"
                       alt=""
@@ -329,30 +275,21 @@ function Navbar() {
                   </a>
                 </div>
                 <div className="home-links-row">
-                  <a
-                    href="https://demo.createdbycocoon.com/moodle/skola/1/mod/page/view.php?id=121&amp;ccn_style=13"
-                    className="demo-card-caption"
-                  >
+                  <a href="/" className="demo-card-caption">
                     <img
                       src="https://demo.createdbycocoon.com/moodle/skola/1/theme/skola/images/home_screens/13_home.jpg"
                       alt=""
                     />
                     Home v13
                   </a>
-                  <a
-                    href="https://demo.createdbycocoon.com/moodle/skola/1/mod/page/view.php?id=122&amp;ccn_style=14"
-                    className="demo-card-caption"
-                  >
+                  <a href="/" className="demo-card-caption">
                     <img
                       src="https://demo.createdbycocoon.com/moodle/skola/1/theme/skola/images/home_screens/14_home.jpg"
                       alt=""
                     />
                     Home v14
                   </a>
-                  <a
-                    href="https://demo.createdbycocoon.com/moodle/skola/1/mod/page/view.php?id=123&amp;ccn_style=15"
-                    className="demo-card-caption"
-                  >
+                  <a href="/" className="demo-card-caption">
                     <img
                       src="https://demo.createdbycocoon.com/moodle/skola/1/theme/skola/images/home_screens/15_home.jpg"
                       alt=""
@@ -371,45 +308,29 @@ function Navbar() {
                   <h3> Courses List</h3>
                   <ul>
                     <li>
-                      <a href="https://demo.createdbycocoon.com/moodle/skola/1/course/index.php?categoryid=3">
-                        Courses List v1
-                      </a>
+                      <a href="/">Courses List v1</a>
                     </li>
                     <li>
-                      <a href="https://demo.createdbycocoon.com/moodle/skola/1/course/index.php?categoryid=4">
-                        Courses List v2
-                      </a>
+                      <a href="/">Courses List v2</a>
                     </li>
                     <li>
-                      <a href="https://demo.createdbycocoon.com/moodle/skola/1/course/index.php?categoryid=5">
-                        Courses List v3
-                      </a>
+                      <a href="/">Courses List v3</a>
                     </li>
                     <li>
-                      <a href="https://demo.createdbycocoon.com/moodle/skola/1/course/index.php?categoryid=6">
-                        Courses List v4
-                      </a>
+                      <a href="/">Courses List v4</a>
                     </li>
                     <li>
-                      <a href="https://demo.createdbycocoon.com/moodle/skola/1/course/index.php?categoryid=7">
-                        Courses List v5
-                      </a>
+                      <a href="/">Courses List v5</a>
                     </li>
                     <li>
-                      <a href="https://demo.createdbycocoon.com/moodle/skola/1/course/index.php?categoryid=8">
-                        Courses List v6
-                      </a>
+                      <a href="/">Courses List v6</a>
                     </li>
                     <h3 id="ins"> Instructors</h3>
                     <li>
-                      <a href="https://demo.createdbycocoon.com/moodle/skola/1/local/cocoon_users">
-                        Instructors List
-                      </a>
+                      <a href="/">Instructors List</a>
                     </li>
                     <li>
-                      <a href="https://demo.createdbycocoon.com/moodle/skola/1/user/profile.php?id=22">
-                        Instructor Profile
-                      </a>
+                      <a href="/">Instructor Profile</a>
                     </li>
                   </ul>
                 </div>
@@ -417,39 +338,25 @@ function Navbar() {
                   <h3> Courses Single</h3>
                   <ul>
                     <li>
-                      <a href="https://demo.createdbycocoon.com/moodle/skola/1/course/view.php?id=11">
-                        Course Single v1
-                      </a>
+                      <a href="/">Course Single v1</a>
                     </li>
                     <li>
-                      <a href="https://demo.createdbycocoon.com/moodle/skola/1/course/view.php?id=10">
-                        Course Single v2
-                      </a>
+                      <a href="/">Course Single v2</a>
                     </li>
                     <li>
-                      <a href="https://demo.createdbycocoon.com/moodle/skola/1/course/view.php?id=9">
-                        Course Single v3
-                      </a>
+                      <a href="/">Course Single v3</a>
                     </li>
                     <li>
-                      <a href="https://demo.createdbycocoon.com/moodle/skola/1/course/view.php?id=8">
-                        Course Single v4
-                      </a>
+                      <a href="/">Course Single v4</a>
                     </li>
                     <li>
-                      <a href="https://demo.createdbycocoon.com/moodle/skola/1/course/view.php?id=7">
-                        Course Single v5
-                      </a>
+                      <a href="/">Course Single v5</a>
                     </li>
                     <li>
-                      <a href="https://demo.createdbycocoon.com/moodle/skola/1/mod/page/view.php?id=146&amp;ccn_lesson_style=1">
-                        Lesson Single v1
-                      </a>
+                      <a href="/">Lesson Single v1</a>
                     </li>
                     <li>
-                      <a href="https://demo.createdbycocoon.com/moodle/skola/1/mod/page/view.php?id=146&amp;ccn_lesson_style=2">
-                        Lesson Single v2
-                      </a>
+                      <a href="/">Lesson Single v2</a>
                     </li>
                   </ul>
                 </div>
@@ -457,29 +364,19 @@ function Navbar() {
                   <h3 className="item__title"> Other Course Pages</h3>
                   <ul>
                     <li>
-                      <a href="https://demo.createdbycocoon.com/moodle/skola/1/course/view.php?id=4">
-                        Free Course
-                      </a>
+                      <a href="/">Free Course</a>
                     </li>
                     <li>
-                      <a href="https://demo.createdbycocoon.com/moodle/skola/1/course/view.php?id=5">
-                        Paid Course
-                      </a>
+                      <a href="/">Paid Course</a>
                     </li>
                     <li>
-                      <a href="https://demo.createdbycocoon.com/moodle/skola/1/course/view.php?id=11">
-                        Topics Format
-                      </a>
+                      <a href="/">Topics Format</a>
                     </li>
                     <li>
-                      <a href="https://demo.createdbycocoon.com/moodle/skola/1/course/view.php?id=10">
-                        Social Format
-                      </a>
+                      <a href="/">Social Format</a>
                     </li>
                     <li>
-                      <a href="https://demo.createdbycocoon.com/moodle/skola/1/course/view.php?id=9">
-                        Weekly Format
-                      </a>
+                      <a href="/">Weekly Format</a>
                     </li>
                   </ul>
                 </div>
@@ -492,42 +389,27 @@ function Navbar() {
               <div className="events-links">
                 <ul className="events-list">
                   <li className="">
-                    <a
-                      className="ccn-menu-item"
-                      href="https://demo.createdbycocoon.com/moodle/skola/1/local/cocoon_events"
-                    >
+                    <a className="ccn-menu-item" href="/">
                       Event List
                     </a>
                   </li>
                   <li className="">
-                    <a
-                      className="ccn-menu-item"
-                      href="https://demo.createdbycocoon.com/moodle/skola/1/local/cocoon_events/view.php?id=1"
-                    >
+                    <a className="ccn-menu-item" href="/">
                       Event Single
                     </a>
                   </li>
                   <li className="">
-                    <a
-                      className="ccn-menu-item"
-                      href="https://demo.createdbycocoon.com/moodle/skola/1/calendar/view.php"
-                    >
+                    <a className="ccn-menu-item" href="/">
                       Calendar Default
                     </a>
                   </li>
                   <li className="">
-                    <a
-                      className="ccn-menu-item"
-                      href="https://demo.createdbycocoon.com/moodle/skola/1/calendar/view.php?view=month&amp;time=1575158400"
-                    >
+                    <a className="ccn-menu-item" href="/">
                       Calendar Month
                     </a>
                   </li>
                   <li className="">
-                    <a
-                      className="ccn-menu-item"
-                      href="https://demo.createdbycocoon.com/moodle/skola/1/calendar/view.php?view=day&amp;time=1577491200"
-                    >
+                    <a className="ccn-menu-item" href="/">
                       Calendar Day
                     </a>
                   </li>
@@ -541,29 +423,19 @@ function Navbar() {
               <div className="pages-links">
                 <ul className="pages-list">
                   <li>
-                    <a href="https://demo.createdbycocoon.com/moodle/skola/1/mod/page/view.php?id=124">
-                      About Us
-                    </a>
+                    <a href="/">About Us</a>
                   </li>
                   <li>
-                    <a href="https://demo.createdbycocoon.com/moodle/skola/1/mod/page/view.php?id=125">
-                      About Us v2
-                    </a>
+                    <a href="/">About Us v2</a>
                   </li>
                   <li>
-                    <a href="https://demo.createdbycocoon.com/moodle/skola/1/mod/page/view.php?id=131">
-                      Become an Instructor
-                    </a>
+                    <a href="/">Become an Instructor</a>
                   </li>
                   <li>
-                    <a href="https://demo.createdbycocoon.com/moodle/skola/1/mod/page/view.php?id=130">
-                      Pricing
-                    </a>
+                    <a href="/">Pricing</a>
                   </li>
                   <li>
-                    <a href="https://demo.createdbycocoon.com/moodle/skola/1/mod/page/view.php?id=126">
-                      FAQ
-                    </a>
+                    <a href="/">FAQ</a>
                   </li>
                   <li className="pages-user-options">
                     <a className="" href="/" id="pages-user">
@@ -573,32 +445,22 @@ function Navbar() {
                     <div className="pages-user-links">
                       <ul className="pages-user-list">
                         <li>
-                          <a href="https://demo.createdbycocoon.com/moodle/skola/1/login/index.php">
-                            Login
-                          </a>
+                          <a href="/">Login</a>
                         </li>
                         <li>
-                          <a href="https://demo.createdbycocoon.com/moodle/skola/1/login/signup.php">
-                            Register
-                          </a>
+                          <a href="/">Register</a>
                         </li>
                       </ul>
                     </div>
                   </li>
                   <li>
-                    <a href="https://demo.createdbycocoon.com/moodle/skola/1/mod/page/view.php?id=140">
-                      Coming Soon
-                    </a>
+                    <a href="/">Coming Soon</a>
                   </li>
                   <li>
-                    <a href="https://demo.createdbycocoon.com/moodle/skola/1/admin/tool/dataprivacy/summary.php">
-                      Terms &amp; Conditions
-                    </a>
+                    <a href="/">Terms &amp; Conditions</a>
                   </li>
                   <li>
-                    <a href="https://demo.createdbycocoon.com/moodle/skola/1/mod/page/view.php?id=139">
-                      Elements
-                    </a>
+                    <a href="/">Elements</a>
                   </li>
                 </ul>
               </div>
@@ -610,38 +472,25 @@ function Navbar() {
               <div className="blog-links">
                 <ul className="blog-list">
                   <li>
-                    <a href="https://demo.createdbycocoon.com/moodle/skola/1/blog/index.php?ccn_blog_style=1">
-                      Blog List
-                    </a>
+                    <a href="/">Blog List</a>
                   </li>
                   <li>
-                    <a href="https://demo.createdbycocoon.com/moodle/skola/1/blog/index.php?ccn_blog_style=2">
-                      Blog List v2
-                    </a>
+                    <a href="/">Blog List v2</a>
                   </li>
                   <li>
-                    <a href="https://demo.createdbycocoon.com/moodle/skola/1/blog/index.php?ccn_blog_style=3">
-                      Blog List v3
-                    </a>
+                    <a href="/">Blog List v3</a>
                   </li>
                   <li>
-                    <a href="https://demo.createdbycocoon.com/moodle/skola/1/blog/index.php?ccn_blog_style=4">
-                      Blog List v4
-                    </a>
+                    <a href="/">Blog List v4</a>
                   </li>
                   <li>
-                    <a href="https://demo.createdbycocoon.com/moodle/skola/1/blog/index.php?entryid=2">
-                      Blog Single
-                    </a>
+                    <a href="/">Blog Single</a>
                   </li>
                 </ul>
               </div>
             </li>
             <li className="nav-contact">
-              <a
-                className="ccn-menu-item"
-                href="https://demo.createdbycocoon.com/moodle/skola/1/mod/page/view.php?id=138"
-              >
+              <a className="ccn-menu-item" href="/contact">
                 Contact
               </a>
             </li>
@@ -716,168 +565,330 @@ function Navbar() {
         ) : (
           <></>
         )}
+        {pathname === "/" ? (
+          <div className="header__user" onClick={handleUserClick}>
+            <svg
+              width="20"
+              height="20"
+              viewBox="0 0 20 20"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M17.2252 3.07776C15.3376 1.10744 12.7258 -0.00451546 9.99712 0.00050521C4.48284 -0.00644005 0.00695317 4.45815 7.91636e-06 9.97248C-0.00342287 12.6991 1.1084 15.3085 3.07726 17.1948C3.08299 17.2005 3.08512 17.2091 3.09082 17.2141C3.14864 17.2698 3.21148 17.317 3.27005 17.3705C3.43071 17.5133 3.59138 17.6611 3.76061 17.7989C3.85128 17.8704 3.94554 17.9417 4.03838 18.0074C4.19833 18.1267 4.35828 18.2459 4.52535 18.3559C4.6389 18.4273 4.756 18.4987 4.87236 18.5701C5.02658 18.663 5.18012 18.7565 5.33936 18.8414C5.47434 18.9129 5.61211 18.9742 5.74922 19.0392C5.89917 19.1106 6.04698 19.182 6.20049 19.2463C6.354 19.3105 6.50826 19.3605 6.6639 19.4162C6.81954 19.4719 6.9538 19.5233 7.10304 19.569C7.27157 19.6197 7.44436 19.659 7.61573 19.7011C7.75853 19.7361 7.89706 19.7761 8.04416 19.8047C8.24123 19.844 8.44117 19.8689 8.64112 19.8961C8.76467 19.9132 8.88534 19.9375 9.01027 19.9496C9.33732 19.9818 9.66718 19.9996 9.99992 19.9996C10.3327 19.9996 10.6626 19.9818 10.9896 19.9496C11.1146 19.9375 11.2352 19.9132 11.3587 19.8961C11.5587 19.8689 11.7586 19.844 11.9557 19.8047C12.0985 19.7761 12.2413 19.7332 12.3841 19.7011C12.5555 19.659 12.7283 19.6197 12.8968 19.569C13.046 19.5233 13.1903 19.4677 13.3359 19.4162C13.4816 19.3648 13.6473 19.3091 13.7994 19.2463C13.9514 19.1834 14.1007 19.1099 14.2506 19.0392C14.3877 18.9742 14.5256 18.9128 14.6605 18.8414C14.8197 18.7565 14.9732 18.6629 15.1275 18.5701C15.2439 18.4987 15.361 18.4337 15.4745 18.3559C15.6416 18.246 15.8016 18.1267 15.9615 18.0074C16.0543 17.936 16.1485 17.8717 16.2392 17.7989C16.4085 17.6633 16.5691 17.519 16.7298 17.3705C16.7883 17.317 16.8512 17.2699 16.909 17.2141C16.9147 17.2091 16.9169 17.2006 16.9226 17.1948C20.9046 13.38 21.04 7.05961 17.2252 3.07776ZM15.6203 16.4472C15.4904 16.5615 15.3561 16.67 15.2205 16.775C15.1405 16.8364 15.0605 16.8971 14.9784 16.9556C14.8491 17.0492 14.7178 17.1377 14.5842 17.2227C14.4871 17.2848 14.3879 17.3448 14.2879 17.4034C14.1622 17.4748 14.0344 17.5462 13.9051 17.6176C13.7909 17.6761 13.6745 17.7311 13.5574 17.7854C13.4403 17.8397 13.3111 17.8975 13.1847 17.9482C13.0583 17.9989 12.924 18.0467 12.7919 18.091C12.6713 18.1324 12.5506 18.1752 12.4285 18.2116C12.2857 18.2545 12.1364 18.2895 11.9886 18.3252C11.8729 18.3523 11.7587 18.383 11.6416 18.4059C11.4724 18.4387 11.2996 18.4616 11.1261 18.4851C11.0275 18.498 10.9297 18.5159 10.8304 18.5259C10.5562 18.5523 10.2784 18.568 9.99783 18.568C9.71722 18.568 9.43945 18.5523 9.16524 18.5259C9.066 18.5159 8.96818 18.498 8.8696 18.4851C8.6961 18.4616 8.5233 18.4387 8.35406 18.4059C8.23696 18.3831 8.1227 18.3524 8.00705 18.3252C7.85924 18.2895 7.71213 18.2538 7.5672 18.2116C7.44512 18.1752 7.32441 18.1324 7.20375 18.091C7.07166 18.0453 6.93953 17.9989 6.811 17.9482C6.68248 17.8975 6.5611 17.8418 6.43826 17.7854C6.31542 17.729 6.20476 17.6762 6.09054 17.6176C5.9613 17.5505 5.83348 17.4798 5.7078 17.4034C5.60784 17.3448 5.50856 17.2848 5.41145 17.2227C5.27794 17.1377 5.14653 17.0492 5.01729 16.9556C4.93516 16.8971 4.8552 16.8364 4.77521 16.775C4.63952 16.67 4.5053 16.5608 4.37535 16.4472C4.34393 16.4237 4.31536 16.3937 4.28469 16.3665C4.31661 13.9375 5.87708 11.7926 8.17843 11.0147C9.32912 11.5621 10.6651 11.5621 11.8158 11.0147C14.1171 11.7926 15.6776 13.9374 15.7096 16.3665C15.6796 16.3937 15.651 16.4208 15.6203 16.4472ZM7.50716 5.72566C8.2803 4.35067 10.0217 3.86278 11.3967 4.63592C12.7717 5.40906 13.2596 7.15044 12.4864 8.52544C12.2299 8.98165 11.8529 9.35862 11.3967 9.61517C11.3931 9.61517 11.3888 9.61517 11.3845 9.61944C11.1952 9.72483 10.9951 9.8096 10.7876 9.87223C10.7505 9.88294 10.7162 9.89721 10.6769 9.9065C10.6055 9.92507 10.5305 9.93792 10.457 9.95076C10.3185 9.97499 10.1784 9.98905 10.0378 9.99289H9.95641C9.81588 9.98905 9.67576 9.97499 9.53727 9.95076C9.46585 9.93792 9.39016 9.92507 9.31736 9.9065C9.2795 9.89721 9.24594 9.88294 9.2067 9.87223C8.99922 9.8096 8.79911 9.72487 8.60974 9.61944L8.5969 9.61517C7.2219 8.84203 6.73402 7.10065 7.50716 5.72566ZM16.9763 14.9506C16.518 12.8133 15.1107 11.0014 13.1532 10.0287C14.7534 8.28561 14.6375 5.57542 12.8944 3.97529C11.1514 2.37516 8.44117 2.49105 6.84104 4.2341C5.33677 5.87276 5.33677 8.39005 6.84104 10.0287C4.88361 11.0015 3.47624 12.8133 3.01802 14.9506C0.27991 11.0938 1.18681 5.7475 5.04365 3.00939C8.90048 0.271287 14.2467 1.17819 16.9848 5.03502C18.0141 6.48487 18.5666 8.21913 18.5658 9.9972C18.5658 11.7737 18.01 13.5057 16.9763 14.9506Z"
+                fill="#949DA6"
+              ></path>
+            </svg>
+            <div
+              className={
+                clickUser && clickUserClose
+                  ? "loginSignCard popupCard active"
+                  : "loginSignCard popupCard"
+              }
+            >
+              <div className="bg"></div>
+              <div className="popupCard__inner scrollfix-custom">
+                <div
+                  className="loginSignCard-item active"
+                  id="loginSignCard-login"
+                >
+                  <div className="loginSignCard-fix">
+                    <div className="f-header">
+                      <h2 className="f-header__title">
+                        Log In to Your Skola Account!
+                      </h2>
+                      <span
+                        className="f-header__close"
+                        onClick={handleUserCloseClick}
+                      >
+                        <i className="fa-solid fa-xmark"></i>
+                      </span>
+                    </div>
 
-        <div className="header__user" onClick={handleUserClick}>
-          <svg
-            width="20"
-            height="20"
-            viewBox="0 0 20 20"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M17.2252 3.07776C15.3376 1.10744 12.7258 -0.00451546 9.99712 0.00050521C4.48284 -0.00644005 0.00695317 4.45815 7.91636e-06 9.97248C-0.00342287 12.6991 1.1084 15.3085 3.07726 17.1948C3.08299 17.2005 3.08512 17.2091 3.09082 17.2141C3.14864 17.2698 3.21148 17.317 3.27005 17.3705C3.43071 17.5133 3.59138 17.6611 3.76061 17.7989C3.85128 17.8704 3.94554 17.9417 4.03838 18.0074C4.19833 18.1267 4.35828 18.2459 4.52535 18.3559C4.6389 18.4273 4.756 18.4987 4.87236 18.5701C5.02658 18.663 5.18012 18.7565 5.33936 18.8414C5.47434 18.9129 5.61211 18.9742 5.74922 19.0392C5.89917 19.1106 6.04698 19.182 6.20049 19.2463C6.354 19.3105 6.50826 19.3605 6.6639 19.4162C6.81954 19.4719 6.9538 19.5233 7.10304 19.569C7.27157 19.6197 7.44436 19.659 7.61573 19.7011C7.75853 19.7361 7.89706 19.7761 8.04416 19.8047C8.24123 19.844 8.44117 19.8689 8.64112 19.8961C8.76467 19.9132 8.88534 19.9375 9.01027 19.9496C9.33732 19.9818 9.66718 19.9996 9.99992 19.9996C10.3327 19.9996 10.6626 19.9818 10.9896 19.9496C11.1146 19.9375 11.2352 19.9132 11.3587 19.8961C11.5587 19.8689 11.7586 19.844 11.9557 19.8047C12.0985 19.7761 12.2413 19.7332 12.3841 19.7011C12.5555 19.659 12.7283 19.6197 12.8968 19.569C13.046 19.5233 13.1903 19.4677 13.3359 19.4162C13.4816 19.3648 13.6473 19.3091 13.7994 19.2463C13.9514 19.1834 14.1007 19.1099 14.2506 19.0392C14.3877 18.9742 14.5256 18.9128 14.6605 18.8414C14.8197 18.7565 14.9732 18.6629 15.1275 18.5701C15.2439 18.4987 15.361 18.4337 15.4745 18.3559C15.6416 18.246 15.8016 18.1267 15.9615 18.0074C16.0543 17.936 16.1485 17.8717 16.2392 17.7989C16.4085 17.6633 16.5691 17.519 16.7298 17.3705C16.7883 17.317 16.8512 17.2699 16.909 17.2141C16.9147 17.2091 16.9169 17.2006 16.9226 17.1948C20.9046 13.38 21.04 7.05961 17.2252 3.07776ZM15.6203 16.4472C15.4904 16.5615 15.3561 16.67 15.2205 16.775C15.1405 16.8364 15.0605 16.8971 14.9784 16.9556C14.8491 17.0492 14.7178 17.1377 14.5842 17.2227C14.4871 17.2848 14.3879 17.3448 14.2879 17.4034C14.1622 17.4748 14.0344 17.5462 13.9051 17.6176C13.7909 17.6761 13.6745 17.7311 13.5574 17.7854C13.4403 17.8397 13.3111 17.8975 13.1847 17.9482C13.0583 17.9989 12.924 18.0467 12.7919 18.091C12.6713 18.1324 12.5506 18.1752 12.4285 18.2116C12.2857 18.2545 12.1364 18.2895 11.9886 18.3252C11.8729 18.3523 11.7587 18.383 11.6416 18.4059C11.4724 18.4387 11.2996 18.4616 11.1261 18.4851C11.0275 18.498 10.9297 18.5159 10.8304 18.5259C10.5562 18.5523 10.2784 18.568 9.99783 18.568C9.71722 18.568 9.43945 18.5523 9.16524 18.5259C9.066 18.5159 8.96818 18.498 8.8696 18.4851C8.6961 18.4616 8.5233 18.4387 8.35406 18.4059C8.23696 18.3831 8.1227 18.3524 8.00705 18.3252C7.85924 18.2895 7.71213 18.2538 7.5672 18.2116C7.44512 18.1752 7.32441 18.1324 7.20375 18.091C7.07166 18.0453 6.93953 17.9989 6.811 17.9482C6.68248 17.8975 6.5611 17.8418 6.43826 17.7854C6.31542 17.729 6.20476 17.6762 6.09054 17.6176C5.9613 17.5505 5.83348 17.4798 5.7078 17.4034C5.60784 17.3448 5.50856 17.2848 5.41145 17.2227C5.27794 17.1377 5.14653 17.0492 5.01729 16.9556C4.93516 16.8971 4.8552 16.8364 4.77521 16.775C4.63952 16.67 4.5053 16.5608 4.37535 16.4472C4.34393 16.4237 4.31536 16.3937 4.28469 16.3665C4.31661 13.9375 5.87708 11.7926 8.17843 11.0147C9.32912 11.5621 10.6651 11.5621 11.8158 11.0147C14.1171 11.7926 15.6776 13.9374 15.7096 16.3665C15.6796 16.3937 15.651 16.4208 15.6203 16.4472ZM7.50716 5.72566C8.2803 4.35067 10.0217 3.86278 11.3967 4.63592C12.7717 5.40906 13.2596 7.15044 12.4864 8.52544C12.2299 8.98165 11.8529 9.35862 11.3967 9.61517C11.3931 9.61517 11.3888 9.61517 11.3845 9.61944C11.1952 9.72483 10.9951 9.8096 10.7876 9.87223C10.7505 9.88294 10.7162 9.89721 10.6769 9.9065C10.6055 9.92507 10.5305 9.93792 10.457 9.95076C10.3185 9.97499 10.1784 9.98905 10.0378 9.99289H9.95641C9.81588 9.98905 9.67576 9.97499 9.53727 9.95076C9.46585 9.93792 9.39016 9.92507 9.31736 9.9065C9.2795 9.89721 9.24594 9.88294 9.2067 9.87223C8.99922 9.8096 8.79911 9.72487 8.60974 9.61944L8.5969 9.61517C7.2219 8.84203 6.73402 7.10065 7.50716 5.72566ZM16.9763 14.9506C16.518 12.8133 15.1107 11.0014 13.1532 10.0287C14.7534 8.28561 14.6375 5.57542 12.8944 3.97529C11.1514 2.37516 8.44117 2.49105 6.84104 4.2341C5.33677 5.87276 5.33677 8.39005 6.84104 10.0287C4.88361 11.0015 3.47624 12.8133 3.01802 14.9506C0.27991 11.0938 1.18681 5.7475 5.04365 3.00939C8.90048 0.271287 14.2467 1.17819 16.9848 5.03502C18.0141 6.48487 18.5666 8.21913 18.5658 9.9972C18.5658 11.7737 18.01 13.5057 16.9763 14.9506Z"
-              fill="#949DA6"
-            ></path>
-          </svg>
-          <div
-            className={
-              clickUser && clickUserClose
-                ? "loginSignCard popupCard active"
-                : "loginSignCard popupCard"
-            }
-          >
-            <div className="bg"></div>
-            <div className="popupCard__inner scrollfix-custom">
-              <div
-                className="loginSignCard-item active"
-                id="loginSignCard-login"
-              >
-                <div className="loginSignCard-fix">
-                  <div className="f-header">
-                    <h2 className="f-header__title">
-                      Log In to Your Skola Account!
-                    </h2>
-                    <span
-                      className="f-header__close"
-                      onClick={handleUserCloseClick}
-                    >
-                      <i className="fa-solid fa-xmark"></i>
-                    </span>
+                    <div className="f-content">
+                      <div className="f-content__scroll">
+                        <div className="login-wrap">
+                          <form
+                            className="__loginform form-wrap"
+                            id="login"
+                            method="post"
+                            action="https://demo.createdbycocoon.com/moodle/skola/1/login/index.php"
+                          >
+                            <div className="form-item">
+                              <label>Username</label>
+                              <input
+                                type="text"
+                                name="username"
+                                placeholder="Username"
+                                id="login_username"
+                                className="form-control"
+                                value=""
+                                autoComplete="username"
+                              />
+                            </div>
+                            <div className="form-item">
+                              <label>Password</label>
+                              <input
+                                type="password"
+                                name="password"
+                                id="login_password"
+                                placeholder="Password"
+                                className="form-control"
+                                value=""
+                                autoComplete="current-password"
+                              />
+                            </div>
+                            <div className="form-forgot">
+                              <label
+                                className="checkbox-custom"
+                                for="rememberusername"
+                              >
+                                <div className="f-textbox">
+                                  <span></span>
+                                  Remember username
+                                </div>
+                              </label>
+                              <p className="f-text">
+                                <a href="https://demo.createdbycocoon.com/moodle/skola/1/login/forgot_password.php">
+                                  Lost password?
+                                </a>
+                              </p>
+                            </div>
+                            <button type="submit" className="btn">
+                              Log in
+                            </button>
+                            <input
+                              type="hidden"
+                              name="logintoken"
+                              value="8n4arqGyuIPyYETfBPhb5cfay1PY3lUf"
+                            />
+                          </form>
+                        </div>
+                        <p className="btn-convert">
+                          Don't have an account?
+                          <a href="#loginSignCard-signup">Sign up</a>
+                        </p>
+                      </div>
+                    </div>
                   </div>
-
-                  <div className="f-content">
-                    <div className="f-content__scroll">
-                      <div className="login-wrap">
-                        <form
-                          className="__loginform form-wrap"
-                          id="login"
-                          method="post"
-                          action="https://demo.createdbycocoon.com/moodle/skola/1/login/index.php"
-                        >
+                </div>
+                <div className="loginSignCard-item" id="loginSignCard-signup">
+                  <div className="loginSignCard-fix">
+                    <div className="f-header">
+                      <h2 className="f-header__title">
+                        Sign Up and Start Learning!
+                      </h2>
+                      <span className="f-header__close">
+                        <i className="ccn-flaticon-multiply"></i>
+                      </span>
+                    </div>
+                    <div className="f-content">
+                      <div className="f-content__scroll">
+                        <form className="form-wrap">
                           <div className="form-item">
                             <label>Username</label>
                             <input
                               type="text"
-                              name="username"
-                              placeholder="Username"
-                              id="login_username"
+                              placeholder="creativelayers"
+                              name="name"
                               className="form-control"
-                              value=""
-                              autoComplete="username"
+                            />
+                          </div>
+                          <div className="form-item">
+                            <label>Email</label>
+                            <input
+                              type="email"
+                              placeholder="creativelayers@gmail.com"
+                              name="email"
+                              className="form-control"
                             />
                           </div>
                           <div className="form-item">
                             <label>Password</label>
                             <input
                               type="password"
+                              placeholder="**********"
                               name="password"
-                              id="login_password"
-                              placeholder="Password"
                               className="form-control"
-                              value=""
-                              autoComplete="current-password"
                             />
                           </div>
-                          <div className="form-forgot">
-                            <label
-                              className="checkbox-custom"
-                              for="rememberusername"
-                            >
-                              <div className="f-textbox">
-                                <span></span>
-                                Remember username
-                              </div>
-                            </label>
-                            <p className="f-text">
-                              <a href="https://demo.createdbycocoon.com/moodle/skola/1/login/forgot_password.php">
-                                Lost password?
-                              </a>
-                            </p>
-                          </div>
                           <button type="submit" className="btn">
-                            Log in
+                            SIGN UP
                           </button>
-                          <input
-                            type="hidden"
-                            name="logintoken"
-                            value="8n4arqGyuIPyYETfBPhb5cfay1PY3lUf"
-                          />
                         </form>
+                        <p className="btn-convert">
+                          Don't have an account?
+                          <a href="#loginSignCard-login">Log In</a>
+                        </p>
                       </div>
-                      <p className="btn-convert">
-                        Don't have an account?
-                        <a href="#loginSignCard-signup">Sign up</a>
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="loginSignCard-item" id="loginSignCard-signup">
-                <div className="loginSignCard-fix">
-                  <div className="f-header">
-                    <h2 className="f-header__title">
-                      Sign Up and Start Learning!
-                    </h2>
-                    <span className="f-header__close">
-                      <i className="ccn-flaticon-multiply"></i>
-                    </span>
-                  </div>
-                  <div className="f-content">
-                    <div className="f-content__scroll">
-                      <form className="form-wrap">
-                        <div className="form-item">
-                          <label>Username</label>
-                          <input
-                            type="text"
-                            placeholder="creativelayers"
-                            name="name"
-                            className="form-control"
-                          />
-                        </div>
-                        <div className="form-item">
-                          <label>Email</label>
-                          <input
-                            type="email"
-                            placeholder="creativelayers@gmail.com"
-                            name="email"
-                            className="form-control"
-                          />
-                        </div>
-                        <div className="form-item">
-                          <label>Password</label>
-                          <input
-                            type="password"
-                            placeholder="**********"
-                            name="password"
-                            className="form-control"
-                          />
-                        </div>
-                        <button type="submit" className="btn">
-                          SIGN UP
-                        </button>
-                      </form>
-                      <p className="btn-convert">
-                        Don't have an account?
-                        <a href="#loginSignCard-login">Log In</a>
-                      </p>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
+        ) : (
+          <div className="header__user header__user2" onClick={handleUserClick}>
+            <svg
+              width="20"
+              height="20"
+              viewBox="0 0 20 20"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M17.2252 3.07776C15.3376 1.10744 12.7258 -0.00451546 9.99712 0.00050521C4.48284 -0.00644005 0.00695317 4.45815 7.91636e-06 9.97248C-0.00342287 12.6991 1.1084 15.3085 3.07726 17.1948C3.08299 17.2005 3.08512 17.2091 3.09082 17.2141C3.14864 17.2698 3.21148 17.317 3.27005 17.3705C3.43071 17.5133 3.59138 17.6611 3.76061 17.7989C3.85128 17.8704 3.94554 17.9417 4.03838 18.0074C4.19833 18.1267 4.35828 18.2459 4.52535 18.3559C4.6389 18.4273 4.756 18.4987 4.87236 18.5701C5.02658 18.663 5.18012 18.7565 5.33936 18.8414C5.47434 18.9129 5.61211 18.9742 5.74922 19.0392C5.89917 19.1106 6.04698 19.182 6.20049 19.2463C6.354 19.3105 6.50826 19.3605 6.6639 19.4162C6.81954 19.4719 6.9538 19.5233 7.10304 19.569C7.27157 19.6197 7.44436 19.659 7.61573 19.7011C7.75853 19.7361 7.89706 19.7761 8.04416 19.8047C8.24123 19.844 8.44117 19.8689 8.64112 19.8961C8.76467 19.9132 8.88534 19.9375 9.01027 19.9496C9.33732 19.9818 9.66718 19.9996 9.99992 19.9996C10.3327 19.9996 10.6626 19.9818 10.9896 19.9496C11.1146 19.9375 11.2352 19.9132 11.3587 19.8961C11.5587 19.8689 11.7586 19.844 11.9557 19.8047C12.0985 19.7761 12.2413 19.7332 12.3841 19.7011C12.5555 19.659 12.7283 19.6197 12.8968 19.569C13.046 19.5233 13.1903 19.4677 13.3359 19.4162C13.4816 19.3648 13.6473 19.3091 13.7994 19.2463C13.9514 19.1834 14.1007 19.1099 14.2506 19.0392C14.3877 18.9742 14.5256 18.9128 14.6605 18.8414C14.8197 18.7565 14.9732 18.6629 15.1275 18.5701C15.2439 18.4987 15.361 18.4337 15.4745 18.3559C15.6416 18.246 15.8016 18.1267 15.9615 18.0074C16.0543 17.936 16.1485 17.8717 16.2392 17.7989C16.4085 17.6633 16.5691 17.519 16.7298 17.3705C16.7883 17.317 16.8512 17.2699 16.909 17.2141C16.9147 17.2091 16.9169 17.2006 16.9226 17.1948C20.9046 13.38 21.04 7.05961 17.2252 3.07776ZM15.6203 16.4472C15.4904 16.5615 15.3561 16.67 15.2205 16.775C15.1405 16.8364 15.0605 16.8971 14.9784 16.9556C14.8491 17.0492 14.7178 17.1377 14.5842 17.2227C14.4871 17.2848 14.3879 17.3448 14.2879 17.4034C14.1622 17.4748 14.0344 17.5462 13.9051 17.6176C13.7909 17.6761 13.6745 17.7311 13.5574 17.7854C13.4403 17.8397 13.3111 17.8975 13.1847 17.9482C13.0583 17.9989 12.924 18.0467 12.7919 18.091C12.6713 18.1324 12.5506 18.1752 12.4285 18.2116C12.2857 18.2545 12.1364 18.2895 11.9886 18.3252C11.8729 18.3523 11.7587 18.383 11.6416 18.4059C11.4724 18.4387 11.2996 18.4616 11.1261 18.4851C11.0275 18.498 10.9297 18.5159 10.8304 18.5259C10.5562 18.5523 10.2784 18.568 9.99783 18.568C9.71722 18.568 9.43945 18.5523 9.16524 18.5259C9.066 18.5159 8.96818 18.498 8.8696 18.4851C8.6961 18.4616 8.5233 18.4387 8.35406 18.4059C8.23696 18.3831 8.1227 18.3524 8.00705 18.3252C7.85924 18.2895 7.71213 18.2538 7.5672 18.2116C7.44512 18.1752 7.32441 18.1324 7.20375 18.091C7.07166 18.0453 6.93953 17.9989 6.811 17.9482C6.68248 17.8975 6.5611 17.8418 6.43826 17.7854C6.31542 17.729 6.20476 17.6762 6.09054 17.6176C5.9613 17.5505 5.83348 17.4798 5.7078 17.4034C5.60784 17.3448 5.50856 17.2848 5.41145 17.2227C5.27794 17.1377 5.14653 17.0492 5.01729 16.9556C4.93516 16.8971 4.8552 16.8364 4.77521 16.775C4.63952 16.67 4.5053 16.5608 4.37535 16.4472C4.34393 16.4237 4.31536 16.3937 4.28469 16.3665C4.31661 13.9375 5.87708 11.7926 8.17843 11.0147C9.32912 11.5621 10.6651 11.5621 11.8158 11.0147C14.1171 11.7926 15.6776 13.9374 15.7096 16.3665C15.6796 16.3937 15.651 16.4208 15.6203 16.4472ZM7.50716 5.72566C8.2803 4.35067 10.0217 3.86278 11.3967 4.63592C12.7717 5.40906 13.2596 7.15044 12.4864 8.52544C12.2299 8.98165 11.8529 9.35862 11.3967 9.61517C11.3931 9.61517 11.3888 9.61517 11.3845 9.61944C11.1952 9.72483 10.9951 9.8096 10.7876 9.87223C10.7505 9.88294 10.7162 9.89721 10.6769 9.9065C10.6055 9.92507 10.5305 9.93792 10.457 9.95076C10.3185 9.97499 10.1784 9.98905 10.0378 9.99289H9.95641C9.81588 9.98905 9.67576 9.97499 9.53727 9.95076C9.46585 9.93792 9.39016 9.92507 9.31736 9.9065C9.2795 9.89721 9.24594 9.88294 9.2067 9.87223C8.99922 9.8096 8.79911 9.72487 8.60974 9.61944L8.5969 9.61517C7.2219 8.84203 6.73402 7.10065 7.50716 5.72566ZM16.9763 14.9506C16.518 12.8133 15.1107 11.0014 13.1532 10.0287C14.7534 8.28561 14.6375 5.57542 12.8944 3.97529C11.1514 2.37516 8.44117 2.49105 6.84104 4.2341C5.33677 5.87276 5.33677 8.39005 6.84104 10.0287C4.88361 11.0015 3.47624 12.8133 3.01802 14.9506C0.27991 11.0938 1.18681 5.7475 5.04365 3.00939C8.90048 0.271287 14.2467 1.17819 16.9848 5.03502C18.0141 6.48487 18.5666 8.21913 18.5658 9.9972C18.5658 11.7737 18.01 13.5057 16.9763 14.9506Z"
+                fill="#949DA6"
+              ></path>
+            </svg>
+            <div
+              className={
+                clickUser && clickUserClose
+                  ? "loginSignCard popupCard active"
+                  : "loginSignCard popupCard"
+              }
+            >
+              <div className="bg"></div>
+              <div className="popupCard__inner scrollfix-custom">
+                <div
+                  className="loginSignCard-item active"
+                  id="loginSignCard-login"
+                >
+                  <div className="loginSignCard-fix">
+                    <div className="f-header">
+                      <h2 className="f-header__title">
+                        Log In to Your Skola Account!
+                      </h2>
+                      <span
+                        className="f-header__close"
+                        onClick={handleUserCloseClick}
+                      >
+                        <i className="fa-solid fa-xmark"></i>
+                      </span>
+                    </div>
+                    <div className="f-content">
+                      <div className="f-content__scroll">
+                        <div className="login-wrap">
+                          <form
+                            className="__loginform form-wrap"
+                            id="login"
+                            method="post"
+                            action="https://demo.createdbycocoon.com/moodle/skola/1/login/index.php"
+                          >
+                            <div className="form-item">
+                              <label>Username</label>
+                              <input
+                                type="text"
+                                name="username"
+                                placeholder="Username"
+                                id="login_username"
+                                className="form-control"
+                                value=""
+                                autoComplete="username"
+                              />
+                            </div>
+                            <div className="form-item">
+                              <label>Password</label>
+                              <input
+                                type="password"
+                                name="password"
+                                id="login_password"
+                                placeholder="Password"
+                                className="form-control"
+                                value=""
+                                autoComplete="current-password"
+                              />
+                            </div>
+                            <div className="form-forgot">
+                              <label
+                                className="checkbox-custom"
+                                for="rememberusername"
+                              >
+                                <div className="f-textbox">
+                                  <span></span>
+                                  Remember username
+                                </div>
+                              </label>
+                              <p className="f-text">
+                                <a href="https://demo.createdbycocoon.com/moodle/skola/1/login/forgot_password.php">
+                                  Lost password?
+                                </a>
+                              </p>
+                            </div>
+                            <button type="submit" className="btn">
+                              Log in
+                            </button>
+                            <input
+                              type="hidden"
+                              name="logintoken"
+                              value="8n4arqGyuIPyYETfBPhb5cfay1PY3lUf"
+                            />
+                          </form>
+                        </div>
+                        <p className="btn-convert">
+                          Don't have an account?
+                          <a href="#loginSignCard-signup">Sign up</a>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div className="loginSignCard-item" id="loginSignCard-signup">
+                  <div className="loginSignCard-fix">
+                    <div className="f-header">
+                      <h2 className="f-header__title">
+                        Sign Up and Start Learning!
+                      </h2>
+                      <span className="f-header__close">
+                        <i className="ccn-flaticon-multiply"></i>
+                      </span>
+                    </div>
+                    <div className="f-content">
+                      <div className="f-content__scroll">
+                        <form className="form-wrap">
+                          <div className="form-item">
+                            <label>Username</label>
+                            <input
+                              type="text"
+                              placeholder="creativelayers"
+                              name="name"
+                              className="form-control"
+                            />
+                          </div>
+                          <div className="form-item">
+                            <label>Email</label>
+                            <input
+                              type="email"
+                              placeholder="creativelayers@gmail.com"
+                              name="email"
+                              className="form-control"
+                            />
+                          </div>
+                          <div className="form-item">
+                            <label>Password</label>
+                            <input
+                              type="password"
+                              placeholder="**********"
+                              name="password"
+                              className="form-control"
+                            />
+                          </div>
+                          <button type="submit" className="btn">
+                            SIGN UP
+                          </button>
+                        </form>
+                        <p className="btn-convert">
+                          Don't have an account?
+                          <a href="#loginSignCard-login">Log In</a>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        )}
         <div className="header__showMenuMb" onClick={handleMenuMbClick}>
           <div className="f-icon">
             <span></span>

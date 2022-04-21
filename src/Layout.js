@@ -11,6 +11,8 @@ import InstructorProfile from "./Pages/InstructorProfile/InstructorProfile";
 
 import Contact from "./Pages/Contact/Contact";
 
+import LogIn from "./Pages/LogIn/LogIn";
+
 const Layout = () => {
   return (
     <>
@@ -23,6 +25,7 @@ const Layout = () => {
           <Route path="/courses/:id" element={<Courses />} />
           <Route path="/ip/:id" element={<InstructorProfile />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/login" element={<LogIn />} />
         </Routes>
         <Scroll showBelow={250} />
         <Footer />

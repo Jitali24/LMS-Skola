@@ -11,7 +11,7 @@ function FeatureCourses() {
             <h2>Featured Courses</h2>
             <p>Discover your perfect program in our courses.</p>
           </div>
-          <div className="right">
+          <div className="fc-right">
             <select>
               <option value="all categories">All categories</option>
               <option value="design">Design</option>

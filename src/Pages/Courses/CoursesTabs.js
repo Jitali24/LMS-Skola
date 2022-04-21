@@ -115,7 +115,7 @@ const CoursesTabs = () => {
                 ) : (
                   <i className="fa-solid fa-plus"></i>
                 )}
-                <a>General</a>
+                <a href="/?">General</a>
               </div>
               <div
                 className="collapse show"
@@ -199,7 +199,7 @@ const CoursesTabs = () => {
                 ) : (
                   <i className="fa-solid fa-plus"></i>
                 )}
-                <a>Topic 1</a>
+                <a href="/?">Topic 1</a>
               </div>
             </div>
             <div
@@ -270,7 +270,7 @@ const CoursesTabs = () => {
                 ) : (
                   <i className="fa-solid fa-plus"></i>
                 )}
-                <a>Topic 2</a>
+                <a href="/?">Topic 2</a>
               </div>
             </div>
             <div
@@ -540,30 +540,45 @@ const CoursesTabs = () => {
                   </select>
                   <div className="br-widget">
                     <a
+                      href="/?"
                       data-rating-value="1"
                       data-rating-text="1"
                       className="br-selected"
-                    ></a>
+                    >
+                      {""}
+                    </a>
                     <a
+                      href="/?"
                       data-rating-value="2"
                       data-rating-text="2"
                       className="br-selected"
-                    ></a>
+                    >
+                      {""}
+                    </a>
                     <a
+                      href="/?"
                       data-rating-value="3"
                       data-rating-text="3"
                       className="br-selected"
-                    ></a>
+                    >
+                      {""}
+                    </a>
                     <a
+                      href="/?"
                       data-rating-value="4"
                       data-rating-text="4"
                       className="br-selected"
-                    ></a>
+                    >
+                      {""}
+                    </a>
                     <a
+                      href="/?"
                       data-rating-value="5"
                       data-rating-text="5"
                       className="br-selected br-current"
-                    ></a>
+                    >
+                      {""}
+                    </a>
                     <div className="br-current-rating">5</div>
                   </div>
                 </div>
@@ -588,11 +603,7 @@ const CoursesTabs = () => {
                   ></textarea>
                 </div>
                 <div className="form-actions">
-                  <a
-                    href="javascript:void(0)"
-                    className="btn"
-                    data-submit-comment=""
-                  >
+                  <a href="/?" className="btn" data-submit-comment="">
                     SUBMIT REVIEW
                   </a>
                 </div>
