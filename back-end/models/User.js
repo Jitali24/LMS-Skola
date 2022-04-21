@@ -8,7 +8,7 @@ const UserSchema = new mongoose.Schema(
       required: true,
     },
     email: {
-      type: true,
+      type: String,
       required: true,
       unique: true,
     },
@@ -36,3 +36,5 @@ UserSchema.pre('save', async function (next) {
 })
 
 const User = mongoose.model('User', UserSchema)
+
+export default User

@@ -17,7 +17,7 @@ const authUser = asyncHandler(async (req, res) => {
     })
   } else {
     res.status(404)
-    throw new Error('No User found!')
+    res.json('No User found!')
   }
 })
 
