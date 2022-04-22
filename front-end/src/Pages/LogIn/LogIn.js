@@ -1,93 +1,109 @@
-import React from "react";
-import "./LogIn.css";
+import React, { useState } from 'react'
+import './LogIn.css'
 
 function LogIn() {
+  const [user, setUser] = useState({
+    email: '',
+    password: '',
+  })
+
+  const submitHandler = (val) => {
+    console.log(val)
+  }
+
   return (
-    <div className="login-container">
-      <div className="login-head">
+    <div className='login-container'>
+      <div className='login-head'>
         <h1>Skola</h1>
         <ol>
           <li>
-            <a href="/">Home /</a>
+            <a href='/'>Home /</a>
           </li>
           <li>
-            <a href="/login">Log In to the site</a>
+            <a href='/login'>Log In to the site</a>
           </li>
         </ol>
       </div>
-      <div className="login-body">
+      <div className='login-body'>
         <h2>Log In to Your Skola Account!</h2>
-        <form action="">
-          <div class="form-item">
-            <label for="username">Username</label>
+        <form>
+          <div class='form-item'>
+            <label for='username'>Username</label>
             <input
-              type="text"
-              name="username"
-              id="username"
-              class="form-control"
-              value=""
-              placeholder="Username"
-              autocomplete="username"
+              type='text'
+              name='username'
+              id='username'
+              class='form-control'
+              value={user.email}
+              onChange={(e) => setUser({ ...user, email: e.target.value })}
+              placeholder='Username'
+              autocomplete='username'
             />
           </div>
-          <div class="form-item">
-            <label for="password">Password</label>
+          <div class='form-item'>
+            <label for='password'>Password</label>
             <input
-              type="password"
-              name="password"
-              id="password"
-              value=""
-              class="form-control"
-              placeholder="Password"
-              autocomplete="current-password"
+              type='password'
+              name='password'
+              id='password'
+              value={user.password}
+              onChange={(e) => setUser({ ...user, password: e.target.value })}
+              class='form-control'
+              placeholder='Password'
+              autocomplete='current-password'
             />
           </div>
-          <div class="form-forgot">
-            <label class="checkbox-custom" for="rememberusername1">
+          <div class='form-forgot'>
+            <label class='checkbox-custom' for='rememberusername1'>
               <input
-                class="form-control"
-                type="checkbox"
-                name="rememberusername1"
-                id="rememberusername1"
-                value="1"
+                class='form-control'
+                type='checkbox'
+                name='rememberusername1'
+                id='rememberusername1'
+                value='1'
               />
-              <div class="f-textbox">
+              <div class='f-textbox'>
                 <span></span>
                 Remember username
               </div>
             </label>
-            <p class="f-text">
+            <p class='f-text'>
               <b>
-                <a href="/">Forgot Password?</a>
+                <a href='/'>Forgot Password?</a>
               </b>
             </p>
           </div>
-          <button type="submit" class="btn" id="loginbtn">
+          <button
+            type='submit'
+            class='btn'
+            id='loginbtn'
+            onClick={(val) => submitHandler(val)}
+          >
             Log in
           </button>
         </form>
-        <div class="mt-2">
-          <form action="" id="guestlogin">
-            <input type="hidden" name="logintoken" />
-            <input type="hidden" name="username" value="guest" />
-            <input type="hidden" name="password" value="guest" />
-            <button class="btn style-4 btn-block" type="submit">
+        <div class='mt-2'>
+          <form action='' id='guestlogin'>
+            <input type='hidden' name='logintoken' />
+            <input type='hidden' name='username' value='guest' />
+            <input type='hidden' name='password' value='guest' />
+            <button class='btn style-4 btn-block' type='submit'>
               Log in as a guest
             </button>
           </form>
         </div>
-        <p class="btn-convert">
-          Is this your first time here? <a href="/">Create new account</a>
+        <p class='btn-convert'>
+          Is this your first time here? <a href='/'>Create new account</a>
         </p>
-        <p class="btn-convert">
+        <p class='btn-convert'>
           Cookies must be enabled in your browser
           <a
-            href="/"
-            class=""
-            role="button"
-            data-container="body"
-            data-toggle="popover"
-            data-placement="right"
+            href='/'
+            class=''
+            role='button'
+            data-container='body'
+            data-toggle='popover'
+            data-placement='right'
           >
             {/* <p>Two cookies are used on this site:</p>
             <p>
@@ -112,10 +128,10 @@ function LogIn() {
             ></i> */}
           </a>
         </p>
-        <p class="mt-0">Some courses may allow guest access</p>
+        <p class='mt-0'>Some courses may allow guest access</p>
       </div>
     </div>
-  );
+  )
 }
 
-export default LogIn;
+export default LogIn
