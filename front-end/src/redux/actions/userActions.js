@@ -21,7 +21,6 @@ export const login = (user) => async (dispatch) => {
     }
 
     const { data } = await axios.post('/api/user/login', user, config)
-    console.log(data)
 
     dispatch({
       type: USER_LOGIN_SUCCESS,
