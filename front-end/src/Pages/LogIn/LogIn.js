@@ -1,15 +1,29 @@
 import React, { useState } from 'react'
+import { useDispatch, useSelector } from 'react-redux'
+import { login } from '../../redux/actions/userActions'
 import './LogIn.css'
 
 function LogIn() {
+  const dispatch = useDispatch()
+
   const [user, setUser] = useState({
     email: '',
     password: '',
   })
 
-  const submitHandler = (val) => {
-    console.log(val)
+  const submitHandler = (e) => {
+    e.preventDefault()
+
+    if (user.email === '' || user.password === '') {
+      alert('Empty fields!')
+      return
+    }
+
+    dispatch(login(user))
+    alert('user logged in successfully!')
   }
+
+  const userLogin = useSelector((state) => state.userLogin)
 
   return (
     <div className='login-container'>
@@ -26,7 +40,7 @@ function LogIn() {
       </div>
       <div className='login-body'>
         <h2>Log In to Your Skola Account!</h2>
-        <form>
+        <form onSubmit={(e) => submitHandler(e)}>
           <div class='form-item'>
             <label for='username'>Username</label>
             <input
@@ -73,12 +87,7 @@ function LogIn() {
               </b>
             </p>
           </div>
-          <button
-            type='submit'
-            class='btn'
-            id='loginbtn'
-            onClick={(val) => submitHandler(val)}
-          >
+          <button type='submit' class='btn' id='loginbtn'>
             Log in
           </button>
         </form>
