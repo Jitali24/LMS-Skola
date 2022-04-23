@@ -122,6 +122,17 @@
   background-color: #ffc78b;
 }
 
+.login-body form .btn:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+
+.login-body form .btn:disabled:hover {
+  opacity: 0.6;
+  cursor: not-allowed;
+  background-color: #090761;
+}
+
 .login-body .mt-2 {
   margin-top: 0.5rem !important;
 }
@@ -157,6 +168,40 @@
   text-align: center;
   margin-top: 20px;
   margin-top: 0;
+}
+
+.login-body .btn-convert-down:hover {
+  color: #ffc78f;
+}
+
+.login-body .mt-3 {
+  margin-top: 1rem !important;
+}
+
+.login-body .accesshide {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.login-body .alert-danger {
+  color: #ab3331;
+  background-color: #ecc8c5;
+  border-color: #f0c5c1;
+}
+.login-body .alert {
+  font-weight: 500;
+  padding: 25px 30px;
+  border-radius: 4px;
+  margin-bottom: 20px;
+  border: 0 solid transparent;
+  position: relative;
 }
 
 @media (min-width: 768px) {

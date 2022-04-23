@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Profiler } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import App from "./App";
 import Footer from "./components/Footer/Footer";
@@ -12,6 +12,7 @@ import InstructorProfile from "./Pages/InstructorProfile/InstructorProfile";
 import Contact from "./Pages/Contact/Contact";
 
 import LogIn from "./Pages/LogIn/LogIn";
+import Profile from "./Pages/Profile/Profile";
 
 const Layout = () => {
   return (
@@ -26,6 +27,7 @@ const Layout = () => {
           <Route path="/ip/:id" element={<InstructorProfile />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/login" element={<LogIn />} />
+          <Route path="/profile" element={<Profile />} />
         </Routes>
         <Scroll showBelow={250} />
         <Footer />

@@ -1,0 +1,60 @@
+@import url("https://fonts.googleapis.com/css2?family=Lora:wght@600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Jost&display=swap");
+
+.profile-container {
+  background-color: white;
+  font-family: "Jost", sans-serif;
+  padding: 60px 14px;
+}
+
+.profile-img {
+  position: absolute;
+  top: 13px;
+  left: 13px;
+  bottom: 13px;
+  right: 13px;
+  border: 1px solid #e7e7ec;
+  border-radius: 50%;
+  box-shadow: 0 8px 15px rgb(140 152 164 / 10%);
+  margin-bottom: 10px;
+}
+
+.profile-img span {
+  position: relative;
+  background-color: #2f2d51;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.profile-head {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 460px;
+}
+
+.profile-head h1 {
+  font-family: "Jost", sans-serif;
+  color: #2f2d51;
+  text-align: center;
+}
+
+.profile-body {
+  padding: 20px 0;
+  max-width: 460px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.profile-body .btn {
+  width: 100%;
+  background-color: #2f2d51;
+}
+
+.profile-body .btn:hover {
+  width: 100%;
+  background-color: #ffc78b;
+}
