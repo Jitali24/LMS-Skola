@@ -49,7 +49,7 @@ function LogIn() {
       <div className='login-body'>
         {error && (
           <div class='loginerrors mt-3'>
-            <a href='#' class='accesshide'>
+            <a href='/' class='accesshide'>
               Invalid Email OR Password!
             </a>
             <div class='alert alert-danger' role='alert'>
@@ -114,14 +114,16 @@ function LogIn() {
             <input type='hidden' name='logintoken' />
             <input type='hidden' name='username' value='guest' />
             <input type='hidden' name='password' value='guest' />
-            <button class='btn style-4 btn-block' type='submit'>
-              Log in as a guest
-            </button>
+            <a href='/'>
+              <button class='btn style-4 btn-block' type='submit'>
+                Log in as a guest
+              </button>
+            </a>
           </form>
         </div>
         <p class='btn-convert'>
           Is this your first time here?{' '}
-          <a href='/' className='btn-convert-down'>
+          <a href='/signup' className='btn-convert-down'>
             Create new account
           </a>
         </p>

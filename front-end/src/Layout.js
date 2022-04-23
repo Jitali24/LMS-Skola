@@ -1,18 +1,19 @@
-import React, { Profiler } from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import App from "./App";
-import Footer from "./components/Footer/Footer";
-import Navbar from "./components/Navbar/Navbar";
-import BlogPage from "./Pages/BlogsPage/BlogPage";
-import BlogPage2 from "./Pages/BlogsPage2/BlogPage2";
-import Scroll from "./components/BackToTop/Scroll";
-import Courses from "./Pages/Courses/Courses";
-import InstructorProfile from "./Pages/InstructorProfile/InstructorProfile";
+import React, { Profiler } from 'react'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import App from './App'
+import Footer from './components/Footer/Footer'
+import Navbar from './components/Navbar/Navbar'
+import BlogPage from './Pages/BlogsPage/BlogPage'
+import BlogPage2 from './Pages/BlogsPage2/BlogPage2'
+import Scroll from './components/BackToTop/Scroll'
+import Courses from './Pages/Courses/Courses'
+import InstructorProfile from './Pages/InstructorProfile/InstructorProfile'
 
-import Contact from "./Pages/Contact/Contact";
+import Contact from './Pages/Contact/Contact'
 
-import LogIn from "./Pages/LogIn/LogIn";
-import Profile from "./Pages/Profile/Profile";
+import LogIn from './Pages/LogIn/LogIn'
+import Profile from './Pages/Profile/Profile'
+import SignUp from './Pages/SignUp/SignUp'
 
 const Layout = () => {
   return (
@@ -20,20 +21,21 @@ const Layout = () => {
       <Router>
         <Navbar />
         <Routes>
-          <Route path="/" element={<App />} exact />
-          <Route path="/blog/:id" element={<BlogPage />} />
-          <Route path="/blog2/:id" element={<BlogPage2 />} />
-          <Route path="/courses/:id" element={<Courses />} />
-          <Route path="/ip/:id" element={<InstructorProfile />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/login" element={<LogIn />} />
-          <Route path="/profile" element={<Profile />} />
+          <Route path='/' element={<App />} exact />
+          <Route path='/blog/:id' element={<BlogPage />} />
+          <Route path='/blog2/:id' element={<BlogPage2 />} />
+          <Route path='/courses/:id' element={<Courses />} />
+          <Route path='/ip/:id' element={<InstructorProfile />} />
+          <Route path='/contact' element={<Contact />} />
+          <Route path='/login' element={<LogIn />} />
+          <Route path='/profile' element={<Profile />} />
+          <Route path='/signup' element={<SignUp />} />
         </Routes>
         <Scroll showBelow={250} />
         <Footer />
       </Router>
     </>
-  );
-};
+  )
+}
 
-export default Layout;
+export default Layout

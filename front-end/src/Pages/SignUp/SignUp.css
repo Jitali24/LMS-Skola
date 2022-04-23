@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jost&display=swap');
+
+.signup-container {
+  font-family: 'Jost', sans-serif;
+  font-size: 16px;
+  background-color: white;
+}
+
+.signup-container .login-body input[type='email'] {
+  font-size: 14px;
+  font-weight: 400;
+  color: #2f2d51;
+  width: 100%;
+  border-radius: 0;
+  height: 50px;
+  line-height: 48px;
+  border: 1px solid #e7e7ec;
+  border-radius: 4px;
+  padding: 0 15px;
+  margin-bottom: 15px;
+  margin: 0;
+}
+
+.signup-container .login-body .btn-convert a:hover {
+  color: #ffc78b;
+}

@@ -13,7 +13,6 @@ function Profile() {
   useEffect(() => {
     if (!user || user === null || user === {}) {
       navigate('/login')
-      console.log('hit')
     }
   }, [user, navigate])
 
@@ -28,12 +27,17 @@ function Profile() {
   return (
     user && (
       <div className='profile-container'>
+        <div className='instructor-head'>
+          <div class='info-avatar'>
+            <div class='info-avatar__avatar'>
+              <span>{/* <img src='' alt='' /> */}</span>
+            </div>
+          </div>
+        </div>
         <div className='profile-head'>
-          {/* <div className="profile-img">
-          <span></span>
-        </div> */}
           <div className='profile-name'>
             <h1>{user.name}</h1>
+            <p>{user.email}</p>
           </div>
         </div>
         <div className='profile-body'>
