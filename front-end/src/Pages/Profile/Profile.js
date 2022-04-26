@@ -2,7 +2,7 @@ import React, { useEffect } from 'react'
 import { useNavigate } from 'react-router'
 import { useDispatch, useSelector } from 'react-redux'
 import './Profile.css'
-import { USER_LOGOUT } from '../../redux/constants/userConstants'
+import { logout as logoutUser } from '../../redux/actions/userActions'
 
 function Profile() {
   const dispatch = useDispatch()
@@ -19,9 +19,7 @@ function Profile() {
   const logout = (e) => {
     e.preventDefault()
 
-    dispatch({
-      type: USER_LOGOUT,
-    })
+    dispatch(logoutUser())
   }
 
   return (

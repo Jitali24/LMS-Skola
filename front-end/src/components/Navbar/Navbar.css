@@ -1,5 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=Lora:wght@600&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Jost&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jost&display=swap');
 
 .navbar-logo svg {
   height: 53.55px;
@@ -74,7 +74,7 @@
 
 .header__showMenuMb .f-icon span:before,
 .header__showMenuMb .f-icon span:after {
-  content: "";
+  content: '';
   position: absolute;
   display: block;
   height: 1px;
@@ -202,7 +202,7 @@
   font-size: 18px;
   margin: 0;
   max-width: 90%;
-  font-family: "Jost";
+  font-family: 'Jost';
   color: #2f2d51;
 }
 
@@ -216,7 +216,7 @@
   flex-grow: 1;
   overflow: hidden;
   overflow-y: auto;
-  font-family: "Jost";
+  font-family: 'Jost';
 }
 
 .popupCard__inner .f-content__scroll {
@@ -233,7 +233,7 @@
   font-weight: 400;
   color: #2f2d51;
   margin-bottom: 10px;
-  font-family: "Jost";
+  font-family: 'Jost';
 }
 
 .loginSignCard .form-wrap .form-control {
@@ -307,8 +307,8 @@
   cursor: pointer;
 }
 
-.loginSignCard .form-wrap button[type="submit"],
-.loginSignCard .form-wrap input[type="submit"] {
+.loginSignCard .form-wrap button[type='submit'],
+.loginSignCard .form-wrap input[type='submit'] {
   width: 100%;
   transition: all 0.3s;
 }
@@ -324,14 +324,14 @@
   border-radius: 4px;
   text-transform: uppercase;
   padding: 0 30px;
-  font-family: "Jost";
+  font-family: 'Jost';
   border: none;
 }
 
 button,
-[type="button"],
-[type="reset"],
-[type="submit"] {
+[type='button'],
+[type='reset'],
+[type='submit'] {
   -webkit-appearance: button;
 }
 
@@ -400,7 +400,7 @@ input {
 .mbCartFirst__inner {
   height: 100%;
   padding: 20px 15px;
-  font-family: "Jost";
+  font-family: 'Jost';
 }
 
 .searchMobile .f-form {
@@ -448,7 +448,7 @@ input {
   visibility: hidden;
   padding: 20px 15px;
   transform: translateY(50%);
-  font-family: "Jost";
+  font-family: 'Jost';
 }
 
 .header__menuMb .active {
@@ -566,7 +566,7 @@ input {
 
   .header__course a {
     text-decoration: none;
-    font-family: "Jost";
+    font-family: 'Jost';
   }
 
   .header__course a svg {
@@ -591,8 +591,6 @@ input {
   .header__course .submenu {
     border-radius: 4px;
     background-color: #090761;
-    /* opacity: 0; */
-    /* transform: translateY(20px); */
   }
 
   .header__course ul {
@@ -617,7 +615,7 @@ input {
     text-overflow: ellipsis;
     white-space: nowrap;
     padding: 0 30px;
-    font-family: "Jost";
+    font-family: 'Jost';
   }
 
   .header__course .submenu li:hover {
@@ -674,7 +672,7 @@ input {
     text-decoration: none;
     color: #77838f;
     font-size: 16px;
-    font-family: "Jost";
+    font-family: 'Jost';
     text-transform: uppercase;
     height: 75px;
     line-height: 75px;
@@ -688,6 +686,29 @@ input {
 
   .nav a:hover {
     color: #2f2d51;
+  }
+
+  .navbar-container.active .header__searchMb:hover,
+  .navbar-container .header__searchMb:hover,
+  .navbar-container.active .header__user:hover,
+  .navbar-container .header__user:hover {
+    cursor: pointer;
+  }
+
+  .navbar-container.active .header__searchMb:hover svg g path {
+    fill: #ffc78b;
+  }
+
+  .navbar-container .header__searchMb:hover svg g path {
+    fill: #2f2d51;
+  }
+
+  .navbar-container.active .header__user svg:hover path {
+    fill: #ffc78b;
+  }
+
+  .navbar-container .header__user svg:hover path {
+    fill: #2f2d51;
   }
 
   .nav ul {
@@ -777,7 +798,7 @@ input {
     margin-left: -120px;
     padding: 30px 0;
     border-radius: 5px;
-    font-family: "Jost";
+    font-family: 'Jost';
     display: none;
     width: 700px;
     margin-top: 2.5px;
@@ -848,7 +869,7 @@ input {
 
   .events-menu:hover > .events-links ul li a {
     text-transform: capitalize;
-    font-family: "Jost";
+    font-family: 'Jost';
     font-size: 16px;
     font-weight: 300;
     color: #77838f;
@@ -890,7 +911,7 @@ input {
 
   .pages-menu:hover > .pages-links ul li a {
     text-transform: capitalize;
-    font-family: "Jost";
+    font-family: 'Jost';
     font-size: 16px;
     font-weight: 300;
     color: #77838f;
@@ -955,7 +976,7 @@ input {
 
   .blog-menu:hover > .blog-links ul li a {
     text-transform: capitalize;
-    font-family: "Jost";
+    font-family: 'Jost';
     font-size: 16px;
     font-weight: 300;
     color: #77838f;
