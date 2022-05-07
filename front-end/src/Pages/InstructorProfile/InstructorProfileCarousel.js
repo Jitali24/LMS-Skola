@@ -7,6 +7,7 @@ function InstructorProfileCarousel({
   category,
   title,
   lessons,
+  courseLink,
 }) {
   return (
     <div className="profile-container">
@@ -19,7 +20,7 @@ function InstructorProfileCarousel({
           <div className="lessonsBox__body">
             <div className="lessonsBox__cat">{category}</div>
             <h3 className="lessonsBox__title">
-              <a href="/">{title}</a>
+              <a href={courseLink}>{title}</a>
             </h3>
             <div className="lessonsBox__footer">
               <div className="lessonsBox__info">

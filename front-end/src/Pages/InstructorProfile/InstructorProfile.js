@@ -180,6 +180,7 @@ function InstructorProfile() {
                   category='Design'
                   title='Introduction to the Web Design & HTML'
                   lessons='8'
+                  courseLink='/courses/1'
                 />
               </div>
               <div className='carousel-cell'>
@@ -189,6 +190,7 @@ function InstructorProfile() {
                   category='Software Development'
                   title='Designing Responsive Mobile Websites with Muse'
                   lessons='1'
+                  courseLink='/courses/8'
                 />
               </div>
               <div className='carousel-cell'>
@@ -198,6 +200,7 @@ function InstructorProfile() {
                   category='Audio + Music'
                   title='Design Instruments for Work Communication'
                   lessons='1'
+                  courseLink='/courses/6'
                 />
               </div>
               <div className='carousel-cell'>
@@ -207,6 +210,7 @@ function InstructorProfile() {
                   category='Finance + Accounting'
                   title='Cubase Pro 10 Essential Training: Advanced'
                   lessons='1'
+                  courseLink='/courses/2'
                 />
               </div>
             </div>

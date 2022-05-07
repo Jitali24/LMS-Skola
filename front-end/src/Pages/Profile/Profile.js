@@ -21,14 +21,14 @@ function Profile() {
 
     dispatch(logoutUser())
   }
-
+  // https://yorktonrentals.com/wp-content/uploads/2017/06/usericon.png
   return (
     user && (
       <div className='profile-container'>
         <div className='instructor-head'>
           <div class='info-avatar'>
             <div class='info-avatar__avatar'>
-              <span>{/* <img src='' alt='' /> */}</span>
+              <span><img src='https://cdn2.iconfinder.com/data/icons/circle-avatars-1/128/050_girl_avatar_profile_woman_suit_student_officer-512.png' alt='' /></span>
             </div>
           </div>
         </div>
