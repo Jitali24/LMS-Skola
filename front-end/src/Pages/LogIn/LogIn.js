@@ -29,7 +29,7 @@ function LogIn() {
 
   useEffect(() => {
     if (userLogin.user) {
-      navigate('/profile')
+      navigate('/')
     }
   }, [userLogin.user, navigate])
 

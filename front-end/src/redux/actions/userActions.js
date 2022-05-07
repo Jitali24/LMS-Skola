@@ -40,6 +40,42 @@ export const login = (user) => async (dispatch) => {
   }
 }
 
+export const registerUser = (user) => async (dispatch) => {
+  try {
+    dispatch({
+      type: USER_SIGNUP_REQUEST,
+    })
+
+    const config = {
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    }
+
+    const { data } = await axios.post('/api/user/signup', user, config)
+
+    dispatch({
+      type: USER_SIGNUP_SUCCESS,
+      payload: data,
+    })
+
+    dispatch({
+      type: USER_LOGIN_SUCCESS,
+      payload: data,
+    })
+
+    localStorage.setItem('user', JSON.stringify(data))
+  } catch (error) {
+    dispatch({
+      type: USER_SIGNUP_FAIL,
+      payload:
+        error.response && error.response.data.message
+          ? error.response.data.message
+          : error.message,
+    })
+  }
+}
+
 export const logout = () => (dispatch) => {
   localStorage.removeItem('user')
   dispatch({
